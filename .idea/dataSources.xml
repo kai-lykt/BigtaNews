@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Django default" uuid="0d3c1493-82fe-401d-a3fe-81cb1cf13edf">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>$PROJECT_DIR$/smedaily/settings.py</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://112.220.72.178:2345/openmetric</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@112.220.72.179" uuid="d11e4888-2c5d-4b27-b657-40bf1ebe20f7">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://112.220.72.179:1433</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@211.233.51.65" uuid="2cfdc2a9-fe48-4699-b7a4-9c4d26993691">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://211.233.51.65:1433</jdbc-url>
+    </data-source>
+  </component>
+</project>

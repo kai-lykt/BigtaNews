@@ -1,0 +1,78 @@
+.mediaViewInfo {
+	--web-view-name: dart popup;
+	--web-view-id: dart_popup;
+	--web-scale-on-resize: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+	--web-is-overlay: true;
+}
+:root {
+	--web-view-ids: dart_popup;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+.dart_popup_Class {
+	position: absolute;
+	width: 627px;
+	height: 693px;
+	background-color: rgba(248,245,245,1);
+	overflow: hidden;
+	cursor: pointer;
+	--web-view-name: dart popup;
+	--web-view-id: dart_popup;
+	--web-scale-on-resize: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+	--web-is-overlay: true;
+}
+.httpdartfssorkrdsaf001maindorc_Class {
+	left: 57px;
+	top: 197px;
+	position: absolute;
+	overflow: visible;
+	width: 408px;
+	height: 300px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(112,112,112,1);
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	87.5% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+.dart_popup_snapshot_Class {
+	animation: fadein 5s linear 0s infinite;
+	pointer-events: none;
+	position: absolute;
+	width: 627px;
+	height: 693px;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+}

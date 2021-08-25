@@ -1,0 +1,25 @@
+{% load static %}
+{% block content %}
+    <div data-type="Symbol" data-name="footer" class="footer footer_Class">
+        <div>
+            <img data-type="Rectangle" data-name="logo" class="logo_Class" src="{% static 'img/logo.png' %}"
+                 srcset="{% static 'img/logo.png' %} 1x, {% static 'img/logo@2x.png' %} 2x">
+        </div>
+        <div data-type="Group" data-name="그룹 523" class="_523_Class">
+            <div data-type="Text" class="___02392____20121218___________Class">
+                <div>
+                    등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+                </div>
+                <div>
+                    주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228
+                </div>
+                <div style="align-items: start; display: flex;">
+                    Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED BY
+                    <img data-type="Rectangle" data-name="kai" class="kai_Class"
+                     src="{% static 'img/kai.png' %}"
+                     srcset="{% static 'img/kai.png' %} 1x, {% static 'img/kai@2x.png' %} 2x">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

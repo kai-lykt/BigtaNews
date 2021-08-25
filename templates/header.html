@@ -1,0 +1,22 @@
+{% load static %}
+{% block content %}
+    <div data-type="Symbol" data-name="Title" class="Title Title_Class">
+        <div style="display: inherit; justify-content: space-between">
+            <img data-type="Rectangle" data-name="logo2" class="logo2_Class" src="{% static 'img/logo2.png' %}"
+                 srcset="{% static 'img/logo2.png' %} 1x, {% static 'img/logo2@2x.png' %} 2x">
+            <svg data-type="Rectangle" data-name="사각형 201" class="_201">
+                <rect class="_201_Class" rx="0" ry="0" x="0" y="0" width="1" height="16">
+                </rect>
+            </svg>
+            <div data-type="Text" data-name="로그아웃" onclick="window.location.replace('/logout')" class="_bed_Class">
+                <span>로그아웃</span>
+            </div>
+            <div data-type="Text" data-name="고객센터" class="_bee_Class">
+                <span>고객센터</span>
+            </div>
+        </div>
+        <div data-type="Text" data-name="AI 주식분석 플랫폼" class="AI___Class">
+            <span>AI 주식분석 플랫폼</span>
+        </div>
+    </div>
+{% endblock %}

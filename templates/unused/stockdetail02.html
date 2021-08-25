@@ -1,0 +1,3176 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>종목 상세보기</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/stockdetail02.css"/>
+</head>
+<body>
+<div id="stockdetail02" class="stockdetail02_Class">
+	<div data-type="Symbol" data-name="Navigation_주식" class="Navigation___ Navigation__Class">
+		<svg data-type="Rectangle" data-name="사각형 24" class="_24">
+			<rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 23" class="_23">
+			<rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_Class">
+			<span>공시데이터</span>
+		</div>
+		<div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="_cd_Class">
+			<span>주식데이터</span>
+		</div>
+		<svg data-type="Polygon" data-name="다각형 4" class="_4" viewBox="0 0 22 14">
+			<path class="_4_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+			</path>
+		</svg>
+		<div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+			<div data-type="Text" data-name="HOME" class="HOME_Class">
+				<span>HOME</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 108" class="_108">
+				<rect class="_108_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+			<div data-type="Text" data-name="작성기사" class="_cj_Class">
+				<span>작성기사</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 109" class="_109">
+				<rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+				</rect>
+			</svg>
+		</div>
+	</div>
+	<div data-type="Text" data-name="주식데이터" class="_cl_Class">
+		<span>주식데이터</span>
+	</div>
+	<div data-type="Group" data-name="그룹 152" class="_152_Class">
+		<svg data-type="Rectangle" data-name="사각형 107" class="_107">
+			<rect class="_107_Class" rx="34.5" ry="34.5" x="0" y="0" width="749" height="69">
+			</rect>
+		</svg>
+		<div data-type="Symbol" data-name="구성 요소 14 – 11" onclick="application.goToTargetView(event)" class="______14___11 __14__11_Class">
+			<div data-type="Group" data-name="그룹 137" class="_137_Class">
+				<div data-type="Text" data-name="종 목" class="__Class">
+					<span>종 목</span>
+				</div>
+			</div>
+			<svg data-type="Path" data-name="ic_highlight_off_24px" class="ic_highlight_off_24px" viewBox="2 2 30 30">
+				<path class="ic_highlight_off_24px_Class" d="M 20.88500022888184 11 L 17 14.88500022888184 L 13.11499977111816 11 L 11 13.11499977111816 L 14.88500022888184 17 L 11 20.88500022888184 L 13.11499977111816 23 L 17 19.11499977111816 L 20.88500022888184 23 L 23 20.88500022888184 L 19.11499977111816 17 L 23 13.11499977111816 L 20.88500022888184 11 Z M 17 2 C 8.704999923706055 2 2 8.704999923706055 2 17 C 2 25.29500198364258 8.704999923706055 32 17 32 C 25.29500198364258 32 32 25.29500198364258 32 17 C 32 8.704998970031738 25.29500198364258 2 17 2 Z M 17 29 C 10.38500022888184 29 5 23.61499977111816 5 17 C 5 10.38500022888184 10.38500022888184 5 17 5 C 23.61499977111816 5 29 10.38500022888184 29 17 C 29 23.61499977111816 23.61499977111816 29 17 29 Z">
+				</path>
+			</svg>
+			<svg data-type="Path" data-name="ic_search_24px" class="ic_search_24px" viewBox="3 3 29 29">
+				<path class="ic_search_24px_Class" d="M 23.72612953186035 21.23899269104004 L 22.41623878479004 21.23899269104004 L 21.95197105407715 20.79130935668945 C 23.57690048217773 18.90108680725098 24.55517387390137 16.44711303710938 24.55517387390137 13.777587890625 C 24.55517387390137 7.825042724609375 19.73013114929199 3 13.777587890625 3 C 7.825042724609375 3 3 7.825042724609375 3 13.777587890625 C 3 19.73013114929199 7.825042724609375 24.55517387390137 13.777587890625 24.55517387390137 C 16.44711303710938 24.55517387390137 18.90108680725098 23.57690048217773 20.79130935668945 21.95197105407715 L 21.23899269104004 22.41623878479004 L 21.23899269104004 23.72612953186035 L 29.52944564819336 31.99999809265137 L 31.99999809265137 29.52944564819336 L 23.72612953186035 21.23899269104004 Z M 13.777587890625 21.23899269104004 C 9.648942947387695 21.23899269104004 6.316181182861328 17.90623092651367 6.316181182861328 13.777587890625 C 6.316181182861328 9.648942947387695 9.648942947387695 6.316181182861328 13.777587890625 6.316181182861328 C 17.90623092651367 6.316181182861328 21.23899269104004 9.648942947387695 21.23899269104004 13.777587890625 C 21.23899269104004 17.90623092651367 17.90623092651367 21.23899269104004 13.777587890625 21.23899269104004 Z">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div data-type="Text" data-name="오늘의 특징주 신호" class="___Class">
+		<span>오늘의 특징주 신호</span>
+	</div>
+	<div data-type="Text" data-name="[2020-08-17 15: 41]" class="ID2020-08-17_15_41_Class">
+		<span>[2020-08-17 15: 41]</span>
+	</div>
+	<img data-type="Rectangle" data-name="이미지 4" class="_4_cv_Class" src="_4_cv.png" srcset="_4_cv.png 1x, _4_cv@2x.png 2x">
+	<div data-type="Group" data-name="그룹 295" class="_295_Class">
+		<div data-type="Text" data-name="일봉차트" class="_cx_Class">
+			<span>일봉차트</span>
+		</div>
+		<div data-type="Text" data-name="[삼성전자]" class="_cy_Class">
+			<span>[삼성전자]</span>
+		</div>
+	</div>
+	<div data-type="Group" data-name="그룹 499" class="_499_Class">
+		<svg data-type="Path" data-name="패스 4" class="_4_c" viewBox="0 0 1150 51">
+			<path class="_4_c_Class" d="M 0 0 L 1150 0 L 1150 51 L 0 51 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 3" class="_3" viewBox="0 0 1150 3">
+			<path class="_3_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15">
+			<rect class="_15_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="날짜" class="_c_Class">
+			<span>날짜</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17">
+			<rect class="_17_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="종가" class="_ca_Class">
+			<span>종가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_c">
+			<rect class="_17_c_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="전일비" class="_cb_Class">
+			<span>전일비</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_ca">
+			<rect class="_17_ca_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="시가" class="_cc_Class">
+			<span>시가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_cb">
+			<rect class="_17_cb_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="고가" class="_ce_Class">
+			<span>고가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_cc">
+			<rect class="_17_cc_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="저가" class="_cf_Class">
+			<span>저가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_ce">
+			<rect class="_17_ce_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="거래량" class="_cg_Class">
+			<span>거래량</span>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cj_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_ck_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cl_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cn">
+				<rect class="_15_cn_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_Class">
+				<div data-type="Text" data-name="500" class="ID500_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5" viewBox="0 0 11 10">
+					<path class="_5_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 298" class="_298_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cs_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_ct_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cu_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cv_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cw_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cx_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cy">
+				<rect class="_15_cy_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_cz_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_c_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_c_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_ca_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cc_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_c_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_c">
+				<rect class="_15_c_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_c_Class">
+				<div data-type="Text" data-name="500" class="ID500_c_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_c" viewBox="0 0 11 10">
+					<path class="_5_c_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 299" class="_299_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cb_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cd_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_ce_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cf_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cg_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cg_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_ch">
+				<rect class="_15_ch_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_ci_Class">
+				<div data-type="Text" data-name="500" class="ID500_cj_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_ck" viewBox="0 0 11 10">
+					<path class="_5_ck_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_cl_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cm_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cn_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_co_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cp_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cq_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cr_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cs">
+				<rect class="_15_cs_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_ct_Class">
+				<div data-type="Text" data-name="500" class="ID500_cu_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cv" viewBox="0 0 11 10">
+					<path class="_5_cv_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 300" class="_300_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cx_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cy_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cz_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_ch_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_ci_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_ca_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_ca">
+				<rect class="_15_ca_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_ca_Class">
+				<div data-type="Text" data-name="500" class="ID500_ca_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_ca" viewBox="0 0 11 10">
+					<path class="_5_ca_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_c_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_ca_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cm_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cr_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cs_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_cx_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cd_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_ce">
+				<rect class="_15_ce_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cf_Class">
+				<div data-type="Text" data-name="500" class="ID500_cg_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_ch" viewBox="0 0 11 10">
+					<path class="_5_ch_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 301" class="_301_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cj_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_daa_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dab_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dac_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dad_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_co_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cp">
+				<rect class="_15_cp_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cq_Class">
+				<div data-type="Text" data-name="500" class="ID500_cr_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cs" viewBox="0 0 11 10">
+					<path class="_5_cs_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_ct_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cu_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dae_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_daf_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dag_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dah_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cz_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cb">
+				<rect class="_15_cb_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cb_Class">
+				<div data-type="Text" data-name="500" class="ID500_cb_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cb" viewBox="0 0 11 10">
+					<path class="_5_cb_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 302" class="_302_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cc_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dai_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_daj_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dak_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dal_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cb_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cc">
+				<rect class="_15_cc_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cc_Class">
+				<div data-type="Text" data-name="500" class="ID500_cd_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_ce" viewBox="0 0 11 10">
+					<path class="_5_ce_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 294" class="_294_Class">
+			<div data-type="Text" data-name="500" class="ID500_ch_Class">
+				<span>500</span>
+			</div>
+			<svg data-type="Polygon" data-name="다각형 5" class="_5_ci" viewBox="0 0 11 10">
+				<path class="_5_ci_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+				</path>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 296" class="_296_Class">
+			<div data-type="Text" data-name="일별시세" class="_ck_Class">
+				<span>일별시세</span>
+			</div>
+			<div data-type="Text" data-name="[삼성전자]" class="_cm_Class">
+				<span>[삼성전자]</span>
+			</div>
+		</div>
+	</div>
+	<div data-type="Group" data-name="그룹 500" class="_500_Class">
+		<svg data-type="Path" data-name="패스 375" class="_375" viewBox="0 0 1150 51">
+			<path class="_375_Class" d="M 0 0 L 1150 0 L 1150 51 L 0 51 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 376" class="_376" viewBox="0 0 1150 3">
+			<path class="_376_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 124" class="_124">
+			<rect class="_124_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="체결시각" class="_cp_Class">
+			<span>체결시각</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 125" class="_125">
+			<rect class="_125_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="체결가" class="_cr_Class">
+			<span>체결가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 126" class="_126">
+			<rect class="_126_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="전일비" class="_ct_Class">
+			<span>전일비</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 127" class="_127">
+			<rect class="_127_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="매도" class="_cv_Class">
+			<span>매도</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 128" class="_128">
+			<rect class="_128_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="매수" class="_cz_Class">
+			<span>매수</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 129" class="_129">
+			<rect class="_129_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="거래량" class="_ch_Class">
+			<span>거래량</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 130" class="_130">
+			<rect class="_130_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="변동량" class="_ci_Class">
+			<span>변동량</span>
+		</div>
+		<div data-type="Group" data-name="그룹 304" class="_304_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cd_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dam_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dan_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dao_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cc_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="6,233" class="ID6233_Class">
+				<span>6,233</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cd">
+				<rect class="_15_cd_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cd_Class">
+				<div data-type="Text" data-name="500" class="ID500_cc_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cc" viewBox="0 0 11 10">
+					<path class="_5_cc_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 305" class="_305_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_ce_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dap_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_daq_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dar_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_ci_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cj_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_ck">
+				<rect class="_15_ck_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 306" class="_306_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cn_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_das_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dat_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dau_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cq_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cs_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_ct">
+				<rect class="_15_ct_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cu_Class">
+				<div data-type="Text" data-name="500" class="ID500_cv_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cw" viewBox="0 0 11 10">
+					<path class="_5_cw_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 307" class="_307_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cy_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dav_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_daw_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dax_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_ce_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cf_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cf">
+				<rect class="_15_cf_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_ce_Class">
+				<div data-type="Text" data-name="500" class="ID500_ce_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cd" viewBox="0 0 11 10">
+					<path class="_5_cd_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 308" class="_308_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cf_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_day_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_daz_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_da_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_ch_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_ck_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cg">
+				<rect class="_15_cg_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cg_Class">
+				<div data-type="Text" data-name="500" class="ID500_ci_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cj" viewBox="0 0 11 10">
+					<path class="_5_cj_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 309" class="_309_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_ck_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dba_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbc_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cn_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cp_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cq">
+				<rect class="_15_cq_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cr_Class">
+				<div data-type="Text" data-name="500" class="ID500_cs_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_ct" viewBox="0 0 11 10">
+					<path class="_5_ct_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 310" class="_310_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cv_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbd_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbe_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbf_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cy_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cl_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_ci">
+				<rect class="_15_ci_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_ch_Class">
+				<div data-type="Text" data-name="500" class="ID500_cf_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cf" viewBox="0 0 11 10">
+					<path class="_5_cf_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 311" class="_311_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cg_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbg_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbh_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbi_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cm_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_ct_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cj">
+				<rect class="_15_cj_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cj_Class">
+				<div data-type="Text" data-name="500" class="ID500_ck_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cg" viewBox="0 0 11 10">
+					<path class="_5_cg_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 312" class="_312_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_ch_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbj_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbk_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbl_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cu_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cv_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cm">
+				<rect class="_15_cm_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cn_Class">
+				<div data-type="Text" data-name="500" class="ID500_co_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cp" viewBox="0 0 11 10">
+					<path class="_5_cp_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 313" class="_313_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_cr_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbm_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbn_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_dbo_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_cw_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_daa_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_cx">
+				<rect class="_15_cx_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_cy_Class">
+				<div data-type="Text" data-name="500" class="ID500_cz_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_cl" viewBox="0 0 11 10">
+					<path class="_5_cl_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 314" class="_314_Class">
+			<div data-type="Text" data-name="500" class="ID500_cl_Class">
+				<span>500</span>
+			</div>
+			<svg data-type="Polygon" data-name="다각형 5" class="_5_cm" viewBox="0 0 11 10">
+				<path class="_5_cm_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+				</path>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 303" class="_303_Class">
+			<div data-type="Text" data-name="시간별시세" class="_cn_Class">
+				<span>시간별시세</span>
+			</div>
+			<div data-type="Text" data-name="[삼성전자]" class="_co_Class">
+				<span>[삼성전자]</span>
+			</div>
+		</div>
+	</div>
+	<div data-type="Symbol" data-name="게시판_num" class="____num _num_Class">
+		<div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_Class">
+			<div data-type="Group" data-name="" class=" __2_0_Class">
+				<div data-type="Text" data-name="1" class="ID1_Class">
+					<span>1</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_1_Class">
+				<div data-type="Text" data-name="2" class="ID2_Class">
+					<span>2</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_2_Class">
+				<div data-type="Text" data-name="3" class="ID3_Class">
+					<span>3</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_3_Class">
+				<div data-type="Text" data-name="4" class="ID4_Class">
+					<span>4</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_4_Class">
+				<div data-type="Text" data-name="5" class="ID5_Class">
+					<span>5</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_5_Class">
+				<div data-type="Text" data-name="6" class="ID6_Class">
+					<span>6</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_6_Class">
+				<div data-type="Text" data-name="7" class="ID7_Class">
+					<span>7</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_7_Class">
+				<div data-type="Text" data-name="8" class="ID8_Class">
+					<span>8</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_8_Class">
+				<div data-type="Text" data-name="9" class="ID9_Class">
+					<span>9</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_9_Class">
+				<div data-type="Text" data-name="10" class="ID10_Class">
+					<span>10</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_Class">
+			<div data-type="Group" data-name="" class=" __3_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19">
+					<rect class="_19_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<<" class="_cw_Class">
+					<span><<</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __3_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_cy">
+					<rect class="_19_cy_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<" class="_daa_Class">
+					<span><</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_Class">
+			<div data-type="Group" data-name="" class=" __4_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_c">
+					<rect class="_19_c_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">" class="_dab_Class">
+					<span>></span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __4_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_daa">
+					<rect class="_19_daa_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">>" class="_dac_Class">
+					<span>>></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-type="Symbol" data-name="게시판_num" class="____num _num_c_Class">
+		<div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_c_Class">
+			<div data-type="Group" data-name="" class=" __2_c_0_Class">
+				<div data-type="Text" data-name="1" class="ID1_daa_Class">
+					<span>1</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_1_Class">
+				<div data-type="Text" data-name="2" class="ID2_dac_Class">
+					<span>2</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_2_Class">
+				<div data-type="Text" data-name="3" class="ID3_dae_Class">
+					<span>3</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_3_Class">
+				<div data-type="Text" data-name="4" class="ID4_dag_Class">
+					<span>4</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_4_Class">
+				<div data-type="Text" data-name="5" class="ID5_dai_Class">
+					<span>5</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_5_Class">
+				<div data-type="Text" data-name="6" class="ID6_dak_Class">
+					<span>6</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_6_Class">
+				<div data-type="Text" data-name="7" class="ID7_dam_Class">
+					<span>7</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_7_Class">
+				<div data-type="Text" data-name="8" class="ID8_dao_Class">
+					<span>8</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_8_Class">
+				<div data-type="Text" data-name="9" class="ID9_daq_Class">
+					<span>9</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_c_9_Class">
+				<div data-type="Text" data-name="10" class="ID10_das_Class">
+					<span>10</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_dat_Class">
+			<div data-type="Group" data-name="" class=" __3_dat_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_dav">
+					<rect class="_19_dav_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<<" class="_daw_Class">
+					<span><<</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __3_dat_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_day">
+					<rect class="_19_day_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<" class="_daz_Class">
+					<span><</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_da_Class">
+			<div data-type="Group" data-name="" class=" __4_da_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_da">
+					<rect class="_19_da_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">" class="_da_Class">
+					<span>></span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __4_da_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_dba">
+					<rect class="_19_dba_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">>" class="_dba_Class">
+					<span>>></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-type="Group" data-name="그룹 497" class="_497_Class">
+		<svg data-type="Rectangle" data-name="사각형 155" class="_155">
+			<rect class="_155_Class" rx="0" ry="0" x="0" y="0" width="357" height="1190">
+			</rect>
+		</svg>
+		<svg data-type="Path" data-name="패스 382" class="_382" viewBox="0 0 193 115">
+			<path class="_382_Class" d="M 0 0 L 193 0 L 193 115 L 0 115 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 384" class="_384" viewBox="0 0 957 55">
+			<path class="_384_Class" d="M 0 0 L 957 0 L 957 55.00000381469727 L 0 55.00000381469727 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 383" class="_383" viewBox="0 0 1150 3">
+			<path class="_383_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 154" class="_154">
+			<rect class="_154_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 158" class="_158">
+			<rect class="_158_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Path" data-name="패스 385" class="_385" viewBox="144 0 957 1">
+			<path class="_385_Class" d="M 144 0 L 1101 0 L 1101 1 L 144 1 L 144 0 Z">
+			</path>
+		</svg>
+		<div data-type="Text" data-name="주요채무정보" class="_dbf_Class">
+			<span>주요채무정보</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 152" class="_152_dbg">
+			<rect class="_152_dbg_Class" rx="0" ry="0" x="0" y="0" width="1" height="1304">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 153" class="_153">
+			<rect class="_153_Class" rx="0" ry="0" x="0" y="0" width="1" height="1249">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 156" class="_156">
+			<rect class="_156_Class" rx="0" ry="0" x="0" y="0" width="1" height="1249">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 160" class="_160">
+			<rect class="_160_Class" rx="0" ry="0" x="0" y="0" width="1" height="1249">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 162" class="_162">
+			<rect class="_162_Class" rx="0" ry="0" x="0" y="0" width="1" height="1249">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 163" class="_163">
+			<rect class="_163_Class" rx="0" ry="0" x="0" y="0" width="1" height="1249">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 165" class="_165">
+			<rect class="_165_Class" rx="0" ry="0" x="0" y="0" width="1" height="1249">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="최근연간실적" class="_dbn_Class">
+			<span>최근연간실적</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 157" class="_157">
+			<rect class="_157_Class" rx="0" ry="0" x="0" y="0" width="1" height="1248">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="분기실적" class="_dbp_Class">
+			<span>분기실적</span>
+		</div>
+		<div data-type="Text" data-name="분기실적상세" class="_dbq_Class">
+			<span>분기실적상세</span>
+		</div>
+		<div data-type="Text" data-name="2019.03
+(IFRS연결)" class="ID201903_IFRS_Class">
+			<span>2019.03<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03
+(IFRS연결)" class="ID201903_IFRS_dbs_Class">
+			<span>2019.03<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03
+(IFRS연결)" class="ID201903_IFRS_dbt_Class">
+			<span>2019.03<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03
+(IFRS연결)" class="ID201903_IFRS_dbu_Class">
+			<span>2019.03<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03
+(IFRS연결)" class="ID201903_IFRS_dbv_Class">
+			<span>2019.03<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03(E)
+(IFRS연결)" class="ID201903E_IFRS_Class">
+			<span>2019.03(E)<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03(E)
+(IFRS연결)" class="ID201903E_IFRS_dbx_Class">
+			<span>2019.03(E)<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="2019.03(E)
+(IFRS연결)" class="ID201903E_IFRS_dby_Class">
+			<span>2019.03(E)<br/>(IFRS연결)</span>
+		</div>
+		<div data-type="Text" data-name="매출액" class="_dbz_Class">
+			<span>매출액</span>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 11" class="__11_Class">
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_db_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dca_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dce_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcf_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dca_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dcg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dch_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dci_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dck_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcn_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dcj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dco_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcs_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dct_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcv_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dcs_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dcw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcy_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dcz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dda_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddc_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dc_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_ddd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dde_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddf_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddi_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddk_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dda_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_ddl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddn_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddo_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dds_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_ddj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_ddt_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddv_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddy_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ddz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dd_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dds_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dea_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_deb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dec_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_ded_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dee_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_def_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_deg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_deh_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dd_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dei_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dej_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dek_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_del_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dem_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_den_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_deo_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dep_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dea_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_deq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_der_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_des_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_det_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_deu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dev_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dew_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dex_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dej_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dey_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dez_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_de_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfa_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfe_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_des_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dff_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfi_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfk_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfm_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_de_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dfn_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfo_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfs_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dft_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfu_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dfa_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dfv_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfy_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dfz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_df_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dga_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgb_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dfj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dgc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dge_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgf_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgi_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgj_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dfs_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dgk_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgn_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgo_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgr_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_df_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dgs_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgt_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgv_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgy_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dgz_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dga_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dha_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhe_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhf_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhg_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dgj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dhh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhi_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhk_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhn_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dho_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dgs_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dhp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhs_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dht_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhv_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhw_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dg_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dhx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhy_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dhz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dia_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dib_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dic_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_did_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dha_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_die_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dif_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dig_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dih_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dii_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dij_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dik_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dil_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dhj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dim_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_din_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dio_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dip_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_diq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dir_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dis_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dit_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dhs_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_diu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_div_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_diw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dix_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_diy_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_diz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_di_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dja_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dh_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_djb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dje_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djf_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dji_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dia_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_djj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djk_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djn_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djo_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djq_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dij_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_djr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djs_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djt_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dju_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djv_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_djy_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dis_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_djz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dka_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkc_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkd_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dke_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkf_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_di_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dkg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dki_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkk_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkl_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkn_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dja_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dko_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dks_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkt_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dku_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkv_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_djj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dkw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dky_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dkz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dk_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dla_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlb_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlc_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_djs_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dld_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dle_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlf_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlg_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlh_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dli_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlj_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlk_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dj_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dll_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlm_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dln_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlo_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlp_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlq_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlr_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dls_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 496" class="___496 _496_dka_Class">
+				<div data-type="Text" data-name="523,333" class="ID523333_dlt_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlu_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlv_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlw_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlx_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dly_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dlz_Class">
+					<span>523,333</span>
+				</div>
+				<div data-type="Text" data-name="523,333" class="ID523333_dl_Class">
+					<span>523,333</span>
+				</div>
+			</div>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dkj">
+			<rect class="_15_dkj_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="영업이익" class="_dkk_Class">
+			<span>영업이익</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dkl">
+			<rect class="_15_dkl_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="영업이익(발표기준)" class="_dkm_Class">
+			<span>영업이익(발표기준)</span>
+		</div>
+		<div data-type="Text" data-name="세전계속사업이익" class="_dkn_Class">
+			<span>세전계속사업이익</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dko">
+			<rect class="_15_dko_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="당기순이익" class="_dkp_Class">
+			<span>당기순이익</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dkq">
+			<rect class="_15_dkq_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="당기순이익(지배)" class="_dkr_Class">
+			<span>당기순이익(지배)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dks">
+			<rect class="_15_dks_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="당기순이익(비지배)" class="_dkt_Class">
+			<span>당기순이익(비지배)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dku">
+			<rect class="_15_dku_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="자산총계" class="_dkv_Class">
+			<span>자산총계</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dkw">
+			<rect class="_15_dkw_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="부채총계" class="_dkx_Class">
+			<span>부채총계</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dky">
+			<rect class="_15_dky_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="자본총계" class="_dkz_Class">
+			<span>자본총계</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dk">
+			<rect class="_15_dk_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="자본총계(지배)" class="_dk_Class">
+			<span>자본총계(지배)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dla">
+			<rect class="_15_dla_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="자본총계(비지배)" class="_dla_Class">
+			<span>자본총계(비지배)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlb">
+			<rect class="_15_dlb_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="자본금" class="_dlb_Class">
+			<span>자본금</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlc">
+			<rect class="_15_dlc_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="영업활동현금흐름" class="_dlc_Class">
+			<span>영업활동현금흐름</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dld">
+			<rect class="_15_dld_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="투자활동현금흐름" class="_dld_Class">
+			<span>투자활동현금흐름</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dle">
+			<rect class="_15_dle_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="재무활동현금흐름" class="_dle_Class">
+			<span>재무활동현금흐름</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlf">
+			<rect class="_15_dlf_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="CAPEX" class="CAPEX_Class">
+			<span>CAPEX</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlg">
+			<rect class="_15_dlg_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="FCF" class="FCF_Class">
+			<span>FCF</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlh">
+			<rect class="_15_dlh_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="이자발생부채" class="_dlh_Class">
+			<span>이자발생부채</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dli">
+			<rect class="_15_dli_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="영업이익율" class="_dlj_Class">
+			<span>영업이익율</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlk">
+			<rect class="_15_dlk_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="순이익율" class="_dll_Class">
+			<span>순이익율</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlm">
+			<rect class="_15_dlm_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="ROA(%)" class="ROA_Class">
+			<span>ROA(%)</span>
+		</div>
+		<div data-type="Text" data-name="ROE(%)" class="ROE_Class">
+			<span>ROE(%)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlp">
+			<rect class="_15_dlp_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="부채비율" class="_dlq_Class">
+			<span>부채비율</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlr">
+			<rect class="_15_dlr_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="자본유보율" class="_dls_Class">
+			<span>자본유보율</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlt">
+			<rect class="_15_dlt_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="EPS(원)" class="EPS_Class">
+			<span>EPS(원)</span>
+		</div>
+		<div data-type="Text" data-name="PER(배)" class="PER_Class">
+			<span>PER(배)</span>
+		</div>
+		<div data-type="Text" data-name="BPS(원)" class="BPS_Class">
+			<span>BPS(원)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlx">
+			<rect class="_15_dlx_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="PBR(원)" class="PBR_Class">
+			<span>PBR(원)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dlz">
+			<rect class="_15_dlz_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="현금DPS(원)" class="DPS_Class">
+			<span>현금DPS(원)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dl">
+			<rect class="_15_dl_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="현금배당수익율" class="_dl_Class">
+			<span>현금배당수익율</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dma">
+			<rect class="_15_dma_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="현금배당성향(%)" class="_dma_Class">
+			<span>현금배당성향(%)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dmb">
+			<rect class="_15_dmb_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="발행주식수(보통주)" class="_dmb_Class">
+			<span>발행주식수(보통주)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dmc">
+			<rect class="_15_dmc_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="당기순이익(억원)" class="_dmc_Class">
+			<span>당기순이익(억원)</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_dmd">
+			<rect class="_15_dmd_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 168" class="_168">
+			<rect class="_168_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 173" class="_173">
+			<rect class="_173_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 170" class="_170">
+			<rect class="_170_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 172" class="_172">
+			<rect class="_172_Class" rx="1" ry="1" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+	</div>
+	<div data-type="Group" data-name="그룹 498" class="_498_Class">
+		<svg data-type="Rectangle" data-name="사각형 150" class="_150">
+			<rect class="_150_Class" rx="0" ry="0" x="0" y="0" width="97" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 151" class="_151">
+			<rect class="_151_Class" rx="0" ry="0" x="0" y="0" width="104" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Path" data-name="패스 377" class="_377" viewBox="0 0 145 163.333">
+			<path class="_377_Class" d="M 0 0 L 145 0 L 145 163.3333740234375 L 0 163.3333740234375 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 381" class="_381" viewBox="0 0 1005 55">
+			<path class="_381_Class" d="M 0 0 L 1005 0 L 1005 55.00000381469727 L 0 55.00000381469727 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 378" class="_378" viewBox="0 0 1150 3">
+			<path class="_378_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 131" class="_131">
+			<rect class="_131_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 136" class="_136">
+			<rect class="_136_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Path" data-name="패스 379" class="_379" viewBox="144 0 1006 1">
+			<path class="_379_Class" d="M 144 0 L 1150 0 L 1150 1 L 144 1 L 144 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 380" class="_380" viewBox="144 0 1006 1">
+			<path class="_380_Class" d="M 144 0 L 1150 0 L 1150 1 L 144 1 L 144 0 Z">
+			</path>
+		</svg>
+		<div data-type="Text" data-name="주요채무정보" class="_dmo_Class">
+			<span>주요채무정보</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 132" class="_132">
+			<rect class="_132_Class" rx="0" ry="0" x="0" y="0" width="1" height="686">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 141" class="_141">
+			<rect class="_141_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 143" class="_143_dmr">
+			<rect class="_143_dmr_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 144" class="_144_dms">
+			<rect class="_144_dms_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 145" class="_145">
+			<rect class="_145_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 146" class="_146">
+			<rect class="_146_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 147" class="_147">
+			<rect class="_147_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 148" class="_148">
+			<rect class="_148_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 149" class="_149">
+			<rect class="_149_Class" rx="0" ry="0" x="0" y="0" width="1" height="630">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="최근연간실적" class="_dmy_Class">
+			<span>최근연간실적</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 135" class="_135">
+			<rect class="_135_Class" rx="0" ry="0" x="0" y="0" width="1" height="686">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="분기실적" class="_dm_Class">
+			<span>분기실적</span>
+		</div>
+		<div data-type="Text" data-name="기업실적분석" class="_dna_Class">
+			<span>기업실적분석</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dm_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dm_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dna_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dna_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12(E)" class="ID201712E_Class">
+			<span>2017.12(E)</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dnb_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dnb_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dnc_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dnc_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dnd_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dne_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dnf_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dng_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dnh_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Text" data-name="2017.12" class="ID201712_dni_Class">
+			<span>2017.12</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dnj_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 10" class="__10_Class">
+			<div data-type="Group" data-name="" class=" __10_0_Class">
+				<div data-type="Text" data-name="매출액(억원)" class="_dnm_Class">
+					<span>매출액(억원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dnn">
+					<rect class="_15_dnn_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dno_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnp_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnr_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dns_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnt_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnu_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnv_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnw_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dnx_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_1_Class">
+				<div data-type="Text" data-name="영업이익(억원)" class="_dnz_Class">
+					<span>영업이익(억원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dn">
+					<rect class="_15_dn_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dn_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doa_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dob_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doc_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dod_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doe_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dof_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dog_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doh_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doi_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_2_Class">
+				<div data-type="Text" data-name="당기순이익(억원)" class="_doc_Class">
+					<span>당기순이익(억원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dod">
+					<rect class="_15_dod_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_doj_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dok_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dol_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dom_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_don_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doo_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dop_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_doq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dor_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dos_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_3_Class">
+				<div data-type="Text" data-name="영업이익률(%)" class="_dop_Class">
+					<span>영업이익률(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_doq">
+					<rect class="_15_doq_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="22.39" class="ID2239_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dos_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dot_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dou_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dov_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dow_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dox_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_doy_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_doz_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_do_Class">
+					<span>22.39</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_4_Class">
+				<div data-type="Text" data-name="순이익률(%)" class="_do_Class">
+					<span>순이익률(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_do">
+					<rect class="_15_do_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpa_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpb_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpc_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpd_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpe_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpf_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpg_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dph_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpi_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpj_Class">
+					<span>22.39</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_5_Class">
+				<div data-type="Text" data-name="ROE(%)" class="ROE_dpf_Class">
+					<span>ROE(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dpg">
+					<rect class="_15_dpg_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpk_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpl_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpm_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpn_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpo_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpp_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpq_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpr_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dps_Class">
+					<span>22.39</span>
+				</div>
+				<div data-type="Text" data-name="22.39" class="ID2239_dpt_Class">
+					<span>22.39</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_6_Class">
+				<div data-type="Text" data-name="부채비율(%)" class="_dps_Class">
+					<span>부채비율(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dpt">
+					<rect class="_15_dpt_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dpu_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dpv_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dpw_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dpx_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dpy_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dpz_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dp_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqa_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqb_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqc_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_7_Class">
+				<div data-type="Text" data-name="당좌비율(%)" class="_dp_Class">
+					<span>당좌비율(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dp">
+					<rect class="_15_dp_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqd_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqe_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqf_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqg_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqh_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqi_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqj_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqk_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dql_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqm_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_8_Class">
+				<div data-type="Text" data-name="유보율(%)" class="_dqi_Class">
+					<span>유보율(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dqj">
+					<rect class="_15_dqj_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqn_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqo_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqp_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqr_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqs_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqt_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqu_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqv_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqw_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_9_Class">
+				<div data-type="Text" data-name="EPS(원)" class="EPS_dqv_Class">
+					<span>EPS(원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dqw">
+					<rect class="_15_dqw_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqx_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqy_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dqz_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dra_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drb_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drc_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drd_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dre_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drf_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_10_Class">
+				<div data-type="Text" data-name="PER(배)" class="PER_dq_Class">
+					<span>PER(배)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dq">
+					<rect class="_15_dq_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_drg_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drh_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dri_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drj_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drk_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drl_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drm_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drn_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dro_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drp_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_11_Class">
+				<div data-type="Text" data-name="BPS(원)" class="BPS_drl_Class">
+					<span>BPS(원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_drm">
+					<rect class="_15_drm_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_drq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drr_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drs_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drt_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dru_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drv_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drw_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drx_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dry_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_drz_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_12_Class">
+				<div data-type="Text" data-name="PBR(배)" class="PBR_dry_Class">
+					<span>PBR(배)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_drz">
+					<rect class="_15_drz_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dr_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsa_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsb_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsc_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsd_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dse_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsf_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsg_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsh_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsi_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_13_Class">
+				<div data-type="Text" data-name="주당배당금(원)" class="_dsb_Class">
+					<span>주당배당금(원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dsc">
+					<rect class="_15_dsc_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsj_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsk_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsl_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsm_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsn_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dso_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsp_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsr_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dss_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_14_Class">
+				<div data-type="Text" data-name="시기배당률(%)" class="_dso_Class">
+					<span>시기배당률(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dsp">
+					<rect class="_15_dsp_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dst_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsu_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsv_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsw_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsx_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsy_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dsz_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_ds_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dta_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtb_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_15_Class">
+				<div data-type="Text" data-name="배당성향(%)" class="_ds_Class">
+					<span>배당성향(%)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_ds">
+					<rect class="_15_ds_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtc_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtd_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dte_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtf_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtg_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dth_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dti_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtj_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtk_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtl_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __10_16_Class">
+				<div data-type="Text" data-name="당기순이익(억원)" class="_dte_Class">
+					<span>당기순이익(억원)</span>
+				</div>
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_dtf">
+					<rect class="_15_dtf_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtm_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtn_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dto_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtp_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtq_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtr_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dts_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtt_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtu_Class">
+					<span>65,000</span>
+				</div>
+				<div data-type="Text" data-name="65,000" class="ID65000_dtv_Class">
+					<span>65,000</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Text" data-name="2017.12(E)" class="ID201712E_dtq_Class">
+			<span>2017.12(E)</span>
+		</div>
+		<div data-type="Text" data-name="IFRS
+연결" class="IFRS__dtr_Class">
+			<span>IFRS<br/>연결</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 137" class="_137_dts">
+			<rect class="_137_dts_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 138" class="_138">
+			<rect class="_138_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 139" class="_139">
+			<rect class="_139_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 140" class="_140">
+			<rect class="_140_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+	</div>
+	<div data-type="Symbol" data-name="Title" class="Title Title_Class">
+		<div data-type="Text" data-name="AI 주식분석 플랫폼" class="AI___Class">
+			<span>AI 주식분석 플랫폼</span>
+		</div>
+		<div data-type="Text" data-name="로그아웃" onclick="window.location.replace('/logout')" class="_dty_Class">
+			<span>로그아웃</span>
+		</div>
+		<div data-type="Text" data-name="고객센터" class="_dtz_Class">
+			<span>고객센터</span>
+		</div>
+		<img data-type="Rectangle" data-name="logo2" class="logo2_Class" src="logo2.png" srcset="logo2.png 1x, logo2@2x.png 2x">
+		<svg data-type="Rectangle" data-name="사각형 201" class="_201">
+			<rect class="_201_Class" rx="0" ry="0" x="0" y="0" width="1" height="16">
+			</rect>
+		</svg>
+	</div>
+	<div data-type="Symbol" data-name="footer" class="footer footer_Class">
+		<svg data-type="Rectangle" data-name="사각형 197" class="_197">
+			<rect class="_197_Class" rx="0" ry="0" x="0" y="0" width="1920" height="104">
+			</rect>
+		</svg>
+		<img data-type="Rectangle" data-name="logo" class="logo_Class" src="logo.png" srcset="logo.png 1x, logo@2x.png 2x">
+		<div data-type="Group" data-name="그룹 523" class="_523_Class">
+			<div data-type="Text" data-name="등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED" class="___02392____20121218___________Class">
+				<span>등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호<br/>주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED BY </span>
+			</div>
+			<img data-type="Rectangle" data-name="kai" class="kai_Class" src="kai.png" srcset="kai.png 1x, kai@2x.png 2x">
+		</div>
+	</div>
+<img data-type="" data-name="" class="stockdetail02_snapshot_Class" src="stockdetail02_snapshot.png" srcset="stockdetail02_snapshot.png 1x, stockdetail02_snapshot@2x.png 2x">
+</div>
+</body>
+</html>

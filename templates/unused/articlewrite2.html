@@ -1,0 +1,1976 @@
+{% load static %}
+{% load get_lists %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>articlewrite</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'css/articlewrite2.css' %}"/>
+</head>
+<body>
+<div id="articlewrite" class="articlewrite_Class">
+
+    <div style="display: inherit; width: 100%">{% include 'header.html' %}</div>
+
+	<div data-type="Symbol" data-name="Navigation_작성기사" class="Navigation_____ Navigation__Class">
+		<svg data-type="Rectangle" data-name="사각형 24" class="_24">
+			<rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+			</rect>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 23" class="_23">
+			<rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_bds_Class">
+			<span>공시데이터</span>
+		</div>
+		<div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="_bdt_Class">
+			<span>주식데이터</span>
+		</div>
+		<svg data-type="Polygon" data-name="다각형 4" class="_4" viewBox="0 0 22 14">
+			<path class="_4_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+			</path>
+		</svg>
+		<div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+			<div data-type="Text" data-name="HOME" class="HOME_Class">
+				<span>HOME</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 108" class="_108">
+				<rect class="_108_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+			<div data-type="Text" data-name="작성기사" class="_bdz_Class">
+				<span>작성기사</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 109" class="_109">
+				<rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+				</rect>
+			</svg>
+		</div>
+	</div>
+
+    <div data-type="Text" data-name="작성기사" class="_Class">
+		<span>작성기사</span>
+	</div>
+	<div data-type="Text" data-name="기사작성 : 자료검색" class="___bvz_Class">
+		<span>기사작성 : 자료검색</span>
+	</div>
+
+	<div data-type="Group" data-name="그룹 502" class="_502_Class">
+		<div data-type="Group" data-name="기간" class="_bei_Class">
+			<svg data-type="Rectangle" data-name="사각형 6" class="_6">
+				<rect class="_6_Class" rx="0" ry="0" x="0" y="0" width="1152" height="70">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 8" class="_8">
+				<rect class="_8_Class" rx="0" ry="0" x="0" y="0" width="147" height="70">
+				</rect>
+			</svg>
+			<div data-type="Text" data-name="기   간" class="____bel_Class">
+				<span>기   간</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 3" class="_3">
+				<rect class="_3_Class" rx="0" ry="0" x="0" y="0" width="135" height="39">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 4" class="_4_ben">
+				<rect class="_4_ben_Class" rx="0" ry="0" x="0" y="0" width="135" height="39">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="조건" class="_beo_Class">
+			<svg data-type="Rectangle" data-name="사각형 6" class="_6_bep">
+				<rect class="_6_bep_Class" rx="0" ry="0" x="0" y="0" width="1152" height="70">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 8" class="_8_beq">
+				<rect class="_8_beq_Class" rx="0" ry="0" x="0" y="0" width="147" height="70">
+				</rect>
+			</svg>
+			<div data-type="Text" data-name="조   건" class="____ber_Class">
+				<span>조   건</span>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 1" class="__1_Class">
+			<div data-type="Group" data-name="" class=" __1_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5">
+					<rect class="_5_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="1주일" class="ID1_Class">
+					<span>1주일</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __1_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5_bex">
+					<rect class="_5_bex_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="1개월" class="ID1_bey_Class">
+					<span>1개월</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __1_2_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5_be">
+					<rect class="_5_be_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="6개월" class="ID6_Class">
+					<span>6개월</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __1_3_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5_bfa">
+					<rect class="_5_bfa_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="1년" class="ID1_be_Class">
+					<span>1년</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __1_4_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5_bfb">
+					<rect class="_5_bfb_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="2년" class="ID2_Class">
+					<span>2년</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __1_5_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5_bfc">
+					<rect class="_5_bfc_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="3년" class="ID3_Class">
+					<span>3년</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __1_6_Class">
+				<svg data-type="Rectangle" data-name="사각형 5" class="_5_bfd">
+					<rect class="_5_bfd_Class" rx="0" ry="0" x="0" y="0" width="56" height="39">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="전체" class="_bfd_Class">
+					<span>전체</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Group" data-name="회사명" class="_bfe_Class">
+			<div data-type="Group" data-name="회사명" class="_bff_Class">
+				<svg data-type="Rectangle" data-name="사각형 6" class="_6_bfg">
+					<rect class="_6_bfg_Class" rx="0" ry="0" x="0" y="0" width="1006" height="70">
+					</rect>
+				</svg>
+				<svg data-type="Rectangle" data-name="사각형 8" class="_8_bfh">
+					<rect class="_8_bfh_Class" rx="0" ry="0" x="0" y="0" width="147" height="70">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="회사명" class="_bfi_Class">
+					<span>회사명</span>
+				</div>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 2" class="_2">
+				<rect class="_2_Class" rx="0" ry="0" x="0" y="0" width="499" height="41">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 1" onclick="application.showOverlay('companysearch',296,283, event)" class="_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 7" class="_7">
+					<rect class="_7_Class" rx="5" ry="5" x="0" y="0" width="119" height="41">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="회사명찾기" class="_bfm_Class">
+					<span>회사명찾기</span>
+				</div>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 9" class="_9">
+				<rect class="_9_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+				</rect>
+			</svg>
+			<div data-type="Text" data-name="최종보고서" class="_bfo_Class">
+				<span>최종보고서</span>
+			</div>
+		</div>
+		<div data-type="Group" data-name="조건항목" class="_bfp_Class">
+			<div data-type="Group" data-name="그룹 2" class="_2_bfq_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bfr" viewBox="0 0 14 14">
+					<path class="_1_bfr_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="정기공시" class="_bfs_Class">
+					<span>정기공시</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 3" class="_3_bft_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bfu" viewBox="0 0 14 14">
+					<path class="_1_bfu_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="주요사항보고" class="_bfv_Class">
+					<span>주요사항보고</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 4" class="_4_bfw_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bfx" viewBox="0 0 14 14">
+					<path class="_1_bfx_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="발행공시" class="_bfy_Class">
+					<span>발행공시</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 5" class="_5_bfz_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bf" viewBox="0 0 14 14">
+					<path class="_1_bf_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="지분공시" class="_bf_Class">
+					<span>지분공시</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 6" class="_6_bf_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bga" viewBox="0 0 14 14">
+					<path class="_1_bga_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="기타공시" class="_bga_Class">
+					<span>기타공시</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 7" class="_7_bf_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bgb" viewBox="0 0 14 14">
+					<path class="_1_bgb_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="외부감사관련" class="_bgb_Class">
+					<span>외부감사관련</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 8" class="_8_bf_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bgc" viewBox="0 0 14 14">
+					<path class="_1_bgc_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="펀드공시" class="_bgc_Class">
+					<span>펀드공시</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 9" class="_9_bgb_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bgd" viewBox="0 0 14 14">
+					<path class="_1_bgd_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="자산유동화" class="_bgd_Class">
+					<span>자산유동화</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 10" class="_10_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bgf" viewBox="0 0 14 14">
+					<path class="_1_bgf_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="거래소공시" class="_bgg_Class">
+					<span>거래소공시</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 11" class="_11_Class">
+				<svg data-type="Path" data-name="패스 1" class="_1_bgi" viewBox="0 0 14 14">
+					<path class="_1_bgi_Class" d="M 0 0 L 14 0 L 14 14 L 7.000003814697266 14 L 0 14 L 0 0 Z">
+					</path>
+				</svg>
+				<div data-type="Text" data-name="공정위공시" class="_bgj_Class">
+					<span>공정위공시</span>
+				</div>
+			</div>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 10" class="_10_bgl">
+			<linearGradient id="_10_bgl" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+				<stop offset="0" stop-color="#efeeee" stop-opacity="1"></stop>
+				<stop offset="1" stop-color="#d6d3d3" stop-opacity="1"></stop>
+			</linearGradient>
+			<rect class="_10_bgl_Class" rx="10" ry="10" x="0" y="0" width="139" height="70">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="검 색" class="__Class">
+			<span>검 색</span>
+		</div>
+		<div data-type="Text" data-name="~" class="_bgn_Class">
+			<span>~</span>
+		</div>
+		<svg data-type="Path" data-name="ic_date_range_24px" class="ic_date_range_24px" viewBox="3 2 18 20">
+			<path class="ic_date_range_24px_Class" d="M 9 11 L 7 11 L 7 13 L 9 13 L 9 11 Z M 13 11 L 11 11 L 11 13 L 13 13 L 13 11 Z M 17 11 L 15 11 L 15 13 L 17 13 L 17 11 Z M 19 4 L 18 4 L 18 2 L 16 2 L 16 4 L 8 4 L 8 2 L 6 2 L 6 4 L 5 4 C 3.889999866485596 4 3.009999990463257 4.900000095367432 3.009999990463257 6 L 3 20 C 3 21.10000038146973 3.889999866485596 22 5 22 L 19 22 C 20.10000038146973 22 21 21.10000038146973 21 20 L 21 6 C 21 4.900000095367432 20.10000038146973 4 19 4 Z M 19 20 L 5 20 L 5 9 L 19 9 L 19 20 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="ic_date_range_24px" class="ic_date_range_24px_bgp" viewBox="3 2 18 20">
+			<path class="ic_date_range_24px_bgp_Class" d="M 9 11 L 7 11 L 7 13 L 9 13 L 9 11 Z M 13 11 L 11 11 L 11 13 L 13 13 L 13 11 Z M 17 11 L 15 11 L 15 13 L 17 13 L 17 11 Z M 19 4 L 18 4 L 18 2 L 16 2 L 16 4 L 8 4 L 8 2 L 6 2 L 6 4 L 5 4 C 3.889999866485596 4 3.009999990463257 4.900000095367432 3.009999990463257 6 L 3 20 C 3 21.10000038146973 3.889999866485596 22 5 22 L 19 22 C 20.10000038146973 22 21 21.10000038146973 21 20 L 21 6 C 21 4.900000095367432 20.10000038146973 4 19 4 Z M 19 20 L 5 20 L 5 9 L 19 9 L 19 20 Z">
+			</path>
+		</svg>
+	</div>
+
+	<div data-type="Group" data-name="그룹 503" class="_503_Class">
+		<svg data-type="Path" data-name="패스 4" class="_4_bgr" viewBox="0 0 1150 52">
+			<path class="_4_bgr_Class" d="M 0 0 L 1150 0 L 1150 52.00000381469727 L 0 52.00000381469727 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 3" class="_3_bgs" viewBox="0 0 1150 3">
+			<path class="_3_bgs_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<div data-type="Group" data-name="board_sub" class="board_sub_Class">
+			<div data-type="Group" data-name="그룹 20" class="_20_Class">
+				<svg data-type="Rectangle" data-name="사각형 14" class="_14">
+					<rect class="_14_Class" rx="0" ry="0" x="0" y="0" width="75" height="38">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="번호" class="_bgw_Class">
+					<span>번호</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 20" class="_20_bgx_Class">
+				<svg data-type="Rectangle" data-name="사각형 14" class="_14_bgy">
+					<rect class="_14_bgy_Class" rx="0" ry="0" x="0" y="0" width="75" height="38">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="공시대상회사" class="_bgz_Class">
+					<span>공시대상회사</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 20" class="_20_bg_Class">
+				<svg data-type="Rectangle" data-name="사각형 14" class="_14_bg">
+					<rect class="_14_bg_Class" rx="0" ry="0" x="0" y="0" width="75" height="38">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="보고서명" class="_bg_Class">
+					<span>보고서명</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 20" class="_20_bha_Class">
+				<svg data-type="Rectangle" data-name="사각형 14" class="_14_bha">
+					<rect class="_14_bha_Class" rx="0" ry="0" x="0" y="0" width="75" height="38">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="제출인" class="_bha_Class">
+					<span>제출인</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 20" class="_20_bhb_Class">
+				<svg data-type="Rectangle" data-name="사각형 14" class="_14_bhb">
+					<rect class="_14_bhb_Class" rx="0" ry="0" x="0" y="0" width="75" height="38">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="접수일자" class="_bhb_Class">
+					<span>수집일자</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="그룹 20" class="_20_bhc_Class">
+				<svg data-type="Rectangle" data-name="사각형 14" class="_14_bhc">
+					<rect class="_14_bhc_Class" rx="0" ry="0" x="0" y="0" width="75" height="38">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="비고" class="_bhc_Class">
+					<span>비고</span>
+				</div>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 17" class="_17">
+				<rect class="_17_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 17" class="_17_bhd">
+				<rect class="_17_bhd_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 17" class="_17_bhe">
+				<rect class="_17_bhe_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 17" class="_17_bhf">
+				<rect class="_17_bhf_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+				</rect>
+			</svg>
+			<svg data-type="Rectangle" data-name="사각형 17" class="_17_bhg">
+				<rect class="_17_bhg_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Repeat Grid" data-name="board_list" class="board_list_Class">
+			<div data-type="Group" data-name="" class=" board_list_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15">
+					<rect class="_15_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="1" class="ID1_bhk_Class">
+					<span>1</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bhl_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bhm_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="국민연금공단" class="_bhn_Class">
+					<span>국민연금공단</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18">
+						<rect class="_18_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bhr_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bht">
+					<rect class="_15_bht_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="2" class="ID2_bhu_Class">
+					<span>2</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bhv_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bhw_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="금동현" class="_bhx_Class">
+					<span>금동현</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bhy_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bhz_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bh">
+						<rect class="_18_bh_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bh_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_2_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bh">
+					<rect class="_15_bh_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="3" class="ID3_bh_Class">
+					<span>3</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bia_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bib_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bic_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bh_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bh_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bia">
+						<rect class="_18_bia_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bid_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_3_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bid">
+					<rect class="_15_bid_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="4" class="ID4_Class">
+					<span>4</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bif_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_big_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bih_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bii_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bij_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bik">
+						<rect class="_18_bik_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bil_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_4_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bin">
+					<rect class="_15_bin_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="5" class="ID5_Class">
+					<span>5</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bip_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_biq_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bir_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bis_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bit_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_biu">
+						<rect class="_18_biu_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_biv_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_5_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bix">
+					<rect class="_15_bix_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="6" class="ID6_biy_Class">
+					<span>6</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_biz_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bi_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bja_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bi_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bi_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bi">
+						<rect class="_18_bi_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bjb_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_6_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bi">
+					<rect class="_15_bi_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="7" class="ID7_Class">
+					<span>7</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bjc_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bjd_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bje_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bjc_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bjd_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bje">
+						<rect class="_18_bje_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bjf_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_7_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bjh">
+					<rect class="_15_bjh_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="8" class="ID8_Class">
+					<span>8</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bjj_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bjk_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bjl_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bjm_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bjn_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bjo">
+						<rect class="_18_bjo_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bjp_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_8_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bjr">
+					<rect class="_15_bjr_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="9" class="ID9_Class">
+					<span>9</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bjt_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bju_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bjv_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bjw_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bjx_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bjy">
+						<rect class="_18_bjy_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bjz_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_9_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bj">
+					<rect class="_15_bj_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="10" class="ID10_Class">
+					<span>10</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bj_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bka_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bkb_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bj_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bj_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bj">
+						<rect class="_18_bj_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bkc_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" board_list_10_Class">
+				<svg data-type="Rectangle" data-name="사각형 15" class="_15_bkb">
+					<rect class="_15_bkb_Class" rx="0" ry="0" x="0" y="0" width="1150" height="1">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="9" class="ID9_bkc_Class">
+					<span>9</span>
+				</div>
+				<div data-type="Text" data-name="삼성전자" class="_bkd_Class">
+					<span>삼성전자</span>
+				</div>
+				<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bke_Class">
+					<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+				</div>
+				<div data-type="Text" data-name="안규리" class="_bkf_Class">
+					<span>안규리</span>
+				</div>
+				<div data-type="Text" data-name="2020.08.12" class="ID20200812_bkg_Class">
+					<span>2020.08.12</span>
+				</div>
+				<div data-type="Group" data-name="그룹 21" class="_21_bkh_Class">
+					<svg data-type="Rectangle" data-name="사각형 18" class="_18_bki">
+						<rect class="_18_bki_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="유" class="_bkj_Class">
+						<span>유</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-type="Symbol" data-name="게시판_num" class="____num _num_Class">
+			<div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_Class">
+				<div data-type="Group" data-name="" class=" __2_0_Class">
+					<div data-type="Text" data-name="1" class="ID1_bkn_Class">
+						<span>1</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_1_Class">
+					<div data-type="Text" data-name="2" class="ID2_bkp_Class">
+						<span>2</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_2_Class">
+					<div data-type="Text" data-name="3" class="ID3_bkr_Class">
+						<span>3</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_3_Class">
+					<div data-type="Text" data-name="4" class="ID4_bkt_Class">
+						<span>4</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_4_Class">
+					<div data-type="Text" data-name="5" class="ID5_bkv_Class">
+						<span>5</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_5_Class">
+					<div data-type="Text" data-name="6" class="ID6_bkx_Class">
+						<span>6</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_6_Class">
+					<div data-type="Text" data-name="7" class="ID7_bkz_Class">
+						<span>7</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_7_Class">
+					<div data-type="Text" data-name="8" class="ID8_bk_Class">
+						<span>8</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_8_Class">
+					<div data-type="Text" data-name="9" class="ID9_bk_Class">
+						<span>9</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __2_9_Class">
+					<div data-type="Text" data-name="10" class="ID10_bk_Class">
+						<span>10</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_Class">
+				<div data-type="Group" data-name="" class=" __3_0_Class">
+					<svg data-type="Rectangle" data-name="사각형 19" class="_19">
+						<rect class="_19_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="<<" class="_bk_Class">
+						<span><<</span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __3_1_Class">
+					<svg data-type="Rectangle" data-name="사각형 19" class="_19_blb">
+						<rect class="_19_blb_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name="<" class="_blc_Class">
+						<span><</span>
+					</div>
+				</div>
+			</div>
+			<div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_Class">
+				<div data-type="Group" data-name="" class=" __4_0_Class">
+					<svg data-type="Rectangle" data-name="사각형 19" class="_19_blf">
+						<rect class="_19_blf_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name=">" class="_blg_Class">
+						<span>></span>
+					</div>
+				</div>
+				<div data-type="Group" data-name="" class=" __4_1_Class">
+					<svg data-type="Rectangle" data-name="사각형 19" class="_19_bli">
+						<rect class="_19_bli_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+						</rect>
+					</svg>
+					<div data-type="Text" data-name=">>" class="_blj_Class">
+						<span>>></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<svg data-type="Rectangle" data-name="사각형 15" class="_15_blk">
+		<rect class="_15_blk_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+		</rect>
+	</svg>
+	<svg data-type="Rectangle" data-name="사각형 15" class="_15_bll">
+		<rect class="_15_bll_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+		</rect>
+	</svg>
+	<div data-type="Text" data-name="AI분석요약" class="AI_Class">
+		<span>AI분석요약</span>
+	</div>
+	<div data-type="Group" data-name="그룹 539" class="_539_Class">
+		<div data-type="Text" data-name="Fact Summary" class="Fact_Summary_Class">
+			<span>Fact Summary</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 20" class="_20_blp">
+			<rect class="_20_blp_Class" rx="0" ry="0" x="0" y="0" width="12" height="12">
+			</rect>
+		</svg>
+	</div>
+	<div data-type="Repeat Grid" data-name="board_list" class="board_list_blq_Class">
+		<div data-type="Group" data-name="" class=" board_list_blq_0_Class">
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bls">
+				<rect class="_15_bls_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+				</rect>
+			</svg>
+			<div data-type="Text" data-name="1" class="ID1_blt_Class">
+				<span>1</span>
+			</div>
+			<div data-type="Text" data-name="2020. 8. 6" class="ID2020_8_6_Class">
+				<span>2020. 8. 6</span>
+			</div>
+			<div data-type="Text" data-name="삼성전자 종가  58,000 ( +1.93 )" class="___58000__193__Class">
+				<span>삼성전자 종가  58,000 ( +1.93 )</span>
+			</div>
+		</div>
+		<div data-type="Group" data-name="" class=" board_list_blq_1_Class">
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_blx">
+				<rect class="_15_blx_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+				</rect>
+			</svg>
+			<div data-type="Text" data-name="2" class="ID2_bly_Class">
+				<span>2</span>
+			</div>
+			<div data-type="Text" data-name="2020. 8. 6" class="ID2020_8_6_blz_Class">
+				<span>2020. 8. 6</span>
+			</div>
+			<div data-type="Text" data-name="삼성전자  특수인 지분 증가   이재용  1% 증가" class="_________1__Class">
+				<span>삼성전자  특수인 지분 증가   이재용  1% 증가</span>
+			</div>
+		</div>
+		<div data-type="Group" data-name="" class=" board_list_blq_2_Class">
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bl">
+				<rect class="_15_bl_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+				</rect>
+			</svg>
+			<div data-type="Text" data-name="3" class="ID3_bl_Class">
+				<span>3</span>
+			</div>
+			<div data-type="Text" data-name="삼성전자" class="_bl_Class">
+				<span>삼성전자</span>
+			</div>
+			<div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_bma_Class">
+				<span>임원ㆍ주요주주특정증권등소유상황보고서</span>
+			</div>
+		</div>
+	</div>
+	<svg data-type="Rectangle" data-name="사각형 214" class="_214">
+		<rect class="_214_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+		</rect>
+	</svg>
+	<svg data-type="Rectangle" data-name="사각형 215" class="_215">
+		<rect class="_215_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+		</rect>
+	</svg>
+	<div data-type="Text" data-name="2020. 8. 6" class="ID2020_8_6_bl_Class">
+		<span>2020. 8. 6</span>
+	</div>
+	<div data-type="Text" data-name="삼성전자 주가가 1.93% 상승했다.
+이재용 지분 1% 증가했다.
+ LG전자, 삼성전자 등 전기전자 업종에서 최근 소부장 산업의 확장 필요성이 대두되고 있다.
+이재용 부회장은 최근 ARM 주식을 매입했다.
+소프트뱅크는 그룹의 경영난으로 ARM  의 매각을 추진 중인 것으로 알려졌다." class="__193____1____LG_______________Class">
+		<span>삼성전자 주가가 1.93% 상승했다.<br/>이재용 지분 1% 증가했다. <br/> LG전자, 삼성전자 등 전기전자 업종에서 최근 소부장 산업의 확장 필요성이 대두되고 있다. <br/>이재용 부회장은 최근 ARM 주식을 매입했다. <br/>소프트뱅크는 그룹의 경영난으로 ARM  의 매각을 추진 중인 것으로 알려졌다.</span>
+	</div>
+	<div data-type="Group" data-name="그룹 540" class="_540_Class">
+		<svg data-type="Rectangle" data-name="사각형 212" class="_212">
+			<rect class="_212_Class" rx="0" ry="0" x="0" y="0" width="12" height="12">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="Proto Article " class="Proto_Article__Class">
+			<span>Proto Article </span>
+		</div>
+	</div>
+
+	<div data-type="Text" data-name="오늘의 특징주 신호" class="___bmd_Class">
+		<span>오늘의 특징주 신호</span>
+	</div>
+	<div data-type="Text" data-name="[2020-08-17 15: 41]" class="ID2020-08-17_15_41_Class">
+		<span>[2020-08-17 15: 41]</span>
+	</div>
+{#	<img data-type="Rectangle" data-name="이미지 4" class="_4_bmf_Class" src="{% static 'img/_4_bmf.png' %}" srcset="{% static 'img/_4_bmf.png' %} 1x, {% static 'img/_4_bmf.png' %} 2x">#}
+	<div data-type="Group" data-name="그룹 295" class="_295_Class">
+		<div data-type="Text" data-name="일봉차트" class="_bmh_Class">
+			<span>일봉차트</span>
+		</div>
+		<div data-type="Text" data-name="[삼성전자]" class="_bmi_Class">
+			<span>[삼성전자]</span>
+		</div>
+	</div>
+	<div data-type="Group" data-name="그룹 499" class="_499_Class">
+		<svg data-type="Path" data-name="패스 4" class="_4_bmk" viewBox="0 0 1150 51">
+			<path class="_4_bmk_Class" d="M 0 0 L 1150 0 L 1150 51 L 0 51 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 3" class="_3_bml" viewBox="0 0 1150 3">
+			<path class="_3_bml_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 15" class="_15_bmm">
+			<rect class="_15_bmm_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="날짜" class="_bmn_Class">
+			<span>날짜</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_bmo">
+			<rect class="_17_bmo_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="종가" class="_bmp_Class">
+			<span>종가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_bmq">
+			<rect class="_17_bmq_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="전일비" class="_bmr_Class">
+			<span>전일비</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_bms">
+			<rect class="_17_bms_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="시가" class="_bmt_Class">
+			<span>시가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_bmu">
+			<rect class="_17_bmu_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="고가" class="_bmv_Class">
+			<span>고가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_bmw">
+			<rect class="_17_bmw_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="저가" class="_bmx_Class">
+			<span>저가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 17" class="_17_bmy">
+			<rect class="_17_bmy_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="거래량" class="_bmz_Class">
+			<span>거래량</span>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bm_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bm_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bna_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bm">
+				<rect class="_15_bm_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_Class">
+				<div data-type="Text" data-name="500" class="ID500_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bna" viewBox="0 0 11 10">
+					<path class="_5_bna_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 298" class="_298_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bnc_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnd_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bne_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnf_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bng_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bnh_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bni">
+				<rect class="_15_bni_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_bnj_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bnk_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnl_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnm_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnn_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bno_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bnp_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bnq">
+				<rect class="_15_bnq_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bnr_Class">
+				<div data-type="Text" data-name="500" class="ID500_bns_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bnt" viewBox="0 0 11 10">
+					<path class="_5_bnt_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 299" class="_299_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bnv_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnw_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnx_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bny_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bnz_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bn_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bn">
+				<rect class="_15_bn_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bn_Class">
+				<div data-type="Text" data-name="500" class="ID500_bn_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bn" viewBox="0 0 11 10">
+					<path class="_5_bn_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_bn_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bn_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bn_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_boa_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bob_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_boc_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bob_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_boc">
+				<rect class="_15_boc_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bod_Class">
+				<div data-type="Text" data-name="500" class="ID500_boe_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bof" viewBox="0 0 11 10">
+					<path class="_5_bof_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 300" class="_300_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_boh_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_boi_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_boj_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bok_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bol_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bom_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bon">
+				<rect class="_15_bon_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_boo_Class">
+				<div data-type="Text" data-name="500" class="ID500_bop_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_boq" viewBox="0 0 11 10">
+					<path class="_5_boq_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_bor_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bos_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bot_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bou_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bov_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bow_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_box_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_boy">
+				<rect class="_15_boy_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_boz_Class">
+				<div data-type="Text" data-name="500" class="ID500_bo_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bo" viewBox="0 0 11 10">
+					<path class="_5_bo_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 301" class="_301_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bo_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bo_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpa_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpc_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bo_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bo">
+				<rect class="_15_bo_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bpa_Class">
+				<div data-type="Text" data-name="500" class="ID500_bpb_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bpc" viewBox="0 0 11 10">
+					<path class="_5_bpc_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 297" class="_297_bpd_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bpe_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpf_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpg_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bph_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpi_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bpj_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bpk">
+				<rect class="_15_bpk_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bpl_Class">
+				<div data-type="Text" data-name="500" class="ID500_bpm_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bpn" viewBox="0 0 11 10">
+					<path class="_5_bpn_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 302" class="_302_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bpp_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpq_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpr_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bps_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bpt_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bpu_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bpv">
+				<rect class="_15_bpv_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bpw_Class">
+				<div data-type="Text" data-name="500" class="ID500_bpx_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bpy" viewBox="0 0 11 10">
+					<path class="_5_bpy_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 294" class="_294_Class">
+			<div data-type="Text" data-name="500" class="ID500_bp_Class">
+				<span>500</span>
+			</div>
+			<svg data-type="Polygon" data-name="다각형 5" class="_5_bp" viewBox="0 0 11 10">
+				<path class="_5_bp_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+				</path>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 296" class="_296_Class">
+			<div data-type="Text" data-name="일별시세" class="_bp_Class">
+				<span>일별시세</span>
+			</div>
+			<div data-type="Text" data-name="[삼성전자]" class="_bqa_Class">
+				<span>[삼성전자]</span>
+			</div>
+		</div>
+	</div>
+	<div data-type="Group" data-name="그룹 500" class="_500_Class">
+		<svg data-type="Path" data-name="패스 375" class="_375" viewBox="0 0 1150 51">
+			<path class="_375_Class" d="M 0 0 L 1150 0 L 1150 51 L 0 51 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Path" data-name="패스 376" class="_376" viewBox="0 0 1150 3">
+			<path class="_376_Class" d="M 0 0 L 1150 0 L 1150 3 L 0 3 L 0 0 Z">
+			</path>
+		</svg>
+		<svg data-type="Rectangle" data-name="사각형 124" class="_124">
+			<rect class="_124_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="체결시각" class="_bqb_Class">
+			<span>체결시각</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 125" class="_125">
+			<rect class="_125_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="체결가" class="_bqc_Class">
+			<span>체결가</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 126" class="_126">
+			<rect class="_126_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="전일비" class="_bqd_Class">
+			<span>전일비</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 127" class="_127">
+			<rect class="_127_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="매도" class="_bqf_Class">
+			<span>매도</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 128" class="_128">
+			<rect class="_128_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="매수" class="_bqh_Class">
+			<span>매수</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 129" class="_129">
+			<rect class="_129_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="거래량" class="_bqj_Class">
+			<span>거래량</span>
+		</div>
+		<svg data-type="Rectangle" data-name="사각형 130" class="_130">
+			<rect class="_130_Class" rx="0" ry="0" x="0" y="0" width="2" height="25">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="변동량" class="_bql_Class">
+			<span>변동량</span>
+		</div>
+		<div data-type="Group" data-name="그룹 304" class="_304_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bqn_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bqo_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bqp_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bqq_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bqr_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="6,233" class="ID6233_Class">
+				<span>6,233</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bqt">
+				<rect class="_15_bqt_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bqu_Class">
+				<div data-type="Text" data-name="500" class="ID500_bqv_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bqw" viewBox="0 0 11 10">
+					<path class="_5_bqw_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 305" class="_305_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bqy_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bqz_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bq_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bra_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bq_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bra_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bq">
+				<rect class="_15_bq_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 306" class="_306_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bq_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brc_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brd_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_brb_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_brc_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_brc">
+				<rect class="_15_brc_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_brd_Class">
+				<div data-type="Text" data-name="500" class="ID500_bre_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_brf" viewBox="0 0 11 10">
+					<path class="_5_brf_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 307" class="_307_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_brh_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bri_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brj_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brk_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_brl_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_brm_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_brn">
+				<rect class="_15_brn_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bro_Class">
+				<div data-type="Text" data-name="500" class="ID500_brp_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_brq" viewBox="0 0 11 10">
+					<path class="_5_brq_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 308" class="_308_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_brs_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brt_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bru_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_brv_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_brw_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_brx_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bry">
+				<rect class="_15_bry_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_brz_Class">
+				<div data-type="Text" data-name="500" class="ID500_br_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_br" viewBox="0 0 11 10">
+					<path class="_5_br_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 309" class="_309_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_br_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_br_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsa_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_br_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bsa_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_br">
+				<rect class="_15_br_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bsa_Class">
+				<div data-type="Text" data-name="500" class="ID500_bsb_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bsc" viewBox="0 0 11 10">
+					<path class="_5_bsc_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 310" class="_310_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bse_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsf_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsg_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsh_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bsi_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bsj_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bsk">
+				<rect class="_15_bsk_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bsl_Class">
+				<div data-type="Text" data-name="500" class="ID500_bsm_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bsn" viewBox="0 0 11 10">
+					<path class="_5_bsn_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 311" class="_311_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bsp_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsq_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bsr_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bss_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bst_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bsu_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bsv">
+				<rect class="_15_bsv_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bsw_Class">
+				<div data-type="Text" data-name="500" class="ID500_bsx_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bsy" viewBox="0 0 11 10">
+					<path class="_5_bsy_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 312" class="_312_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_bs_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bs_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bta_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_btb_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bs_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_bta_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bs">
+				<rect class="_15_bs_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bs_Class">
+				<div data-type="Text" data-name="500" class="ID500_bs_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_bs" viewBox="0 0 11 10">
+					<path class="_5_bs_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 313" class="_313_Class">
+			<div data-type="Text" data-name="2020.08.12" class="ID20200812_btb_Class">
+				<span>2020.08.12</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_btc_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_btd_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="65,000" class="ID65000_bte_Class">
+				<span>65,000</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_btf_Class">
+				<span>16,949,183</span>
+			</div>
+			<div data-type="Text" data-name="16,949,183" class="ID16949183_btg_Class">
+				<span>16,949,183</span>
+			</div>
+			<svg data-type="Rectangle" data-name="사각형 15" class="_15_bth">
+				<rect class="_15_bth_Class" rx="0.5" ry="0.5" x="0" y="0" width="1150" height="1">
+				</rect>
+			</svg>
+			<div data-type="Group" data-name="그룹 286" class="_286_bti_Class">
+				<div data-type="Text" data-name="500" class="ID500_btj_Class">
+					<span>500</span>
+				</div>
+				<svg data-type="Polygon" data-name="다각형 5" class="_5_btk" viewBox="0 0 11 10">
+					<path class="_5_btk_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div data-type="Group" data-name="그룹 314" class="_314_Class">
+			<div data-type="Text" data-name="500" class="ID500_btm_Class">
+				<span>500</span>
+			</div>
+			<svg data-type="Polygon" data-name="다각형 5" class="_5_btn" viewBox="0 0 11 10">
+				<path class="_5_btn_Class" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+				</path>
+			</svg>
+		</div>
+		<div data-type="Group" data-name="그룹 303" class="_303_Class">
+			<div data-type="Text" data-name="시간별시세" class="_btp_Class">
+				<span>시간별시세</span>
+			</div>
+			<div data-type="Text" data-name="[삼성전자]" class="_btq_Class">
+				<span>[삼성전자]</span>
+			</div>
+		</div>
+	</div>
+	<div data-type="Symbol" data-name="게시판_num" class="____num _num_btr_Class">
+		<div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_bts_Class">
+			<div data-type="Group" data-name="" class=" __2_bts_0_Class">
+				<div data-type="Text" data-name="1" class="ID1_btu_Class">
+					<span>1</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_1_Class">
+				<div data-type="Text" data-name="2" class="ID2_btw_Class">
+					<span>2</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_2_Class">
+				<div data-type="Text" data-name="3" class="ID3_bty_Class">
+					<span>3</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_3_Class">
+				<div data-type="Text" data-name="4" class="ID4_bt_Class">
+					<span>4</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_4_Class">
+				<div data-type="Text" data-name="5" class="ID5_bt_Class">
+					<span>5</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_5_Class">
+				<div data-type="Text" data-name="6" class="ID6_bt_Class">
+					<span>6</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_6_Class">
+				<div data-type="Text" data-name="7" class="ID7_bt_Class">
+					<span>7</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_7_Class">
+				<div data-type="Text" data-name="8" class="ID8_bt_Class">
+					<span>8</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_8_Class">
+				<div data-type="Text" data-name="9" class="ID9_bua_Class">
+					<span>9</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bts_9_Class">
+				<div data-type="Text" data-name="10" class="ID10_buc_Class">
+					<span>10</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_bud_Class">
+			<div data-type="Group" data-name="" class=" __3_bud_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_buf">
+					<rect class="_19_buf_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<<" class="_bug_Class">
+					<span><<</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __3_bud_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bui">
+					<rect class="_19_bui_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<" class="_buj_Class">
+					<span><</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_buk_Class">
+			<div data-type="Group" data-name="" class=" __4_buk_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bum">
+					<rect class="_19_bum_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">" class="_bun_Class">
+					<span>></span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __4_buk_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bup">
+					<rect class="_19_bup_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">>" class="_buq_Class">
+					<span>>></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div data-type="Symbol" data-name="게시판_num" class="____num _num_bur_Class">
+		<div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_bus_Class">
+			<div data-type="Group" data-name="" class=" __2_bus_0_Class">
+				<div data-type="Text" data-name="1" class="ID1_buu_Class">
+					<span>1</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_1_Class">
+				<div data-type="Text" data-name="2" class="ID2_buw_Class">
+					<span>2</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_2_Class">
+				<div data-type="Text" data-name="3" class="ID3_buy_Class">
+					<span>3</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_3_Class">
+				<div data-type="Text" data-name="4" class="ID4_bu_Class">
+					<span>4</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_4_Class">
+				<div data-type="Text" data-name="5" class="ID5_bu_Class">
+					<span>5</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_5_Class">
+				<div data-type="Text" data-name="6" class="ID6_bu_Class">
+					<span>6</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_6_Class">
+				<div data-type="Text" data-name="7" class="ID7_bu_Class">
+					<span>7</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_7_Class">
+				<div data-type="Text" data-name="8" class="ID8_bu_Class">
+					<span>8</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_8_Class">
+				<div data-type="Text" data-name="9" class="ID9_bva_Class">
+					<span>9</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __2_bus_9_Class">
+				<div data-type="Text" data-name="10" class="ID10_bvc_Class">
+					<span>10</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_bvd_Class">
+			<div data-type="Group" data-name="" class=" __3_bvd_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bvf">
+					<rect class="_19_bvf_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<<" class="_bvg_Class">
+					<span><<</span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __3_bvd_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bvi">
+					<rect class="_19_bvi_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name="<" class="_bvj_Class">
+					<span><</span>
+				</div>
+			</div>
+		</div>
+		<div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_bvk_Class">
+			<div data-type="Group" data-name="" class=" __4_bvk_0_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bvm">
+					<rect class="_19_bvm_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">" class="_bvn_Class">
+					<span>></span>
+				</div>
+			</div>
+			<div data-type="Group" data-name="" class=" __4_bvk_1_Class">
+				<svg data-type="Rectangle" data-name="사각형 19" class="_19_bvp">
+					<rect class="_19_bvp_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+					</rect>
+				</svg>
+				<div data-type="Text" data-name=">>" class="_bvq_Class">
+					<span>>></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<svg data-type="Rectangle" data-name="사각형 112" class="_112">
+		<rect class="_112_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+		</rect>
+	</svg>
+
+    <div data-type="Text" data-name="기사쓰기" class="_bdo_Class">
+		<span>기사쓰기</span>
+	</div>
+	<div data-type="Text" data-name="＊별표 항목은 필수 입력입니다." class="____bvy_Class">
+		<span>＊별표 항목은 필수 입력입니다.</span>
+	</div>
+	<div data-type="Text" data-name="제   목" class="____Class">
+		<span>제   목</span>
+	</div>
+	<div data-type="Text" data-name="＊" class="_bv_Class">
+		<span>＊</span>
+	</div>
+    {{ form.title }}
+	<div data-type="Text" data-name="＊" class="_bwa_Class">
+		<span>＊</span>
+	</div>
+	<div data-type="Text" data-name="내  용" class="___Class">
+		<span>내  용</span>
+	</div>
+    <div class="_176">
+        {{ form.content }}
+    </div>
+
+	<div data-type="Group" data-name="그룹 282" onclick="window.location.href='/article'" class="_282_Class">
+		<svg data-type="Rectangle" data-name="사각형 121" class="_121_bd">
+			<rect class="_121_bd_Class" rx="10" ry="10" x="0" y="0" width="184" height="62">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="확   인" class="____bd_Class">
+			<span>확   인</span>
+		</div>
+	</div>
+    <svg data-type="Path" data-name="ic_done_24px" class="ic_done_24px" viewBox="3.4 5.6 28.107 21.4">
+		<path class="ic_done_24px_Class" d="M 12.34324264526367 22.52828216552734 L 5.635810852050781 15.82084846496582 L 3.400000095367432 18.05665969848633 L 12.34324264526367 26.99990272521973 L 31.50733184814453 7.835810661315918 L 29.27152252197266 5.600000381469727 L 12.34324264526367 22.52828216552734 Z">
+		</path>
+	</svg>
+    <div data-type="Group" data-name="그룹 281" onclick="window.location.href='/article'" class="_281_Class">
+		<svg data-type="Rectangle" data-name="사각형 121" class="_121">
+			<rect class="_121_Class" rx="10" ry="10" x="0" y="0" width="184" height="62">
+			</rect>
+		</svg>
+		<div data-type="Text" data-name="목  록" class="___bd_Class">
+			<span>목  록</span>
+		</div>
+	</div>
+	<svg data-type="Path" data-name="ic_list_24px" class="ic_list_24px" viewBox="3 7 24 14.333">
+		<path class="ic_list_24px_Class" d="M 3 15.2603816986084 L 5.666666984558105 15.2603816986084 L 5.666666984558105 13.07295989990234 L 3 13.07295989990234 L 3 15.2603816986084 Z M 3 21.33334350585938 L 5.666666984558105 21.33334350585938 L 5.666666984558105 19.14591979980469 L 3 19.14591979980469 L 3 21.33334350585938 Z M 3 9.187422752380371 L 5.666666984558105 9.187422752380371 L 5.666666984558105 6.999999523162842 L 3 6.999999523162842 L 3 9.187422752380371 Z M 8.333333969116211 15.2603816986084 L 27 15.2603816986084 L 27 13.07295989990234 L 8.333333969116211 13.07295989990234 L 8.333333969116211 15.2603816986084 Z M 8.333333969116211 21.33334350585938 L 27 21.33334350585938 L 27 19.14591979980469 L 8.333333969116211 19.14591979980469 L 8.333333969116211 21.33334350585938 Z M 8.333333969116211 6.999999523162842 L 8.333333969116211 9.187422752380371 L 27 9.187422752380371 L 27 6.999999523162842 L 8.333333969116211 6.999999523162842 Z">
+		</path>
+	</svg>
+
+    <div style="display: inherit;">{% include 'footer.html' %}</div>
+</div>
+</body>
+</html>

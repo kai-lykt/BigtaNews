@@ -1,0 +1,296 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주식데이터</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'css/stocksearch.css' %}"/>
+    <script src="{% static 'js/stocksearch.js' %}"></script>
+</head>
+<body>
+<div id="stock" class="stock_Class">
+
+    <div data-type="Symbol" data-name="Title" class="Title Title_Class">
+        <div data-type="Text" data-name="AI 주식분석 플랫폼" class="AI___Class">
+            <span>AI 주식분석 플랫폼</span>
+        </div>
+        <div data-type="Text" data-name="로그아웃" onclick="window.location.replace('/logout')" class="_sf_Class">
+            <span>로그아웃</span>
+        </div>
+        <div data-type="Text" data-name="고객센터" class="_sg_Class">
+            <span>고객센터</span>
+        </div>
+        <img data-type="Rectangle" data-name="logo2" class="logo2_Class" src="{% static 'img/logo2.png' %}"
+             srcset="{% static 'img/logo2.png' %} 1x, {% static 'img/logo2@2x.png' %} 2x">
+        <svg data-type="Rectangle" data-name="사각형 201" class="_201">
+            <rect class="_201_Class" rx="0" ry="0" x="0" y="0" width="1" height="16">
+            </rect>
+        </svg>
+    </div>
+
+    <div data-type="Symbol" data-name="Navigation_주식" class="Navigation___ Navigation__Class">
+        <svg data-type="Rectangle" data-name="사각형 24" class="_24">
+            <rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+            </rect>
+        </svg>
+        <svg data-type="Rectangle" data-name="사각형 23" class="_23">
+            <rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+            </rect>
+        </svg>
+        <div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_Class">
+            <span>공시데이터</span>
+        </div>
+        <div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="_rv_Class">
+            <span>주식데이터</span>
+        </div>
+        <svg data-type="Polygon" data-name="다각형 4" class="_4" viewBox="0 0 22 14">
+            <path class="_4_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+            </path>
+        </svg>
+        <div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+            <div data-type="Text" data-name="HOME" class="HOME_Class">
+                <span>HOME</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 108" class="_108">
+                <rect class="_108_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+        <div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+            <div data-type="Text" data-name="작성기사" class="_r_Class">
+                <span>작성기사</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 109" class="_109">
+                <rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="주식데이터" class="_sa_Class">
+        <span>주식데이터</span>
+    </div>
+
+    <svg data-type="Rectangle" data-name="사각형 107" class="_107">
+        <rect class="_107_Class" rx="34.5" ry="34.5" x="0" y="0" width="749" height="69">
+        </rect>
+    </svg>
+    <form id="searchName" name="searchName" action="/stock/search/1" method="get">
+        <div data-type="Group" data-name="그룹 137" class="_137_Class">
+            <div data-type="Text" data-name="종 목" class="__Class">
+                <span>종 목</span>
+            </div>
+            <input data-type="Text" data-name="종목명, 지수명, 펀드명 입력" class="____Class"
+                   placeholder="종목명, 지수명, 펀드명 입력" value="{{ request.GET.searchName }}" name="searchName" id="searchName"
+            />
+        </div>
+        <svg data-type="Path" data-name="ic_highlight_off_24px"
+             class="ic_highlight_off_24px" viewBox="2 2 30 30"
+             onclick="document.getElementById('searchName').value = ''"
+        >
+            <path class="ic_highlight_off_24px_Class"
+                  d="M 20.88500022888184 11 L 17 14.88500022888184 L 13.11499977111816 11 L 11 13.11499977111816 L 14.88500022888184 17 L 11 20.88500022888184 L 13.11499977111816 23 L 17 19.11499977111816 L 20.88500022888184 23 L 23 20.88500022888184 L 19.11499977111816 17 L 23 13.11499977111816 L 20.88500022888184 11 Z M 17 2 C 8.704999923706055 2 2 8.704999923706055 2 17 C 2 25.29500198364258 8.704999923706055 32 17 32 C 25.29500198364258 32 32 25.29500198364258 32 17 C 32 8.704998970031738 25.29500198364258 2 17 2 Z M 17 29 C 10.38500022888184 29 5 23.61499977111816 5 17 C 5 10.38500022888184 10.38500022888184 5 17 5 C 23.61499977111816 5 29 10.38500022888184 29 17 C 29 23.61499977111816 23.61499977111816 29 17 29 Z">
+            </path>
+        </svg>
+        <svg data-type="Path" data-name="ic_search_24px"
+             class="ic_search_24px" viewBox="3 3 29 29"
+             onclick="document.getElementById('searchName').submit()"
+        >
+            <path class="ic_search_24px_Class"
+                  d="M 23.72612953186035 21.23899269104004 L 22.41623878479004 21.23899269104004 L 21.95197105407715 20.79130935668945 C 23.57690048217773 18.90108680725098 24.55517387390137 16.44711303710938 24.55517387390137 13.777587890625 C 24.55517387390137 7.825042724609375 19.73013114929199 3 13.777587890625 3 C 7.825042724609375 3 3 7.825042724609375 3 13.777587890625 C 3 19.73013114929199 7.825042724609375 24.55517387390137 13.777587890625 24.55517387390137 C 16.44711303710938 24.55517387390137 18.90108680725098 23.57690048217773 20.79130935668945 21.95197105407715 L 21.23899269104004 22.41623878479004 L 21.23899269104004 23.72612953186035 L 29.52944564819336 31.99999809265137 L 31.99999809265137 29.52944564819336 L 23.72612953186035 21.23899269104004 Z M 13.777587890625 21.23899269104004 C 9.648942947387695 21.23899269104004 6.316181182861328 17.90623092651367 6.316181182861328 13.777587890625 C 6.316181182861328 9.648942947387695 9.648942947387695 6.316181182861328 13.777587890625 6.316181182861328 C 17.90623092651367 6.316181182861328 21.23899269104004 9.648942947387695 21.23899269104004 13.777587890625 C 21.23899269104004 17.90623092651367 17.90623092651367 21.23899269104004 13.777587890625 21.23899269104004 Z">
+            </path>
+        </svg>
+    </form>
+
+    <div class="main_div">
+        <div class="table_title">
+            <div data-type="Text" data-name="오늘의 특징주 신호" class="table_title_string">
+                <span>검색종목</span>
+            </div>
+{#            <div data-type="Text" data-name="[2020-08-17 15: 41]" class="table_title_date">#}
+{#                <span>[2020-08-17 15: 41]</span>#}
+{#            </div>#}
+        </div>
+        <div data-type="Group" class="result_table">
+            <div class="table_header">
+                <div class="header_cell wid50">
+                    <span>종목코드</span>
+                </div>
+                <div class="header_cell wid50 left_border">
+                    <span>종목명</span>
+                </div>
+            </div>
+            <div class="table_contents">
+                {% for stock in data %}
+                    <div class="table_row" onclick="window.location.href='/stock/detail/{{ stock.code|slice:"1:" }}'">
+                        <div class="contents_cell wid50">
+                            <span>{{ stock.code|slice:"1:" }}</span>
+                        </div>
+                        <div class="contents_cell wid50">
+                            <span>{{ stock.name }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div data-type="Symbol" data-name="게시판_num" class="____num _num_Class">
+            <div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_Class">
+                <div data-type="Group" data-name="" class=" __2_0_Class">
+                    <div data-type="Text"
+                         class="ID1_lo_Class pointer_cursor {% if current_page == ten_pages.0 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.0 }})">
+                        <span>{{ ten_pages.0 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_1_Class">
+                    <div data-type="Text"
+                         class="ID2_lq_Class pointer_cursor {% if current_page == ten_pages.1 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.1 }})">
+                        <span>{{ ten_pages.1 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_2_Class">
+                    <div data-type="Text"
+                         class="ID3_ls_Class pointer_cursor {% if current_page == ten_pages.2 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.2 }})">
+                        <span>{{ ten_pages.2 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_3_Class">
+                    <div data-type="Text"
+                         class="ID4_lu_Class pointer_cursor {% if current_page == ten_pages.3 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.3 }})">
+                        <span>{{ ten_pages.3 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_4_Class">
+                    <div data-type="Text"
+                         class="ID5_lw_Class pointer_cursor {% if current_page == ten_pages.4 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.4 }})">
+                        <span>{{ ten_pages.4 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_5_Class">
+                    <div data-type="Text"
+                         class="ID6_ly_Class pointer_cursor {% if current_page == ten_pages.5 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.5 }})">
+                        <span>{{ ten_pages.5 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_6_Class">
+                    <div data-type="Text"
+                         class="ID7_l_Class pointer_cursor {% if current_page == ten_pages.6 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.6 }})">
+                        <span>{{ ten_pages.6 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_7_Class">
+                    <div data-type="Text"
+                         class="ID8_l_Class pointer_cursor {% if current_page == ten_pages.7 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.7 }})">
+                        <span>{{ ten_pages.7 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_8_Class">
+                    <div data-type="Text"
+                         class="ID9_l_Class pointer_cursor {% if current_page == ten_pages.8 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.8 }})">
+                        <span>{{ ten_pages.8 }}</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __2_9_Class">
+                    <div data-type="Text"
+                         class="ID10_l_Class pointer_cursor {% if current_page == ten_pages.9 %} active_page {% endif %}"
+                         onclick="goPage({{ ten_pages.9 }})">
+                        <span>{{ ten_pages.9 }}</span>
+                    </div>
+                </div>
+            </div>
+            <div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_Class">
+                <div data-type="Group" data-name="" class=" __3_0_Class">
+                    <svg data-type="Rectangle" data-name="사각형 19" class="_19">
+                        <rect class="_19_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                        </rect>
+                    </svg>
+                    <div data-type="Text" data-name="<<" class="_ma_Class pointer_cursor"
+                         onclick="goTenPrevious({{ current_page }})">
+                        <span><<</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __3_1_Class">
+                    <svg data-type="Rectangle" data-name="사각형 19" class="_19_mc">
+                        <rect class="_19_mc_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                        </rect>
+                    </svg>
+                    {% if has_previous %}
+                        <div data-type="Text" data-name="<" class="_md_Class pointer_cursor"
+                             onclick="previousPage({{ current_page }})">
+                            <span><</span>
+                        </div>
+                    {% else %}
+                        <div data-type="Text" data-name="<" class="_md_Class pointer_cursor">
+                            <span><</span>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_Class">
+                <div data-type="Group" data-name="" class=" __4_0_Class">
+                    <svg data-type="Rectangle" data-name="사각형 19" class="_19_mg">
+                        <rect class="_19_mg_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                        </rect>
+                    </svg>
+                    {% if has_next %}
+                        <div data-type="Text" data-name=">" class="_mh_Class pointer_cursor"
+                             onclick="nextPage({{ current_page }}, {{ total_page }})">
+                            <span>></span>
+                        </div>
+                    {% else %}
+                        <div data-type="Text" data-name=">" class="_mh_Class pointer_cursor">
+                            <span>></span>
+                        </div>
+                    {% endif %}
+                </div>
+                <div data-type="Group" data-name="" class=" __4_1_Class">
+                    <svg data-type="Rectangle" data-name="사각형 19" class="_19_mj">
+                        <rect class="_19_mj_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                        </rect>
+                    </svg>
+                    <div data-type="Text" data-name=">>" class="_mk_Class pointer_cursor"
+                         onclick="goTenNext({{ current_page }}, {{ total_page }})">
+                        <span>>></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-type="Symbol" data-name="footer" class="footer footer_Class">
+        <svg data-type="Rectangle" data-name="사각형 197" class="_197">
+            <rect class="_197_Class" rx="0" ry="0" x="0" y="0" width="1920" height="104">
+            </rect>
+        </svg>
+        <img data-type="Rectangle" data-name="logo" class="logo_Class" src="{% static 'img/logo.png' %}"
+             srcset="{% static 'img/logo.png' %} 1x, {% static 'img/logo@2x.png' %} 2x">
+        <div data-type="Group" data-name="그룹 523" class="_523_Class">
+            <div data-type="Text" data-name="등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED"
+                 class="___02392____20121218___________Class">
+                <span>
+                    등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+                    <br/>주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228
+                    <br/>Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED BY
+                </span>
+            </div>
+            <img data-type="Rectangle" data-name="kai" class="kai_Class" src="{% static 'img/kai.png' %}"
+                 srcset="{% static 'img/kai.png' %} 1x, {% static 'img/kai@2x.png' %} 2x">
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

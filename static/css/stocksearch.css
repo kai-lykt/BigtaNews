@@ -1,0 +1,1759 @@
+.mediaViewInfo {
+	--web-view-name: stock;
+	--web-view-id: stock;
+	--web-scale-on-resize: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: stock;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+.stock_Class {
+	position: absolute;
+	width: 1920px;
+	height: 1244px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: stock;
+	--web-view-id: stock;
+	--web-scale-on-resize: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+.Navigation__Class {
+	position: absolute;
+	width: 1920px;
+	height: 75px;
+	left: 0px;
+	top: 115px;
+	overflow: visible;
+}
+._24_Class {
+	fill: rgba(98,121,205,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._24 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 73px;
+	left: 0px;
+	top: 0px;
+}
+._23_Class {
+	fill: rgba(232,231,231,1);
+}
+._23 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 2px;
+	left: 0px;
+	top: 73px;
+}
+._Class {
+	left: 622px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 88px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: dart.html;
+	cursor: pointer;
+	line-height: 25px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._rv_Class {
+	left: 812px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 88px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._4_Class {
+	fill: rgba(255,255,255,1);
+}
+._4 {
+	overflow: hidden;
+	position: absolute;
+	width: 22px;
+	height: 14px;
+	left: 851px;
+	top: 61px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._143_Class {
+	position: absolute;
+	width: 100px;
+	height: 27px;
+	left: 432px;
+	top: 23px;
+	overflow: visible;
+}
+.HOME_Class {
+	left: 22px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	line-height: 25px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._108_Class {
+	fill: transparent;
+}
+._108 {
+	position: absolute;
+	overflow: visible;
+	width: 100px;
+	height: 27px;
+	left: 0px;
+	top: 0px;
+}
+._144_Class {
+	position: absolute;
+	width: 100px;
+	height: 28px;
+	left: 1002px;
+	top: 23px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: article.html;
+	cursor: pointer;
+}
+._r_Class {
+	left: 10px;
+	top: 4px;
+	position: absolute;
+	overflow: visible;
+	width: 70px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._109_Class {
+	fill: transparent;
+}
+._109 {
+	position: absolute;
+	overflow: visible;
+	width: 100px;
+	height: 27px;
+	left: 0px;
+	top: 0px;
+}
+._sa_Class {
+	left: 380px;
+	top: 216px;
+	position: absolute;
+	overflow: visible;
+	width: 131px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+}
+._107_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(214,214,214,1);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._107 {
+	position: absolute;
+	overflow: visible;
+	width: 755px;
+	height: 75px;
+	left: 585.5px;
+	top: 272px;
+}
+._137_Class {
+	position: absolute;
+	width: 401px;
+	height: 31px;
+	left: 624.5px;
+	top: 292px;
+	overflow: visible;
+}
+.__Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.5px;
+}
+.____Class {
+	left: 100px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 450px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(0,0,0,1);
+	letter-spacing: -0.4px;
+}
+.ic_highlight_off_24px_Class {
+	fill: rgba(214,214,214,1);
+}
+.ic_highlight_off_24px {
+	overflow: visible;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 1201px;
+	top: 293px;
+	transform: matrix(1,0,0,1,0,0);
+	cursor: pointer;
+}
+.ic_search_24px_Class {
+	fill: rgba(98,121,205,1);
+}
+.ic_search_24px {
+	overflow: visible;
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	left: 1256px;
+	top: 292px;
+	transform: matrix(1,0,0,1,0,0);
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: stocksearch.html;
+	cursor: pointer;
+}
+.___Class {
+	left: 380px;
+	top: 388px;
+	position: absolute;
+	overflow: visible;
+	width: 188px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(42,42,42,1);
+}
+.ID2020-08-17_15_41_Class {
+	left: 628px;
+	top: 392px;
+	position: absolute;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(251,3,3,1);
+}
+._202_Class {
+	opacity: 0.2;
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._202 {
+	position: absolute;
+	overflow: visible;
+	width: 20px;
+	height: 115px;
+	left: 359px;
+	top: 0px;
+}
+.Title_Class {
+	position: absolute;
+	width: 1135px;
+	height: 86px;
+	left: 380px;
+	top: 26px;
+	overflow: visible;
+}
+.AI___Class {
+	left: 0px;
+	top: 28px;
+	position: absolute;
+	overflow: visible;
+	width: 315px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Source Han Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,42,42,1);
+}
+._sf_Class {
+	left: 996px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(173,173,173,1);
+}
+._sg_Class {
+	left: 1079px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(173,173,173,1);
+}
+.logo2_Class {
+	opacity: 0.35;
+	position: absolute;
+	width: 149px;
+	height: 28px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._201_Class {
+	fill: rgba(244,245,247,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._201 {
+	position: absolute;
+	overflow: visible;
+	width: 1px;
+	height: 16px;
+	left: 1065px;
+	top: 1px;
+}
+._536_Class {
+	position: absolute;
+	width: 1150px;
+	height: 416px;
+	left: 385px;
+	top: 451px;
+	overflow: visible;
+}
+._285_Class {
+	position: absolute;
+	width: 1150px;
+	height: 416px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._4_sl_Class {
+	fill: rgba(244,245,247,1);
+}
+._4_sl {
+	overflow: visible;
+	position: absolute;
+	width: 1150px;
+	height: 51px;
+	left: 0px;
+	top: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.board_list_Class {
+	position: absolute;
+	width: 1150px;
+	height: 362px;
+	left: 0px;
+	top: 54px;
+	overflow: hidden;
+}
+.board_list_0_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._15_Class {
+	fill: rgba(233,233,233,1);
+}
+._15 {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._sr_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_1_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 45px;
+	overflow: visible;
+}
+._15_st_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_st {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_su_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_sv_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._sw_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_2_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 90px;
+	overflow: visible;
+}
+._15_sy_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_sy {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_sz_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_s_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._s_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_3_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 135px;
+	overflow: visible;
+}
+._15_s_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_s {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_s_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TIGER__Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 102px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._ta_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_4_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 180px;
+	overflow: visible;
+}
+._15_ta_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_ta {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_ta_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._tb_Class {
+	left: 152px;
+	top: 16px;
+	position: absolute;
+	overflow: visible;
+	width: 62px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._tc_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_5_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 225px;
+	overflow: visible;
+}
+._15_td_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_td {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_te_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_tf_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._tg_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_6_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 270px;
+	overflow: visible;
+}
+._15_ti_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_ti {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_tj_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_tk_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._tl_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_7_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 315px;
+	overflow: visible;
+}
+._15_tn_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_tn {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_to_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_tp_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._tq_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_8_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 360px;
+	overflow: visible;
+}
+._15_ts_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_ts {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_tt_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.____tu_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 213px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.ID20200812__2139_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 108px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+._tw_Class {
+	left: 38px;
+	top: 20px;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._tx_Class {
+	left: 177px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(112,112,112,1);
+}
+._ty_Class {
+	left: 669px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(112,112,112,1);
+}
+._3_Class {
+	fill: rgba(112,112,112,1);
+}
+._3 {
+	overflow: visible;
+	position: absolute;
+	width: 1150px;
+	height: 3px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._196_Class {
+	fill: rgba(214,211,211,1);
+}
+._196 {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 54px;
+}
+._194_Class {
+	fill: rgba(214,211,211,1);
+}
+._194 {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 414px;
+}
+._199_Class {
+	fill: rgba(233,233,233,1);
+}
+._199 {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 25px;
+	left: 104px;
+	top: 18px;
+}
+._200_Class {
+	fill: rgba(233,233,233,1);
+}
+._200 {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 25px;
+	left: 284px;
+	top: 18px;
+}
+.footer_Class {
+	position: absolute;
+	width: 1920px;
+	height: 104px;
+	left: 0px;
+	top: 1141px;
+	overflow: visible;
+}
+._197_Class {
+	fill: rgba(244,245,247,1);
+}
+._197 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 104px;
+	left: 0px;
+	top: 0px;
+}
+.logo_Class {
+	position: absolute;
+	width: 149px;
+	height: 41px;
+	left: 388px;
+	top: 18px;
+	overflow: visible;
+}
+._523_Class {
+	position: absolute;
+	width: 913px;
+	height: 75px;
+	left: 554px;
+	top: 20px;
+	overflow: visible;
+}
+.___02392____20121218___________Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 914px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	color: rgba(112,112,112,1);
+}
+.kai_Class {
+	position: absolute;
+	width: 48px;
+	height: 43px;
+	left: 640px;
+	top: 32px;
+	overflow: visible;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	87.5% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+.stock_snapshot_Class {
+	animation: fadein 5s linear 0s infinite;
+	pointer-events: none;
+	position: absolute;
+	width: 1920px;
+	height: 1244px;
+	left: 0;
+	top: 0;
+}
+
+input:focus {
+	outline: none;
+}
+
+.main_div {
+	position: absolute;
+	top: 388px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.table_title {
+	margin-left: 380px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.table_title_string {
+	width: 188px;
+	line-height: 34px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(42,42,42,1);
+}
+.table_title_date {
+	margin-left: 60px;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(251,3,3,1);
+}
+.result_table {
+	width: 1150px;
+	margin-left: 385px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	border-top-color: rgba(112,112,112,1);
+	border-top-style: solid;
+	border-top-width: 3px;
+}
+.table_header {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	background-color: rgba(245,245,245,1);
+}
+.header_cell {
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 16px;
+	color: rgba(112,112,112,1);
+}
+.table_contents {
+	width: 100%;
+	/*height: 460px;*/
+	/*border-bottom-color: rgba(214,211,211,1);*/
+	/*border-bottom-style: solid;*/
+	/*border-bottom-width: 1px;*/
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.table_row {
+	width: 100%;
+	height: 46px;
+	border-bottom-color: rgba(214,211,211,1);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	cursor: pointer;
+}
+.contents_cell {
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+	/*background-color: #5a7be3;*/
+}
+.pages {
+
+}
+.left_border {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: rgba(214,211,211,1);
+}
+.wid50 {
+	width: 50%;
+}
+
+
+
+
+._num_Class {
+	position: absolute;
+	width: 389px;
+	height: 20px;
+	left: 773px;
+	top: 600px;
+	overflow: visible;
+}
+.__2_Class {
+	position: absolute;
+	width: 273px;
+	height: 19px;
+	left: 58px;
+	top: 0px;
+	overflow: hidden;
+}
+.__2_0_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.ID1_lo_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_1_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 28px;
+	top: 0px;
+	overflow: visible;
+}
+.ID2_lq_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_2_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 56px;
+	top: 0px;
+	overflow: visible;
+}
+.ID3_ls_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_3_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 84px;
+	top: 0px;
+	overflow: visible;
+}
+.ID4_lu_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_4_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 112px;
+	top: 0px;
+	overflow: visible;
+}
+.ID5_lw_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_5_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 140px;
+	top: 0px;
+	overflow: visible;
+}
+.ID6_ly_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_6_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 168px;
+	top: 0px;
+	overflow: visible;
+}
+.ID7_l_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_7_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 196px;
+	top: 0px;
+	overflow: visible;
+}
+.ID8_l_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_8_Class {
+	position: absolute;
+	width: 8px;
+	height: 19px;
+	left: 224px;
+	top: 0px;
+	overflow: visible;
+}
+.ID9_l_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__2_9_Class {
+	position: absolute;
+	width: 15px;
+	height: 19px;
+	left: 252px;
+	top: 0px;
+	overflow: visible;
+}
+.ID10_l_Class {
+	opacity: 0.4;
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 16px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(68,67,67,1);
+}
+.__3_Class {
+	position: absolute;
+	width: 46px;
+	height: 20px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.__3_0_Class {
+	position: absolute;
+	width: 19px;
+	height: 20px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._19_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(180,180,180,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._19 {
+	position: absolute;
+	overflow: visible;
+	width: 19px;
+	height: 19px;
+	left: 0px;
+	top: 1px;
+}
+._ma_Class {
+	left: 2px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 15px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(180,180,180,1);
+	letter-spacing: -2.99px;
+}
+.__3_1_Class {
+	position: absolute;
+	width: 19px;
+	height: 20px;
+	left: 24px;
+	top: 0px;
+	overflow: visible;
+}
+._19_mc_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(180,180,180,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._19_mc {
+	position: absolute;
+	overflow: visible;
+	width: 19px;
+	height: 19px;
+	left: 0px;
+	top: 1px;
+}
+._md_Class {
+	left: 4px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 11px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(180,180,180,1);
+	letter-spacing: -2.99px;
+}
+.__4_Class {
+	position: absolute;
+	width: 46px;
+	height: 20px;
+	left: 343px;
+	top: 0px;
+	overflow: hidden;
+}
+.__4_0_Class {
+	position: absolute;
+	width: 19px;
+	height: 20px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._19_mg_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(180,180,180,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._19_mg {
+	position: absolute;
+	overflow: visible;
+	width: 19px;
+	height: 19px;
+	left: 0px;
+	top: 1px;
+}
+._mh_Class {
+	left: 4px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 11px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(180,180,180,1);
+	letter-spacing: -2.99px;
+}
+.__4_1_Class {
+	position: absolute;
+	width: 19px;
+	height: 20px;
+	left: 24px;
+	top: 0px;
+	overflow: visible;
+}
+._19_mj_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(180,180,180,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._19_mj {
+	position: absolute;
+	overflow: visible;
+	width: 19px;
+	height: 19px;
+	left: 0px;
+	top: 1px;
+}
+._mk_Class {
+	left: 2px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 15px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(180,180,180,1);
+	letter-spacing: -2.99px;
+}
+._ml_Class {
+	left: 380px;
+	top: 216px;
+	position: absolute;
+	overflow: visible;
+	width: 131px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+}
+.pointer_cursor {
+	cursor: pointer;
+}

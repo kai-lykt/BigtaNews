@@ -1,0 +1,591 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공시데이터</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" /*href="{% static 'css/dart.css' %}"*/ href="../static/css/dart.css" />
+    <script src="{% static 'js/dart_search.js' %}"></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/c21b1db13f.js"></script>
+</head>
+<body>
+<div id="dart" class="dart_Class">
+
+    <div data-type="Symbol" data-name="Title" class="Title Title_Class">
+        <div data-type="Text" data-name="AI 주식분석 플랫폼" class="AI___Class">
+            <span>AI 주식분석 플랫폼</span>
+        </div>
+        <div data-type="Text" data-name="로그아웃" onclick="window.location.replace('/logout')" class="_m_Class">
+            <span>로그아웃</span>
+        </div>
+        <div data-type="Text" data-name="고객센터" class="_na_Class">
+            <span>고객센터</span>
+        </div>
+        <img data-type="Rectangle" data-name="logo2" class="logo2_Class" src="{% static 'img/logo2.png' %}"
+             srcset="{% static 'img/logo2.png' %} 1x, {% static 'img/logo2@2x.png' %} 2x">
+        <svg data-type="Rectangle" data-name="사각형 201" class="_201">
+            <rect class="_201_Class" rx="0" ry="0" x="0" y="0" width="1" height="16">
+            </rect>
+        </svg>
+    </div>
+
+    <div data-type="Symbol" data-name="Navigation_공시" class="Navigation___ Navigation__Class">
+        <svg data-type="Rectangle" data-name="사각형 24" class="_24">
+            <rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+            </rect>
+        </svg>
+        <svg data-type="Rectangle" data-name="사각형 23" class="_23">
+            <rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+            </rect>
+        </svg>
+        <div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_mp_Class">
+            <span>공시데이터</span>
+        </div>
+        <div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="_mq_Class">
+            <span>주식데이터</span>
+        </div>
+        <div data-type="Text" data-name="증권사리포트" onclick="window.location.href='/report'" class="_____Class">
+            <span>증권사리포트</span>
+        </div>
+        <svg data-type="Polygon" data-name="다각형 4" class="_4_mr" viewBox="0 0 22 14">
+            <path class="_4_mr_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+            </path>
+        </svg>
+        <div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+            <div data-type="Text" data-name="HOME" class="HOME_Class">
+                <span>HOME</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 108" class="_108">
+                <rect class="_108_Class" rx="0" ry="0" x="0" y="0"
+                      width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+        <div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+            <div data-type="Text" data-name="작성기사" class="_mw_Class">
+                <span>작성기사</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 109" class="_109">
+                <rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+    </div>
+    <svg data-type="Rectangle" data-name="사각형 15" class="_15_my">
+        <rect class="_15_my_Class" rx="0" ry="0" x="0" y="0" width="1150" height="2">
+        </rect>
+    </svg>
+
+    <div data-type="Text" data-name="공시데이터" class="_ml_Class">
+        <span>공시데이터</span>
+        {% load get_lists %}
+    </div>
+
+    <div data-type="Group" data-name="검색" class="_502_Class">
+        <form id="search_form" method="get" action="/dart/1">
+            <div data-type="Group" data-name="회사명" class="_gf_Class">
+                <input id="stockCode" name="stockCode" value="{{ request.GET.stockCode }}" style="display: none;" />
+                <div data-type="Group" data-name="회사명" class="_gg_Class">
+                    <div data-type="Text" data-name="회사명" class="_gj_Class">
+                        <span>회사명</span>
+                    </div>
+                </div>
+                <input id="corp" name="corp_name" value="{{ request.GET.corp_name }}" readonly class="_2"
+                     onclick="$('#companysearch').show();"/>
+                <div data-type="Group" data-name="그룹 1"
+                     onclick="$('#companysearch').show();"
+                     class="_1_Class">
+                    <span>회사명찾기</span>
+                </div>
+                <div data-type="Group" class="_gp_Class">
+                    <input id="final" type="checkbox" value=""/>
+                    <label for="final">최종보고서</label>
+                </div>
+            </div>
+            <div class="pointer_cursor">
+                <svg data-type="Rectangle" data-name="사각형 10" class="_10_hm">
+                    <linearGradient id="_10_hm" spreadMethod="pad" x1="0.5" x2="0.5" y1="0" y2="1">
+                        <stop offset="0" stop-color="#efeeee" stop-opacity="1"></stop>
+                        <stop offset="1" stop-color="#d6d3d3" stop-opacity="1"></stop>
+                    </linearGradient>
+                    <rect class="_10_hm_Class" rx="0" ry="0" x="0" y="0" width="139" height="70">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name="검 색" class="__Class" onclick="search()">
+                    <span>검 색</span>
+                </div>
+            </div>
+
+            <div data-type="Group" data-name="기간" class="_Class">
+                <div data-type="Text" data-name="기   간" class="____Class">
+                    <span>기   간</span>
+                </div>
+                <input id="fromDate" name="fromDate" readonly class="_3"/>
+                <input id="toDate" name="toDate" value="" readonly class="_4"/>
+            </div>
+            <div data-type="Text" data-name="~" class="_ho_Class">
+                <span>~</span>
+            </div>
+            <svg data-type="Path" id="fromDateImg" class="ic_date_range_24px" viewBox="3 2 18 20" onclick="$('#fromDate').datepicker('show')">
+                <path class="ic_date_range_24px_Class"
+                      d="M 9 11 L 7 11 L 7 13 L 9 13 L 9 11 Z M 13 11 L 11 11 L 11 13 L 13 13 L 13 11 Z M 17 11 L 15 11 L 15 13 L 17 13 L 17 11 Z M 19 4 L 18 4 L 18 2 L 16 2 L 16 4 L 8 4 L 8 2 L 6 2 L 6 4 L 5 4 C 3.889999866485596 4 3.009999990463257 4.900000095367432 3.009999990463257 6 L 3 20 C 3 21.10000038146973 3.889999866485596 22 5 22 L 19 22 C 20.10000038146973 22 21 21.10000038146973 21 20 L 21 6 C 21 4.900000095367432 20.10000038146973 4 19 4 Z M 19 20 L 5 20 L 5 9 L 19 9 L 19 20 Z">
+                </path>
+            </svg>
+            <svg data-type="Path" id="toDateImg" class="ic_date_range_24px_hq" viewBox="3 2 18 20" onclick="$('#toDate').datepicker('show')">
+                <path class="ic_date_range_24px_hq_Class"
+                      d="M 9 11 L 7 11 L 7 13 L 9 13 L 9 11 Z M 13 11 L 11 11 L 11 13 L 13 13 L 13 11 Z M 17 11 L 15 11 L 15 13 L 17 13 L 17 11 Z M 19 4 L 18 4 L 18 2 L 16 2 L 16 4 L 8 4 L 8 2 L 6 2 L 6 4 L 5 4 C 3.889999866485596 4 3.009999990463257 4.900000095367432 3.009999990463257 6 L 3 20 C 3 21.10000038146973 3.889999866485596 22 5 22 L 19 22 C 20.10000038146973 22 21 21.10000038146973 21 20 L 21 6 C 21 4.900000095367432 20.10000038146973 4 19 4 Z M 19 20 L 5 20 L 5 9 L 19 9 L 19 20 Z">
+                </path>
+            </svg>
+            <div data-type="Repeat Grid" data-name="반복 그리드 1" class="__1_Class">
+                <div data-type="Group" data-name="" class=" __1_0_Class" onclick="changeDates('1w')">
+                    <div data-type="Text" data-name="1주일" class="select_month">
+                        <span>1주일</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __1_1_Class" onclick="changeDates('1m')">
+                    <div data-type="Text" data-name="1개월" class="select_month">
+                        <span>1개월</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __1_2_Class" onclick="changeDates('6m')">
+                    <div data-type="Text" data-name="6개월" class="select_month">
+                        <span>6개월</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __1_3_Class" onclick="changeDates('1y')">
+                    <div data-type="Text" data-name="1년" class="select_month">
+                        <span>1년</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __1_4_Class" onclick="changeDates('2y')">
+                    <div data-type="Text" data-name="2년" class="select_month">
+                        <span>2년</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __1_5_Class" onclick="changeDates('3y')">
+                    <div data-type="Text" data-name="3년" class="select_month">
+                        <span>3년</span>
+                    </div>
+                </div>
+                <div data-type="Group" data-name="" class=" __1_6_Class" onclick="changeDates('all')">
+                    <div data-type="Text" data-name="전체" class="select_month">
+                        <span>전체</span>
+                    </div>
+                </div>
+            </div>
+
+            <div data-type="Group" data-name="조건" class="_fp_Class">
+                <div data-type="Text" data-name="조   건" class="____Class">
+                    <span>조   건</span>
+                </div>
+                <div data-type="Group" data-name="조건항목" class="_gq_Class">
+                    <div>
+                        <input id="search_A" name="data_type" value="A" type="checkbox"
+                                {% if 'A' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_A" class="_gt_Class">정기공시</label>
+                    </div>
+                    <div>
+                        <input id="search_B" name="data_type" value="B" type="checkbox"
+                                {% if 'B' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_B" class="_gt_Class">주요사항보고</label>
+                    </div>
+                    <div>
+                        <input id="search_C" name="data_type" value="C" type="checkbox"
+                                {% if 'C' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_C" class="_gt_Class">발행공시</label>
+                    </div>
+                    <div>
+                        <input id="search_D" name="data_type" value="D" type="checkbox"
+                                {% if 'D' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_D" class="_gt_Class">지분공시</label>
+                    </div>
+                    <div>
+                        <input id="search_E" name="data_type" value="E" type="checkbox"
+                                {% if 'E' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_E" class="_gt_Class">기타공시</label>
+                    </div>
+                    <div>
+                        <input id="search_F" name="data_type" value="F" type="checkbox"
+                                {% if 'F' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_F" class="_gt_Class">외부감사관련</label>
+                    </div>
+                    <div>
+                        <input id="search_G" name="data_type" value="G" type="checkbox"
+                                {% if 'G' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_G" class="_gt_Class">펀드공시</label>
+                    </div>
+                    <div>
+                        <input id="search_H" name="data_type" value="H" type="checkbox"
+                                {% if 'H' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_H" class="_gt_Class">자산유동화</label>
+                    </div>
+                    <div>
+                        <input id="search_I" name="data_type" value="I" type="checkbox"
+                                {% if 'I' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_I" class="_gt_Class">거래소공시</label>
+                    </div>
+                    <div>
+                        <input id="search_J" name="data_type" value="J" type="checkbox"
+                                {% if 'J' in request.GET|get_list:'data_type' %}
+                               checked
+                                {% endif %}/>
+                        <label for="search_J" class="_gt_Class">공정위공시</label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div data-type="Group" data-name="그룹 503" class="_503_Class">
+        <div data-type="Group" data-name="board_sub" class="board_sub_Class">
+            <div data-type="Text" data-name="번호" class="ID1_il_Class table_title">
+                <span>번호</span>
+            </div>
+            <div data-type="Text" data-name="공시대상회사" class="_im_Class table_title left_border">
+                <span>공시대상회사</span>
+            </div>
+            <div data-type="Text" data-name="보고서명" class="_in_Class table_title left_border">
+                <span>보고서명</span>
+            </div>
+            <div data-type="Text" data-name="제출인" class="_io_Class table_title left_border">
+                <span>제출인</span>
+            </div>
+            <div data-type="Text" data-name="수집일자" class="ID20200812_Class table_title left_border">
+                <span>수집일자</span>
+            </div>
+            <div data-type="Text" data-name="비고" class="etc_Class table_title left_border">
+                <span>비고</span>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="board_list" class="board_list_Class">
+            {% for dart in data %}
+                <div data-type="Group" data-name="" class=" board_list_0_Class">
+                    <div data-type="Text" data-name="1" class="ID1_il_Class">
+                        <span>{{ dart.id }}</span>
+                    </div>
+                    <div data-type="Text" data-name="삼성전자" class="_im_Class pl25">
+                        <div data-type="Group" data-name="그룹 21" class="_21_Class">
+                            <svg data-type="Rectangle" data-name="사각형 18" class="_18">
+                                <rect class="_18_Class" rx="8" ry="8" x="0" y="0" width="24" height="24">
+                                </rect>
+                            </svg>
+                            <div data-type="Text" data-name="유" class="_is_Class">
+                                {% if dart.corp_type == 'Y' %}
+                                    <span>유</span>
+                                {% elif dart.corp_type == 'K' %}
+                                    <span>코</span>
+                                {% elif dart.corp_type == 'N' %}
+                                    <span>넥</span>
+                                {% else %}
+                                    <span>기</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <span>{{ dart.corp_name }}</span>
+                    </div>
+                    <div data-type="Text" data-name="임원ㆍ주요주주특정증권등소유상황보고서" class="_in_Class pl25"
+                         onclick="openDartDetail({{ dart.receipt_no }})">
+                        <span>{{ dart.title }}</span>
+                    </div>
+                    <div data-type="Text" data-name="국민연금공단" class="_io_Class">
+                        <span>{{ dart.upload_name }}</span>
+                    </div>
+                    <div data-type="Text" data-name="2020.08.12" class="ID20200812_Class">
+                        <span>{{ dart.created_at|date:"Y-m-d" }} {{ dart.created_at|time:"H:i" }}</span>
+                    </div>
+                    <div data-type="Text" class="etc_Class">
+                        <span>{{ dart.rm }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="main_number0">
+        <div class="arrow_left">
+            <ul>
+                <li><a onclick="goTenPrevious({{ current_page }})"><i class="fas fa-angle-double-left"></i></a></li>
+                <li><a onclick="previousPage({{ current_page }})"><i class="fas fa-angle-left"></i></a></li>
+            </ul>
+        </div>
+
+        <ul class="center_number">
+            <li class="first"><a onclick="goPage({{ ten_pages.0 }})">{{ ten_pages.0 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.1 }})">{{ ten_pages.1 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.2 }})">{{ ten_pages.2 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.3 }})">{{ ten_pages.3 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.4 }})">{{ ten_pages.4 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.5 }})">{{ ten_pages.5 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.6 }})">{{ ten_pages.6 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.7 }})">{{ ten_pages.7 }}</a></li>
+            <li><a onclick="goPage({{ ten_pages.8 }})">{{ ten_pages.8 }}</a></li>
+            <li class="last"><a onclick="goPage({{ ten_pages.9 }})">{{ ten_pages.9 }}</a></li>
+        </ul>
+
+        <div class="arrow_right">
+            <ul>
+                <li><a onclick="nextPage({{ current_page }}, {{ total_page }})"><i class="fas fa-angle-right"></i></a></li>
+                <li><a onclick="goTenNext({{ current_page }}, {{ total_page }})"><i class="fas fa-angle-double-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-type="Symbol" data-name="footer" class="footer footer_Class">
+        <svg data-type="Rectangle" data-name="사각형 197" class="_197">
+            <rect class="_197_Class" rx="0" ry="0" x="0" y="0" width="1920" height="104">
+            </rect>
+        </svg>
+        <img data-type="Rectangle" data-name="logo" class="logo_Class" src="{% static 'img/logo.png' %}"
+             srcset="{% static 'img/logo.png' %} 1x, {% static 'img/logo@2x.png' %} 2x">
+        <div data-type="Group" data-name="그룹 523" class="_523_Class">
+            <div data-type="Text" data-name="등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED"
+                 class="___02392____20121218___________Class">
+                <span>
+                    등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+                    <br/>주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228
+                    <br/>Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED BY
+                </span>
+            </div>
+            <img data-type="Rectangle" data-name="kai" class="kai_Class" src="{% static 'img/kai.png' %}"
+                 srcset="{% static 'img/kai.png' %} 1x, {% static 'img/kai@2x.png' %} 2x">
+        </div>
+    </div>
+</div>
+
+
+
+<div id="companysearch" class="companysearch_Class">
+
+    <div data-type="Text" data-name="회사명찾기" class="pop_title">
+        <span>회사명찾기</span>
+    </div>
+
+    <div class="search_inputs">
+        <div class="comp_name">
+            <svg data-type="Path" data-name="ic_apps_24px" class="ic_apps_24px" viewBox="10 4 10 10">
+                <path class="ic_apps_24px_Class"
+                      d="M 16 4 L 16 8 L 20 8 L 20 4 L 16 4 Z M 10 8 L 14 8 L 14 4 L 10 4 L 10 8 Z M 16 14 L 20 14 L 20 10 L 16 10 L 16 14 Z">
+                </path>
+            </svg>
+            <div data-type="Text" data-name="회사이름" class="pop_corp_name">
+                <span>회사이름</span>
+            </div>
+            <div data-type="Text" data-name="회사명을 입력하세요." class="__ot_Class">
+                <input id="pop_corp_name_input" name="pop_corp_name_input" placeholder="회사명을 입력하세요." class="pop_corp_name_input" />
+            </div>
+        </div>
+        <div class="comp_type">
+            <svg data-type="Path" data-name="ic_apps_24px" class="ic_apps_24px" viewBox="10 4 10 10">
+                <path class="ic_apps_24px_Class"
+                      d="M 16 4 L 16 8 L 20 8 L 20 4 L 16 4 Z M 10 8 L 14 8 L 14 4 L 10 4 L 10 8 Z M 16 14 L 20 14 L 20 10 L 16 10 L 16 14 Z">
+                </path>
+            </svg>
+            <div data-type="Text" data-name="법인구분" class="pop_corp_name">
+                <span>법인구분</span>
+            </div>
+            <select id="pop_corp_type" name="corp_type" class="corp_type_sel">
+                <option value="Z">전체</option>
+                <option value="Y">유가증권시장</option>
+                <option value="K">코스닥시장</option>
+                <option value="N">코넥스시장</option>
+                <option value="E">기타법인</option>
+            </select>
+        </div>
+        <div data-type="Group" data-name="그룹 1" class="search_btn_container" onclick="searchCorps()">
+            <div data-type="Text" data-name="검 색" class="search_btn">
+                <span>검 색</span>
+            </div>
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="◎  회사명 위에 마우스를 위치시키면 기업정보 도움말이 나타납니다." class="desc">
+        <span>◎  회사명 위에 마우스를 위치시키면 기업정보 도움말이 나타납니다.</span>
+    </div>
+
+    <div class="result_table">
+        <div class="table_header">
+            <div data-type="Text" data-name="회사명" class="header_cell wid30">
+                <span>회사명</span>
+            </div>
+            <div data-type="Text" data-name="대표자명" class="header_cell wid20 left_border">
+                <span>대표자명</span>
+            </div>
+            <div data-type="Text" data-name="종목코드" class="header_cell wid20 left_border">
+                <span>종목코드</span>
+            </div>
+            <div data-type="Text" data-name="업종명" class="header_cell wid30 left_border">
+                <span>업종명</span>
+            </div>
+        </div>
+        <div class="table_contents">
+        </div>
+    </div>
+
+    <!--
+    <div data-type="Symbol" data-name="게시판_num" class="pop_num_Class">
+        <div data-type="Repeat Grid" data-name="반복 그리드 2" class="pop__2_Class">
+            <div data-type="Group" data-name="" class=" __2_0_Class" id="searchPage1">
+                <div data-type="Text" data-name="1" class="pop_ID1_Class">
+                    <span id="searchPage1Num">1</span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __2_1_Class" id="searchPage2">
+                <div data-type="Text" data-name="2" class="pop_ID2_Class">
+                    <span id="searchPage2Num">2</span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __2_2_Class" id="searchPage3">
+                <div data-type="Text" data-name="3" class="pop_ID3_Class">
+                    <span id="searchPage3Num">3</span>
+                </div>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_Class">
+            <div data-type="Group" data-name="" class=" __3_0_Class" id="threePrevious">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19">
+                    <rect class="_19_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name="<<" class="_oc_Class">
+                    <span><<</span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __3_1_Class" id="searchPrevious">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19_oe">
+                    <rect class="_19_oe_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name="<" class="pop_prev_page">
+                    <span><</span>
+                </div>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="반복 그리드 4" class="pop__4_Class">
+            <div data-type="Group" data-name="" class=" __4_0_Class" id="searchNext">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19_oi">
+                    <rect class="_19_oi_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name=">" class="pop_next_page">
+                    <span>></span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __4_1_Class" id="threeNext">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19_ol">
+                    <rect class="_19_ol_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name=">>" class="_om_Class">
+                    <span>>></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="main_number">
+        <div class="arrow_left">
+            <ul>
+                <li><a href="#"><i class="fas fa-angle-double-left"></i></a></li>
+                <li><a href="#"><i class="fas fa-angle-left"></i></a></li>
+            </ul>
+        </div>
+
+        <ul class="center_number">
+            <li class="first"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="last"><a href="#">3</a></li>
+        </ul>
+
+         <div class="arrow_right">
+            <ul>
+                <li><a href="#"><i class="fas fa-angle-right"></i></a></li>
+                <li><a href="#"><i class="fas fa-angle-double-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="[1/1] [총 234건]" class="num_container">
+        <span>[
+            <span id="cur_comp_page">1</span>/
+            <span id="total_comp_page">1</span>] [총
+            <span id="total_comp">234</span>건]
+        </span>
+    </div>
+    <div data-type="Group" data-name="그룹 519" class="btn_container">
+        <div data-type="Group" data-name="그룹 155" class="btn_confirm" onclick="searchCorpConfirm()">
+            <span>확 인</span>
+        </div>
+        <div data-type="Group" data-name="그룹 154" class="btn_cancel" onclick="$('#companysearch').hide();">
+            <span>취 소</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(function () {
+        //모든 datepicker에 대한 공통 옵션 설정
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd' //Input Display Format 변경
+            , showOtherMonths: true //빈 공간에 현재월의 앞뒤월의 날짜를 표시
+            , showMonthAfterYear: true //년도 먼저 나오고, 뒤에 월 표시
+            , changeYear: true //콤보박스에서 년 선택 가능
+            , changeMonth: true //콤보박스에서 월 선택 가능
+            , showOn: "both" //button:버튼을 표시하고,버튼을 눌러야만 달력 표시 ^ both:버튼을 표시하고,버튼을 누르거나 input을 클릭하면 달력 표시
+            , buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif" //버튼 이미지 경로
+            , buttonImageOnly: true //기본 버튼의 회색 부분을 없애고, 이미지만 보이게 함
+            , buttonText: "선택" //버튼에 마우스 갖다 댔을 때 표시되는 텍스트
+            , yearSuffix: "년" //달력의 년도 부분 뒤에 붙는 텍스트
+            , monthNamesShort: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'] //달력의 월 부분 텍스트
+            , monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'] //달력의 월 부분 Tooltip 텍스트
+            , dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'] //달력의 요일 부분 텍스트
+            , dayNames: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'] //달력의 요일 부분 Tooltip 텍스트
+            , minDate: new Date('1999-01-01') //최소 선택일자(-1D:하루전, -1M:한달전, -1Y:일년전)
+            , maxDate: "+0D" //최대 선택일자(+1D:하루후, -1M:한달후, -1Y:일년후)
+        });
+
+        //input을 datepicker로 선언
+        $("#fromDate").datepicker();
+        $("#toDate").datepicker();
+        //From의 초기값을 오늘 날짜로 설정
+        let fromDate = '{{ request.GET.fromDate }}'
+        if (fromDate && fromDate != '') {
+            $('#fromDate').val(fromDate);
+        } else {
+            $('#fromDate').datepicker('setDate', '-7D'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        }
+        //To의 초기값을 내일로 설정
+        let toDate = '{{ request.GET.toDate }}'
+        if (toDate && toDate != '') {
+            $('#toDate').val(toDate);
+        } else {
+            $('#toDate').datepicker('setDate', 'today'); //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        }
+    });
+</script>
+

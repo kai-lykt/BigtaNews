@@ -1,0 +1,342 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>companysearch</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/companysearch.css"/>
+</head>
+<body>
+<div id="companysearch" class="companysearch_Class">
+
+    <div data-type="Text" data-name="회사명찾기" class="pop_title">
+        <span>회사명찾기</span>
+    </div>
+
+    <div class="search_inputs">
+        <div class="comp_name">
+            <svg data-type="Path" data-name="ic_apps_24px" class="ic_apps_24px" viewBox="10 4 10 10">
+                <path class="ic_apps_24px_Class"
+                      d="M 16 4 L 16 8 L 20 8 L 20 4 L 16 4 Z M 10 8 L 14 8 L 14 4 L 10 4 L 10 8 Z M 16 14 L 20 14 L 20 10 L 16 10 L 16 14 Z">
+                </path>
+            </svg>
+            <div data-type="Text" data-name="회사이름" class="_Class">
+                <span>회사이름</span>
+            </div>
+            <div data-type="Text" data-name="회사명을 입력하세요." class="__ot_Class">
+                <span>회사명을 입력하세요.</span>
+            </div>
+        </div>
+        <div class="comp_type">
+            <svg data-type="Path" data-name="ic_apps_24px" class="ic_apps_24px" viewBox="10 4 10 10">
+                <path class="ic_apps_24px_Class"
+                      d="M 16 4 L 16 8 L 20 8 L 20 4 L 16 4 Z M 10 8 L 14 8 L 14 4 L 10 4 L 10 8 Z M 16 14 L 20 14 L 20 10 L 16 10 L 16 14 Z">
+                </path>
+            </svg>
+            <div data-type="Text" data-name="법인구분" class="_Class">
+                <span>법인구분</span>
+            </div>
+            <select name="corp_type" class="corp_type_sel">
+                <option value="Z">전체</option>
+                <option value="Y">유가증권시장</option>
+                <option value="K">코스닥시장</option>
+                <option value="N">코넥스시장</option>
+                <option value="E">기타법인</option>
+            </select>
+        </div>
+        <div data-type="Group" data-name="그룹 1" class="search_btn_container">
+            <div data-type="Text" data-name="검 색" class="search_btn">
+                <span>검 색</span>
+            </div>
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="◎  회사명 위에 마우스를 위치시키면 기업정보 도움말이 나타납니다." class="desc">
+        <span>◎  회사명 위에 마우스를 위치시키면 기업정보 도움말이 나타납니다.</span>
+    </div>
+
+    <div class="result_table">
+        <div class="table_header">
+            <div data-type="Text" data-name="회사명" class="header_cell wid30">
+                <span>회사명</span>
+            </div>
+            <div data-type="Text" data-name="대표자명" class="header_cell wid20 left_border">
+                <span>대표자명</span>
+            </div>
+            <div data-type="Text" data-name="종목코드" class="header_cell wid20 left_border">
+                <span>종목코드</span>
+            </div>
+            <div data-type="Text" data-name="업종명" class="header_cell wid30 left_border">
+                <span>업종명</span>
+            </div>
+        </div>
+        <div class="table_contents">
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+            <div class="table_row">
+                <div data-type="Text" data-name="회사명" class="contents_cell wid30 corp_name_sel">
+                    <div style="width: 15%;">
+                        <input type="checkbox" name="selected" id="sel"/>
+                    </div>
+                    <div style="width: 85%">
+                        <label for="sel">회사명</label>
+                    </div>
+                </div>
+                <div data-type="Text" data-name="대표자명" class="contents_cell wid20">
+                    <span>대표자명</span>
+                </div>
+                <div data-type="Text" data-name="종목코드" class="contents_cell wid20">
+                    <span>종목코드</span>
+                </div>
+                <div data-type="Text" data-name="업종명" class="contents_cell wid30">
+                    <span>업종명</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-type="Symbol" data-name="게시판_num" class="_num_Class">
+        <div data-type="Repeat Grid" data-name="반복 그리드 2" class="__2_Class">
+            <div data-type="Group" data-name="" class=" __2_0_Class">
+                <div data-type="Text" data-name="1" class="pop_ID1_Class">
+                    <span>1</span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __2_1_Class">
+                <div data-type="Text" data-name="2" class="pop_ID2_Class">
+                    <span>2</span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __2_2_Class">
+                <div data-type="Text" data-name="3" class="pop_ID3_Class">
+                    <span>3</span>
+                </div>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="반복 그리드 3" class="__3_Class">
+            <div data-type="Group" data-name="" class=" __3_0_Class">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19">
+                    <rect class="_19_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name="<<" class="_oc_Class">
+                    <span><<</span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __3_1_Class">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19_oe">
+                    <rect class="_19_oe_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name="<" class="pop_prev_page">
+                    <span><</span>
+                </div>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="반복 그리드 4" class="__4_Class">
+            <div data-type="Group" data-name="" class=" __4_0_Class">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19_oi">
+                    <rect class="_19_oi_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name=">" class="pop_next_page">
+                    <span>></span>
+                </div>
+            </div>
+            <div data-type="Group" data-name="" class=" __4_1_Class">
+                <svg data-type="Rectangle" data-name="사각형 19" class="_19_ol">
+                    <rect class="_19_ol_Class" rx="0" ry="0" x="0" y="0" width="19" height="19">
+                    </rect>
+                </svg>
+                <div data-type="Text" data-name=">>" class="_om_Class">
+                    <span>>></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="[1/1] [총 234건]" class="num_container">
+        <span>[1/1] [총 234건]</span>
+    </div>
+    <div data-type="Group" data-name="그룹 519" class="btn_container">
+        <div data-type="Group" data-name="그룹 155" class="btn_confirm">
+            <span>확 인</span>
+        </div>
+        <div data-type="Group" data-name="그룹 154" class="btn_cancel">
+            <span>취 소</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

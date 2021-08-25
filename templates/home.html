@@ -1,0 +1,210 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'css/home.css' %}" />
+    <script src="{% static 'js/dart_search.js' %}"></script>  
+</head>
+<body>
+<div id="home" class="">
+<div data-type="Symbol" data-name="Title" class="Title Title_Class">
+
+        <div data-type="Text" data-name="AI 주식분석 플랫폼" class="AI___Class">
+            <span>AI 주식분석 플랫폼</span>
+        </div>
+        <div data-type="Text" data-name="로그아웃" onclick="window.location.replace('/logout')" class="_eh_Class">
+            <span>로그아웃</span>
+        </div>
+        <div data-type="Text" data-name="고객센터" class="_ei_Class">
+            <span>고객센터</span>
+        </div>
+        <img data-type="Rectangle" data-name="logo2" class="logo2_Class" src="{% static 'img/logo2.png' %}"
+             srcset="{% static 'img/logo2.png' %} 1x, {% static 'img/logo2@2x.png' %} 2x">
+        <svg data-type="Rectangle" data-name="사각형 201" class="_201">
+            <rect class="_201_Class" rx="0" ry="0" x="0" y="0" width="1" height="16">
+            </rect>
+        </svg>
+    </div>
+
+    <svg data-type="Polygon" data-name="다각형 4" class="_4" viewBox="0 0 22 14">
+        <path class="_4_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+        </path>
+    </svg>
+    <div data-type="Symbol" data-name="Navigation_HOME" class="Navigation_HOME Navigation_HOME_Class">
+        <svg data-type="Rectangle" data-name="사각형 24" class="_24">
+            <rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+            </rect>
+        </svg>
+        <svg data-type="Rectangle" data-name="사각형 23" class="_23">
+            <rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+            </rect>
+        </svg>
+        <div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_Class">
+            <span>공시데이터</span>
+        </div>
+        <div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="__Class">
+            <span>주식데이터</span>
+        </div>
+        <div data-type="Text" data-name="증권사리포트" onclick="window.location.href='/report'" class="_____Class">
+            <span>증권사리포트</span>
+        </div>
+        <svg data-type="Polygon" data-name="다각형 4" class="_4_" viewBox="0 0 22 14">
+            <path class="_4__Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+            </path>
+        </svg>
+        <div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+            <div data-type="Text" data-name="HOME" class="HOME__Class">
+                <span>HOME</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 108" class="_108">
+                <rect class="_108_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+        <div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+            <div data-type="Text" data-name="작성기사" class="_ba_Class">
+                <span>작성기사</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 109" class="_109">
+                <rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+    </div>
+    <div data-type="Text" data-name="오늘의 공시" class="___Class">
+        <span>오늘의 공시</span>
+    </div>
+    <div data-type="Text" data-name="[2020-08-17 15: 41]" class="ID2020-08-17_15_41_Class">
+        <span>[{{ now|date:"Y-m-d" }} {{ now|time:"H:i:s" }}]</span>
+    </div>
+    <div data-type="Text" class="dart_more" onclick="window.location.href='/dart/1'">
+        <span>+ 더보기</span>
+    </div>
+
+    <div class="today_dart table_border">
+        <div class="table_title_row">
+            <div data-type="Text" data-name="시간" class="_cg_Class table_title">
+                <span>시간</span>
+            </div>
+            <div data-type="Text" data-name="시 장" class="__ch_Class table_title left_border">
+                <span>시 장</span>
+            </div>
+            <div data-type="Text" data-name="종목명" class="_ci_Class table_title left_border">
+                <span>종목명</span>
+            </div>
+            <div data-type="Text" data-name="공시명" class="_cj_Class table_title left_border">
+                <span>공시명</span>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="board_list" class="table_data_row">
+            {% for dart in darts %}
+            <div data-type="Group" data-name="" class="table_data">
+                <div data-type="Text" data-name="16:05" class="_cg_Class">
+                    <span>{{ dart.created_at|date:"m-d" }} <b>{{ dart.created_at|time:"H:i" }}</b></span>
+                </div>
+                <div data-type="Text" data-name="유가증권시장" class="__ch_Class">
+                    {% if dart.corp_type == 'Y' %}
+                        <span>유가증권시장</span>
+                    {% elif dart.corp_type == 'K' %}
+                        <span>코스닥시장</span>
+                    {% elif dart.corp_type == 'N' %}
+                        <span>코넥스시장</span>
+                    {% else %}
+                        <span>기타</span>
+                    {% endif %}
+                </div>
+                <div data-type="Text" data-name="신라젠" class="_ci_Class pl25 text_left purple" onclick="openDartDetail({{ dart.receipt_no }})">
+                    <span>{{ dart.corp_name }}</span>
+                </div>
+                <div data-type="Text" data-name="연결재무재표기준영업(장정)실적(공정공시)"
+                     class="_cj_Class pl25 text_left blue"
+                     onclick="openDartDetail({{ dart.receipt_no }})">
+                    <span>{{ dart.title }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="오늘의 특징주 신호" class="___ba_Class">
+        <span>오늘의 특징주 신호</span>
+    </div>
+    <div data-type="Text" data-name="[2020-08-17 15: 41]" class="ID2020-08-17_15_41_bc_Class">
+        <span>[{{ now|date:"Y-m-d" }} {{ now|time:"H:i:s" }}]</span>
+    </div>
+    <div data-type="Text" class="stock_more" onclick="window.location.href = '/stock'">
+        <span>+ 더보기</span>
+    </div>
+    <div class="today_stock table_border">
+        <div class="table_title_row">
+            <div data-type="Text" data-name="시간" class="_d_Class table_title">
+                <span>시간</span>
+            </div>
+            <div data-type="Text" data-name="종목명" class="_ea_Class table_title left_border">
+                <span>종목명</span>
+            </div>
+            <div data-type="Text" data-name="특이사항" class="_eb_Class table_title left_border">
+                <span>특이사항</span>
+            </div>
+            <div data-type="Text" data-name="증권사리포트" class="_ec_Class table_title left_border">
+                <span>증권사리포트</span>
+            </div>
+        </div>
+        <div data-type="Repeat Grid" data-name="board_list" class="table_data_row">
+            {% for signal in signals %}
+            <div data-type="Group" data-name="" class=" table_data">
+                <div data-type="Text" data-name="16:05" class="_d_Class">
+                    <span>{{ signal.time }}</span>
+                </div>
+                <div data-type="Text" class="_ea_Class text_left pl25 purple"
+                     onclick="window.location.href='/stock/detail/{{ signal.code_id|slice:"1:" }}'">
+                    <span>{{ signal.stock_name }}</span>
+                </div>
+                <div data-type="Text" class="_eb_Class text_left pl25 blue">
+                    <span>{{ signal.signal }}</span>
+                </div>
+                <div data-type="Text" class="_ec_Class">
+                    <span>
+                        <input type="button" value="검색"
+                               onclick="window.location.href='/report/1?stock={{ signal.stock_name }}'">
+                    </span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="reload" onclick="location.reload()">
+        <img src="{% static 'img/page_reload.png' %}" alt="페이지 리로드" class="reload_icon" />
+    </div>
+
+    <div data-type="Symbol" data-name="footer" class="footer footer_Class">
+        <svg data-type="Rectangle" data-name="사각형 197" class="_197">
+            <rect class="_197_Class" rx="0" ry="0" x="0" y="0" width="1920" height="104">
+            </rect>
+        </svg>
+        <img data-type="Rectangle" data-name="logo" class="logo_Class" src="{% static 'img/logo.png' %}"
+             srcset="{% static 'img/logo.png' %} 1x, {% static 'img/logo@2x.png' %} 2x">
+        <div data-type="Group" data-name="그룹 523" class="_523_Class">
+            <div data-type="Text" data-name="등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED"
+                 class="___02392____20121218___________Class">
+                <span>
+                    등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+                    <br/>주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228
+                    <br/>Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED BY
+                </span>
+            </div>
+            <img data-type="Rectangle" data-name="kai" class="kai_Class" src="{% static 'img/kai.png' %}"
+                 srcset="{% static 'img/kai.png' %} 1x, {% static 'img/kai@2x.png' %} 2x">
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

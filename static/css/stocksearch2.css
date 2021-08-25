@@ -1,0 +1,4464 @@
+.mediaViewInfo {
+	--web-view-name: stocksearch;
+	--web-view-id: stocksearch;
+	--web-scale-on-resize: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: stocksearch;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+.stocksearch_Class {
+	position: absolute;
+	width: 1920px;
+	height: 1362px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	--web-view-name: stocksearch;
+	--web-view-id: stocksearch;
+	--web-scale-on-resize: true;
+	--web-navigate-on-keypress: true;
+	--web-refresh-for-changes: true;
+	--web-add-image-compare: true;
+	--web-enable-deep-linking: true;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+.Navigation__Class {
+	position: absolute;
+	width: 1920px;
+	height: 75px;
+	left: 0px;
+	top: 115px;
+	overflow: visible;
+}
+._24_Class {
+	fill: rgba(98,121,205,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._24 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 73px;
+	left: 0px;
+	top: 0px;
+}
+._23_Class {
+	fill: rgba(232,231,231,1);
+}
+._23 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 2px;
+	left: 0px;
+	top: 73px;
+}
+._Class {
+	left: 622px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 88px;
+	white-space: nowrap;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: dart.html;
+	cursor: pointer;
+	line-height: 25px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._ug_Class {
+	left: 812px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 88px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._4_Class {
+	fill: rgba(255,255,255,1);
+}
+._4 {
+	overflow: hidden;
+	position: absolute;
+	width: 22px;
+	height: 14px;
+	left: 851px;
+	top: 61px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._143_Class {
+	position: absolute;
+	width: 100px;
+	height: 27px;
+	left: 432px;
+	top: 23px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: home.html;
+	cursor: pointer;
+}
+.HOME_Class {
+	left: 22px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	line-height: 25px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._108_Class {
+	fill: transparent;
+}
+._108 {
+	position: absolute;
+	overflow: visible;
+	width: 100px;
+	height: 27px;
+	left: 0px;
+	top: 0px;
+}
+._144_Class {
+	position: absolute;
+	width: 100px;
+	height: 28px;
+	left: 1002px;
+	top: 23px;
+	overflow: visible;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: article.html;
+	cursor: pointer;
+}
+._um_Class {
+	left: 10px;
+	top: 4px;
+	position: absolute;
+	overflow: visible;
+	width: 70px;
+	white-space: nowrap;
+	line-height: 25px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+._109_Class {
+	fill: transparent;
+}
+._109 {
+	position: absolute;
+	overflow: visible;
+	width: 100px;
+	height: 27px;
+	left: 0px;
+	top: 0px;
+}
+._uo_Class {
+	left: 366px;
+	top: 216px;
+	position: absolute;
+	overflow: visible;
+	width: 131px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -2px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+}
+._152_Class {
+	position: absolute;
+	width: 749px;
+	height: 69px;
+	left: 585.5px;
+	top: 272px;
+	overflow: visible;
+}
+._387_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(214,214,214,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._387 {
+	overflow: visible;
+	position: absolute;
+	width: 755px;
+	height: 75px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._137_Class {
+	position: absolute;
+	width: 132px;
+	height: 31px;
+	left: 39px;
+	top: 20px;
+	overflow: visible;
+}
+.__Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.5px;
+}
+._ut_Class {
+	left: 98px;
+	top: 3.25px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.ic_highlight_off_24px_Class {
+	fill: rgba(214,214,214,1);
+}
+.ic_highlight_off_24px {
+	overflow: visible;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	left: 615.5px;
+	top: 21px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ic_search_24px_Class {
+	fill: rgba(98,121,205,1);
+}
+.ic_search_24px {
+	overflow: visible;
+	position: absolute;
+	width: 29px;
+	height: 29px;
+	left: 670.5px;
+	top: 20px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.__9_Class {
+	position: absolute;
+	width: 1200px;
+	height: 222px;
+	left: 360px;
+	top: 391px;
+	overflow: hidden;
+}
+._139_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.__8_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	--web-animation: fadein 0.3s ease-out;
+	--web-action-type: page;
+	--web-action-target: stockdetail01.html;
+	cursor: pointer;
+}
+.__8_0_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 1.294px;
+	top: 1.5px;
+	overflow: visible;
+}
+.card__Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.BG_Class {
+	opacity: 0.2;
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.BG {
+	overflow: visible;
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.__u_Class {
+	opacity: 0;
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	left: 281.707px;
+	top: 162.5px;
+	overflow: visible;
+}
+._38_Class {
+	fill: rgba(57,178,197,1);
+}
+._38 {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 0px;
+	top: 0px;
+}
+.ic_close_24px_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_close_24px {
+	overflow: visible;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	transform: translate(0px, 0px) matrix(1,0,0,1,13.8994,13.8995) rotate(45deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.__va_Class {
+	position: absolute;
+	width: 215px;
+	height: 89px;
+	left: 24.707px;
+	top: 48.5px;
+	overflow: visible;
+}
+.__vb_Class {
+	position: absolute;
+	width: 215px;
+	height: 46px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._u_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -1px;
+}
+.ID005930KRX_Class {
+	left: 0px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+._va_Class {
+	left: 83px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+._vb_Class {
+	left: 156px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+.KOSPI150_Class {
+	left: 90px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+.__vc_Class {
+	left: 162px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1px;
+}
+._113_Class {
+	position: absolute;
+	width: 97.521px;
+	height: 15px;
+	left: 101.479px;
+	top: 69px;
+	overflow: visible;
+}
+.ID500_Class {
+	left: 11.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ID064_Class {
+	left: 40.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ic_arrow_drop_up_24px_Class {
+	fill: rgba(255,80,80,1);
+}
+.ic_arrow_drop_up_24px {
+	overflow: visible;
+	position: absolute;
+	width: 8.263px;
+	height: 7.897px;
+	left: 0px;
+	top: 3.297px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID50100_Class {
+	left: 0px;
+	top: 61px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.ID6030_Class {
+	left: 78.707px;
+	top: 181.5px;
+	position: absolute;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+._vj_Class {
+	left: 24.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID3__Class {
+	left: 24.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 47px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID166_Class {
+	left: 78.707px;
+	top: 149.5px;
+	position: absolute;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ico___Class {
+	position: absolute;
+	width: 85px;
+	height: 17px;
+	left: 238.707px;
+	top: 35.5px;
+	display: none;
+	overflow: visible;
+}
+._136_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 45px;
+	top: 0px;
+	overflow: visible;
+}
+._79_Class {
+	fill: rgba(255,136,0,1);
+}
+._79 {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._vp_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._vq_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_Class {
+	fill: rgba(255,80,80,1);
+}
+._104 {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._vs_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_touch_app_24px_Class {
+	opacity: 0;
+	fill: rgba(154,154,154,1);
+}
+.ic_touch_app_24px {
+	overflow: visible;
+	position: absolute;
+	width: 3.856px;
+	height: 8.999px;
+	left: 237.707px;
+	top: 186.501px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.___Class {
+	left: 276.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -0.5px;
+}
+.ID73_Class {
+	left: 191.707px;
+	top: 173.5px;
+	position: absolute;
+	overflow: visible;
+	width: 33px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.__vw_Class {
+	left: 186.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1.11px;
+}
+.__vx_Class {
+	position: absolute;
+	width: 298px;
+	height: 19px;
+	left: 24.707px;
+	top: 20.5px;
+	overflow: visible;
+}
+.ico__Class {
+	position: absolute;
+	width: 56px;
+	height: 19px;
+	left: 242px;
+	top: 0px;
+	overflow: visible;
+}
+._vz_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_v_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_v {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._v_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._wa_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._104_v_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_v {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._wb_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._wc_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._105_Class {
+	fill: rgba(80,126,255,1);
+}
+._105 {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._wd_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._we_Class {
+	position: absolute;
+	width: 97px;
+	height: 19px;
+	left: 140px;
+	top: 0px;
+	overflow: visible;
+}
+._136_v_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 49px;
+	top: 0px;
+	overflow: visible;
+}
+._79_wa_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_wa {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._wf_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_thumb_up_24px_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_thumb_up_24px {
+	overflow: visible;
+	position: absolute;
+	width: 12.1px;
+	height: 11px;
+	left: 6px;
+	top: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._wg_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_we_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_we {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._wh_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic__Class {
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 6px;
+	top: 3px;
+	overflow: visible;
+}
+.ic_star_24px_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.ic_star_24px {
+	overflow: visible;
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ico___wi_Class {
+	position: absolute;
+	width: 44px;
+	height: 19px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._wj_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: -4px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_wk_Class {
+	fill: rgba(57,178,197,1);
+}
+._79_wk {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._wl_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_shopping_basket_24px_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_shopping_basket_24px {
+	overflow: visible;
+	position: absolute;
+	width: 12.31px;
+	height: 10.62px;
+	left: 5.864px;
+	top: 4.264px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._wn_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_wo_Class {
+	fill: rgba(57,178,197,1);
+}
+._104_wo {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._wp_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ico__wq_Class {
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 6.864px;
+	top: 4.21px;
+	overflow: visible;
+}
+.ic_favorite_24px_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_24px {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ic_favorite_border_24px_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_border_24px {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._139_wt_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 372px;
+	top: 0px;
+	overflow: visible;
+}
+.__8_wu_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.__8_wu_0_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 1.294px;
+	top: 1.5px;
+	overflow: visible;
+}
+.card__ww_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.BG_wx_Class {
+	opacity: 0.2;
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.BG_wx {
+	overflow: visible;
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.__wy_Class {
+	opacity: 0;
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	left: 281.707px;
+	top: 162.5px;
+	overflow: visible;
+}
+._38_wz_Class {
+	fill: rgba(57,178,197,1);
+}
+._38_wz {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 0px;
+	top: 0px;
+}
+.ic_close_24px_w_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_close_24px_w {
+	overflow: visible;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	transform: translate(0px, 0px) matrix(1,0,0,1,13.8994,13.8995) rotate(45deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.__w_Class {
+	position: absolute;
+	width: 215px;
+	height: 89px;
+	left: 24.707px;
+	top: 48.5px;
+	overflow: visible;
+}
+.__xa_Class {
+	position: absolute;
+	width: 215px;
+	height: 46px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._w_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -1px;
+}
+.ID005930KRX_w_Class {
+	left: 0px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+._xa_Class {
+	left: 83px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+._xb_Class {
+	left: 156px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+.KOSPI150_w_Class {
+	left: 90px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+.__xb_Class {
+	left: 162px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1px;
+}
+._113_w_Class {
+	position: absolute;
+	width: 97.521px;
+	height: 15px;
+	left: 101.479px;
+	top: 69px;
+	overflow: visible;
+}
+.ID500_xa_Class {
+	left: 11.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ID064_xb_Class {
+	left: 40.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ic_arrow_drop_up_24px_xc_Class {
+	fill: rgba(255,80,80,1);
+}
+.ic_arrow_drop_up_24px_xc {
+	overflow: visible;
+	position: absolute;
+	width: 8.263px;
+	height: 7.897px;
+	left: 0px;
+	top: 3.297px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID50100_xd_Class {
+	left: 0px;
+	top: 61px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.ID6030_xe_Class {
+	left: 78.707px;
+	top: 181.5px;
+	position: absolute;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+._xf_Class {
+	left: 24.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID3__xg_Class {
+	left: 24.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 47px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID166_xh_Class {
+	left: 78.707px;
+	top: 149.5px;
+	position: absolute;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ico___xi_Class {
+	position: absolute;
+	width: 85px;
+	height: 17px;
+	left: 238.707px;
+	top: 35.5px;
+	display: none;
+	overflow: visible;
+}
+._136_xj_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 45px;
+	top: 0px;
+	overflow: visible;
+}
+._79_xk_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_xk {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._xl_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._xm_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_xn_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_xn {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._xo_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_touch_app_24px_xp_Class {
+	opacity: 0;
+	fill: rgba(154,154,154,1);
+}
+.ic_touch_app_24px_xp {
+	overflow: visible;
+	position: absolute;
+	width: 3.856px;
+	height: 8.999px;
+	left: 237.707px;
+	top: 186.501px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.___xq_Class {
+	left: 276.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -0.5px;
+}
+.ID73_xr_Class {
+	left: 191.707px;
+	top: 173.5px;
+	position: absolute;
+	overflow: visible;
+	width: 33px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.__xs_Class {
+	left: 186.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1.11px;
+}
+.__xt_Class {
+	position: absolute;
+	width: 298px;
+	height: 19px;
+	left: 24.707px;
+	top: 20.5px;
+	overflow: visible;
+}
+.ico__xu_Class {
+	position: absolute;
+	width: 56px;
+	height: 19px;
+	left: 242px;
+	top: 0px;
+	overflow: visible;
+}
+._xv_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_xw_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_xw {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._xx_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._xy_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._104_xz_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_xz {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._x_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._ya_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._105_x_Class {
+	fill: rgba(80,126,255,1);
+}
+._105_x {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._yb_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._yc_Class {
+	position: absolute;
+	width: 97px;
+	height: 19px;
+	left: 140px;
+	top: 0px;
+	overflow: visible;
+}
+._136_x_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 49px;
+	top: 0px;
+	overflow: visible;
+}
+._79_x_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_x {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._yd_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_thumb_up_24px_x_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_thumb_up_24px_x {
+	overflow: visible;
+	position: absolute;
+	width: 12.1px;
+	height: 11px;
+	left: 6px;
+	top: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._ye_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_ya_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_ya {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._yf_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic__yc_Class {
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 6px;
+	top: 3px;
+	overflow: visible;
+}
+.ic_star_24px_yd_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.ic_star_24px_yd {
+	overflow: visible;
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ico___ye_Class {
+	position: absolute;
+	width: 44px;
+	height: 19px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._yg_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: -4px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_yg_Class {
+	fill: rgba(57,178,197,1);
+}
+._79_yg {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._yh_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_shopping_basket_24px_yi_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_shopping_basket_24px_yi {
+	overflow: visible;
+	position: absolute;
+	width: 12.31px;
+	height: 10.62px;
+	left: 5.864px;
+	top: 4.264px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._yj_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_yk_Class {
+	fill: rgba(57,178,197,1);
+}
+._104_yk {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._yl_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ico__ym_Class {
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 6.864px;
+	top: 4.21px;
+	overflow: visible;
+}
+.ic_favorite_24px_yn_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_24px_yn {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ic_favorite_border_24px_yo_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_border_24px_yo {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._139_yp_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 744px;
+	top: 0px;
+	overflow: visible;
+}
+.__8_yq_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.__8_yq_0_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 1.294px;
+	top: 1.5px;
+	overflow: visible;
+}
+.card__ys_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.BG_yt_Class {
+	opacity: 0.2;
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.BG_yt {
+	overflow: visible;
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.__yu_Class {
+	opacity: 0;
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	left: 281.707px;
+	top: 162.5px;
+	overflow: visible;
+}
+._38_yv_Class {
+	fill: rgba(57,178,197,1);
+}
+._38_yv {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 0px;
+	top: 0px;
+}
+.ic_close_24px_yw_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_close_24px_yw {
+	overflow: visible;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	transform: translate(0px, 0px) matrix(1,0,0,1,13.8994,13.8995) rotate(45deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.__yx_Class {
+	position: absolute;
+	width: 215px;
+	height: 89px;
+	left: 24.707px;
+	top: 48.5px;
+	overflow: visible;
+}
+.__yy_Class {
+	position: absolute;
+	width: 215px;
+	height: 46px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._yz_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -1px;
+}
+.ID005930KRX_y_Class {
+	left: 0px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+._y_Class {
+	left: 83px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+._za_Class {
+	left: 156px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+.KOSPI150_y_Class {
+	left: 90px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+.__y_Class {
+	left: 162px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1px;
+}
+._113_y_Class {
+	position: absolute;
+	width: 97.521px;
+	height: 15px;
+	left: 101.479px;
+	top: 69px;
+	overflow: visible;
+}
+.ID500_y_Class {
+	left: 11.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ID064_y_Class {
+	left: 40.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ic_arrow_drop_up_24px_y_Class {
+	fill: rgba(255,80,80,1);
+}
+.ic_arrow_drop_up_24px_y {
+	overflow: visible;
+	position: absolute;
+	width: 8.263px;
+	height: 7.897px;
+	left: 0px;
+	top: 3.297px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID50100_y_Class {
+	left: 0px;
+	top: 61px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.ID6030_za_Class {
+	left: 78.707px;
+	top: 181.5px;
+	position: absolute;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+._zb_Class {
+	left: 24.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID3__zc_Class {
+	left: 24.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 47px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID166_zd_Class {
+	left: 78.707px;
+	top: 149.5px;
+	position: absolute;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ico___ze_Class {
+	position: absolute;
+	width: 85px;
+	height: 17px;
+	left: 238.707px;
+	top: 35.5px;
+	display: none;
+	overflow: visible;
+}
+._136_zf_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 45px;
+	top: 0px;
+	overflow: visible;
+}
+._79_zg_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_zg {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._zh_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._zi_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_zj_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_zj {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._zk_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_touch_app_24px_zl_Class {
+	opacity: 0;
+	fill: rgba(154,154,154,1);
+}
+.ic_touch_app_24px_zl {
+	overflow: visible;
+	position: absolute;
+	width: 3.856px;
+	height: 8.999px;
+	left: 237.707px;
+	top: 186.501px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.___zm_Class {
+	left: 276.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -0.5px;
+}
+.ID73_zn_Class {
+	left: 191.707px;
+	top: 173.5px;
+	position: absolute;
+	overflow: visible;
+	width: 33px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.__zo_Class {
+	left: 186.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1.11px;
+}
+.__zp_Class {
+	position: absolute;
+	width: 298px;
+	height: 19px;
+	left: 24.707px;
+	top: 20.5px;
+	overflow: visible;
+}
+.ico__zq_Class {
+	position: absolute;
+	width: 56px;
+	height: 19px;
+	left: 242px;
+	top: 0px;
+	overflow: visible;
+}
+._zr_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_zs_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_zs {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._zt_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._zu_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._104_zv_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_zv {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._zw_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._zx_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._105_zy_Class {
+	fill: rgba(80,126,255,1);
+}
+._105_zy {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._zz_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._z_Class {
+	position: absolute;
+	width: 97px;
+	height: 19px;
+	left: 140px;
+	top: 0px;
+	overflow: visible;
+}
+._136_z_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 49px;
+	top: 0px;
+	overflow: visible;
+}
+._79_z_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_z {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._a_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_thumb_up_24px_z_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_thumb_up_24px_z {
+	overflow: visible;
+	position: absolute;
+	width: 12.1px;
+	height: 11px;
+	left: 6px;
+	top: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._b_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_z_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_z {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._c_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic__z_Class {
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 6px;
+	top: 3px;
+	overflow: visible;
+}
+.ic_star_24px_z_Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.ic_star_24px_z {
+	overflow: visible;
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ico___a_Class {
+	position: absolute;
+	width: 44px;
+	height: 19px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._d_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: -4px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_c_Class {
+	fill: rgba(57,178,197,1);
+}
+._79_c {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._e_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_shopping_basket_24px_e_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_shopping_basket_24px_e {
+	overflow: visible;
+	position: absolute;
+	width: 12.31px;
+	height: 10.62px;
+	left: 5.864px;
+	top: 4.264px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._f_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_g_Class {
+	fill: rgba(57,178,197,1);
+}
+._104_g {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._h_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ico__i_Class {
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 6.864px;
+	top: 4.21px;
+	overflow: visible;
+}
+.ic_favorite_24px_j_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_24px_j {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ic_favorite_border_24px_k_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_border_24px_k {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._139_l_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 1116px;
+	top: 0px;
+	overflow: visible;
+}
+.__8_m_Class {
+	position: absolute;
+	width: 352px;
+	height: 222px;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.__8_m_0_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 1.294px;
+	top: 1.5px;
+	overflow: visible;
+}
+.card__o_Class {
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+.BG_p_Class {
+	opacity: 0.2;
+	fill: rgba(255,255,255,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.BG_p {
+	overflow: visible;
+	position: absolute;
+	width: 347.412px;
+	height: 220px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.__q_Class {
+	opacity: 0;
+	position: absolute;
+	width: 41px;
+	height: 41px;
+	left: 281.707px;
+	top: 162.5px;
+	overflow: visible;
+}
+._38_r_Class {
+	fill: rgba(57,178,197,1);
+}
+._38_r {
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	height: 41px;
+	left: 0px;
+	top: 0px;
+}
+.ic_close_24px_s_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_close_24px_s {
+	overflow: visible;
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	transform: translate(0px, 0px) matrix(1,0,0,1,13.8994,13.8995) rotate(45deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+.__t_Class {
+	position: absolute;
+	width: 215px;
+	height: 89px;
+	left: 24.707px;
+	top: 48.5px;
+	overflow: visible;
+}
+.__v_Class {
+	position: absolute;
+	width: 215px;
+	height: 46px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._g_Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -1px;
+}
+.ID005930KRX_x_Class {
+	left: 0px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+._i_Class {
+	left: 83px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+._j_Class {
+	left: 156px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 5px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1.11px;
+}
+.KOSPI150_z_Class {
+	left: 90px;
+	top: 29px;
+	position: absolute;
+	overflow: visible;
+	width: 68px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -0.4px;
+}
+.__a_Class {
+	left: 162px;
+	top: 27px;
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(90,90,90,1);
+	letter-spacing: -1px;
+}
+._113__Class {
+	position: absolute;
+	width: 97.521px;
+	height: 15px;
+	left: 101.479px;
+	top: 69px;
+	overflow: visible;
+}
+.ID500__Class {
+	left: 11.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ID064__Class {
+	left: 40.521px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 58px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ic_arrow_drop_up_24px__Class {
+	fill: rgba(255,80,80,1);
+}
+.ic_arrow_drop_up_24px_ {
+	overflow: visible;
+	position: absolute;
+	width: 8.263px;
+	height: 7.897px;
+	left: 0px;
+	top: 3.297px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ID50100__Class {
+	left: 0px;
+	top: 61px;
+	position: absolute;
+	overflow: visible;
+	width: 86px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.ID6030__Class {
+	left: 78.707px;
+	top: 181.5px;
+	position: absolute;
+	overflow: visible;
+	width: 78px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+._k_Class {
+	left: 24.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID3___Class {
+	left: 24.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 47px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1px;
+}
+.ID166__Class {
+	left: 78.707px;
+	top: 149.5px;
+	position: absolute;
+	overflow: visible;
+	width: 75px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 23px;
+	color: rgba(255,80,80,1);
+	letter-spacing: -0.4px;
+}
+.ico___b_Class {
+	position: absolute;
+	width: 85px;
+	height: 17px;
+	left: 238.707px;
+	top: 35.5px;
+	display: none;
+	overflow: visible;
+}
+._136_b_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 45px;
+	top: 0px;
+	overflow: visible;
+}
+._79_d_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_d {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._l_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._m_Class {
+	position: absolute;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_f_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_f {
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	height: 17px;
+	left: 0px;
+	top: 0px;
+}
+._n_Class {
+	left: 10px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_touch_app_24px_h_Class {
+	opacity: 0;
+	fill: rgba(154,154,154,1);
+}
+.ic_touch_app_24px_h {
+	overflow: visible;
+	position: absolute;
+	width: 3.856px;
+	height: 8.999px;
+	left: 237.707px;
+	top: 186.501px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.___i_Class {
+	left: 276.707px;
+	top: 184.5px;
+	position: absolute;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -0.5px;
+}
+.ID73_j_Class {
+	left: 191.707px;
+	top: 173.5px;
+	position: absolute;
+	overflow: visible;
+	width: 33px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(42,42,42,1);
+	letter-spacing: -0.4px;
+}
+.__k_Class {
+	left: 186.707px;
+	top: 155.5px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	line-height: 17px;
+	margin-top: -2.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(154,154,154,1);
+	letter-spacing: -1.11px;
+}
+.__l_Class {
+	position: absolute;
+	width: 298px;
+	height: 19px;
+	left: 24.707px;
+	top: 20.5px;
+	overflow: visible;
+}
+.ico__m_Class {
+	position: absolute;
+	width: 56px;
+	height: 19px;
+	left: 242px;
+	top: 0px;
+	overflow: visible;
+}
+._o_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79_o_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_o {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._p_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._q_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._104_r_Class {
+	fill: rgba(255,80,80,1);
+}
+._104_r {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._s_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._t_Class {
+	position: absolute;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._105_u_Class {
+	fill: rgba(80,126,255,1);
+}
+._105_u {
+	position: absolute;
+	overflow: visible;
+	width: 56px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._r_Class {
+	left: 4px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+._baa_Class {
+	position: absolute;
+	width: 97px;
+	height: 19px;
+	left: 140px;
+	top: 0px;
+	overflow: visible;
+}
+._136_y_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 49px;
+	top: 0px;
+	overflow: visible;
+}
+._79_y_Class {
+	fill: rgba(255,136,0,1);
+}
+._79_y {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._bab_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_thumb_up_24px__Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_thumb_up_24px_ {
+	overflow: visible;
+	position: absolute;
+	width: 12.1px;
+	height: 11px;
+	left: 6px;
+	top: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._bac_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104__Class {
+	fill: rgba(255,80,80,1);
+}
+._104_ {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._bad_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	line-height: 18px;
+	margin-top: -3px;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic___Class {
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 6px;
+	top: 3px;
+	overflow: visible;
+}
+.ic_star_24px__Class {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 2px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.ic_star_24px_ {
+	overflow: visible;
+	position: absolute;
+	width: 11.2px;
+	height: 11.24px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ico____Class {
+	position: absolute;
+	width: 44px;
+	height: 19px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._bae_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: -4px;
+	top: 0px;
+	display: none;
+	overflow: visible;
+}
+._79__Class {
+	fill: rgba(57,178,197,1);
+}
+._79_ {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._baf_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ic_shopping_basket_24px_a_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_shopping_basket_24px_a {
+	overflow: visible;
+	position: absolute;
+	width: 12.31px;
+	height: 10.62px;
+	left: 5.864px;
+	top: 4.264px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._bag_Class {
+	position: absolute;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._104_c_Class {
+	fill: rgba(57,178,197,1);
+}
+._104_c {
+	position: absolute;
+	overflow: visible;
+	width: 48px;
+	height: 18px;
+	left: 0px;
+	top: 0px;
+}
+._bah_Class {
+	left: 21px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 21px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	letter-spacing: -1px;
+}
+.ico__e_Class {
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 6.864px;
+	top: 4.21px;
+	overflow: visible;
+}
+.ic_favorite_24px_f_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_24px_f {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.ic_favorite_border_24px_g_Class {
+	fill: rgba(255,255,255,1);
+}
+.ic_favorite_border_24px_g {
+	overflow: visible;
+	position: absolute;
+	width: 11.593px;
+	height: 10.658px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.Title_Class {
+	position: absolute;
+	width: 1135px;
+	height: 86px;
+	left: 380px;
+	top: 29px;
+	overflow: visible;
+}
+.AI___Class {
+	left: 0px;
+	top: 28px;
+	position: absolute;
+	overflow: visible;
+	width: 315px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Source Han Sans KR;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 40px;
+	color: rgba(42,42,42,1);
+}
+._bai_Class {
+	left: 996px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(173,173,173,1);
+}
+._baj_Class {
+	left: 1079px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 49px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(173,173,173,1);
+}
+.logo2_Class {
+	opacity: 0.35;
+	position: absolute;
+	width: 149px;
+	height: 28px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._201_Class {
+	fill: rgba(244,245,247,1);
+	stroke: rgba(112,112,112,1);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+._201 {
+	position: absolute;
+	overflow: visible;
+	width: 1px;
+	height: 16px;
+	left: 1065px;
+	top: 1px;
+}
+.footer_Class {
+	position: absolute;
+	width: 1920px;
+	height: 104px;
+	left: 0px;
+	top: 1264px;
+	overflow: visible;
+}
+._197_Class {
+	fill: rgba(244,245,247,1);
+}
+._197 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 104px;
+	left: 0px;
+	top: 0px;
+}
+.logo_Class {
+	position: absolute;
+	width: 149px;
+	height: 41px;
+	left: 388px;
+	top: 18px;
+	overflow: visible;
+}
+._523_Class {
+	position: absolute;
+	width: 913px;
+	height: 75px;
+	left: 554px;
+	top: 20px;
+	overflow: visible;
+}
+.___02392____20121218___________Class {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 914px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 15px;
+	color: rgba(112,112,112,1);
+}
+.kai_Class {
+	position: absolute;
+	width: 48px;
+	height: 43px;
+	left: 640px;
+	top: 32px;
+	overflow: visible;
+}
+.___t_Class {
+	left: 383px;
+	top: 701px;
+	position: absolute;
+	overflow: visible;
+	width: 188px;
+	white-space: nowrap;
+	line-height: 34px;
+	margin-top: -4.5px;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 25px;
+	color: rgba(42,42,42,1);
+}
+.ID2020-08-17_15_41_Class {
+	left: 631px;
+	top: 705px;
+	position: absolute;
+	overflow: visible;
+	width: 139px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(251,3,3,1);
+}
+._552_Class {
+	position: absolute;
+	width: 1150px;
+	height: 416px;
+	left: 388px;
+	top: 764px;
+	overflow: visible;
+}
+._285_Class {
+	position: absolute;
+	width: 1150px;
+	height: 416px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._4_x_Class {
+	fill: rgba(244,245,247,1);
+}
+._4_x {
+	overflow: visible;
+	position: absolute;
+	width: 1150px;
+	height: 51px;
+	left: 0px;
+	top: 3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+.board_list_Class {
+	position: absolute;
+	width: 1150px;
+	height: 362px;
+	left: 0px;
+	top: 54px;
+	overflow: hidden;
+}
+.board_list_0_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+._15_Class {
+	fill: rgba(233,233,233,1);
+}
+._15 {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bak_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_1_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 45px;
+	overflow: visible;
+}
+._15__Class {
+	fill: rgba(233,233,233,1);
+}
+._15_ {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605__Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV__Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bal_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_2_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 90px;
+	overflow: visible;
+}
+._15_a_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_a {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_b_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_c_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bam_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_3_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 135px;
+	overflow: visible;
+}
+._15_f_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_f {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_g_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TIGER__Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 102px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._ban_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_4_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 180px;
+	overflow: visible;
+}
+._15_k_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_k {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_l_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bao_Class {
+	left: 152px;
+	top: 16px;
+	position: absolute;
+	overflow: visible;
+	width: 62px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bap_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_5_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 225px;
+	overflow: visible;
+}
+._15_p_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_p {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_q_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_r_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._baq_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_6_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 270px;
+	overflow: visible;
+}
+._15_u_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_u {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_v_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_w_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bar_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_7_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 315px;
+	overflow: visible;
+}
+._15_z_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_z {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_a_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.TV_a_Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 66px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bas_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+.board_list_8_Class {
+	position: absolute;
+	width: 1150px;
+	height: 33px;
+	left: 0px;
+	top: 360px;
+	overflow: visible;
+}
+._15_b_Class {
+	fill: rgba(233,233,233,1);
+}
+._15_b {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 0px;
+}
+.ID1605_c_Class {
+	opacity: 0.6;
+	left: 31px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 35px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.____Class {
+	left: 152px;
+	top: 14px;
+	position: absolute;
+	overflow: visible;
+	width: 213px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+.ID20200812__2139_Class {
+	left: 311px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 108px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Segoe UI;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	color: rgba(13,64,230,1);
+}
+._bat_Class {
+	left: 38px;
+	top: 20px;
+	position: absolute;
+	overflow: visible;
+	width: 25px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(112,112,112,1);
+}
+._bau_Class {
+	left: 177px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 40px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(112,112,112,1);
+}
+._bav_Class {
+	left: 669px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 53px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: KoPubWorldDotum_Pro;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 15px;
+	color: rgba(112,112,112,1);
+}
+._3_Class {
+	fill: rgba(112,112,112,1);
+}
+._3 {
+	overflow: visible;
+	position: absolute;
+	width: 1150px;
+	height: 3px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+._196_Class {
+	fill: rgba(214,211,211,1);
+}
+._196 {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 54px;
+}
+._194_Class {
+	fill: rgba(214,211,211,1);
+}
+._194 {
+	position: absolute;
+	overflow: visible;
+	width: 1150px;
+	height: 1px;
+	left: 0px;
+	top: 414px;
+}
+._199_Class {
+	fill: rgba(233,233,233,1);
+}
+._199 {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 25px;
+	left: 104px;
+	top: 18px;
+}
+._200_Class {
+	fill: rgba(233,233,233,1);
+}
+._200 {
+	position: absolute;
+	overflow: visible;
+	width: 2px;
+	height: 25px;
+	left: 284px;
+	top: 18px;
+}
+@keyframes fadein {
+
+	0% {
+		opacity: 1;
+	}
+	37.5% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	87.5% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+
+}
+.stocksearch_snapshot_Class {
+	animation: fadein 5s linear 0s infinite;
+	pointer-events: none;
+	position: absolute;
+	width: 1920px;
+	height: 1362px;
+	left: 0;
+	top: 0;
+}

@@ -1,0 +1,448 @@
+{% load static %}
+{% load get_lists %}
+{% load mathfilters %}
+{% load humanize %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종목 상세보기</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'css/stockdetail.css' %}"/>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{% static 'js/dart_search_write.js' %}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script type="text/javascript" src="{% static 'js/charts/fusioncharts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/charts/themes/fusioncharts.theme.fusion.js' %}"></script>
+</head>
+
+<body>
+<div id="articlewrite" class="articlewrite_Class">
+
+    <div style="display: inherit; width: 100%">{% include 'header.html' %}</div>
+
+    <div data-type="Symbol" data-name="Navigation_작성기사" class="Navigation_____ Navigation__Class">
+        <svg data-type="Rectangle" data-name="사각형 24" class="_24">
+            <rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+            </rect>
+        </svg>
+        <svg data-type="Rectangle" data-name="사각형 23" class="_23">
+            <rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+            </rect>
+        </svg>
+        <div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_bds_Class">
+            <span>공시데이터</span>
+        </div>
+        <div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="_bdt_Class">
+            <span>주식데이터</span>
+        </div>
+        <svg data-type="Polygon" data-name="다각형 4" class="_4" viewBox="0 0 22 14">
+            <path class="_4_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+            </path>
+        </svg>
+        <div data-type="Text" data-name="증권사리포트" onclick="window.location.href='/report'" class="_____Class_2">
+            <span>증권사리포트</span>
+        </div>
+        <div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+            <div data-type="Text" data-name="HOME" class="HOME_Class">
+                <span>HOME</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 108" class="_108">
+                <rect class="_108_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+        <div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+            <div data-type="Text" data-name="작성기사" class="_bdz_Class">
+                <span>작성기사</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 109" class="_109">
+                <rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+    </div>
+
+    <div data-type="Text" data-name="작성기사" class="_Class">
+        <span>주식데이터</span>
+    </div>
+
+	<div data-type="Group" data-name="그룹 152" class="_152_Class">
+		<svg data-type="Rectangle" data-name="사각형 107" class="_107">
+			<rect class="_107_Class" rx="34.5" ry="34.5" x="0" y="0" width="749" height="69">
+			</rect>
+		</svg>
+		<div data-type="Symbol" data-name="구성 요소 14 – 11" onclick="application.goToTargetView(event)" class="______14___11 __14__11_Class">
+			<div data-type="Group" data-name="그룹 137" class="_137_Class">
+				<div data-type="Text" data-name="종 목" class="__Class2">
+					<span>종 목</span>
+				</div>
+			</div>
+            <form id="searchForm" method="get" action="/stock/search/1">
+                <input data-type="Text" data-name="종목명, 지수명, 펀드명 입력" class="input_class"
+                       placeholder="종목명, 지수명, 펀드명 입력" value="{{ request.GET.searchName }}" name="searchName" id="searchName"
+                />
+                <svg data-type="Path" data-name="ic_highlight_off_24px" class="ic_highlight_off_24px" viewBox="2 2 30 30"
+                    onclick="document.getElementById('searchName').value=''">
+                    <path class="ic_highlight_off_24px_Class" d="M 20.88500022888184 11 L 17 14.88500022888184 L 13.11499977111816 11 L 11 13.11499977111816 L 14.88500022888184 17 L 11 20.88500022888184 L 13.11499977111816 23 L 17 19.11499977111816 L 20.88500022888184 23 L 23 20.88500022888184 L 19.11499977111816 17 L 23 13.11499977111816 L 20.88500022888184 11 Z M 17 2 C 8.704999923706055 2 2 8.704999923706055 2 17 C 2 25.29500198364258 8.704999923706055 32 17 32 C 25.29500198364258 32 32 25.29500198364258 32 17 C 32 8.704998970031738 25.29500198364258 2 17 2 Z M 17 29 C 10.38500022888184 29 5 23.61499977111816 5 17 C 5 10.38500022888184 10.38500022888184 5 17 5 C 23.61499977111816 5 29 10.38500022888184 29 17 C 29 23.61499977111816 23.61499977111816 29 17 29 Z">
+                    </path>
+                </svg>
+                <svg data-type="Path" data-name="ic_search_24px" class="ic_search_24px" viewBox="3 3 29 29"
+                    onclick="document.getElementById('searchForm').submit()">
+                    <path class="ic_search_24px_Class" d="M 23.72612953186035 21.23899269104004 L 22.41623878479004 21.23899269104004 L 21.95197105407715 20.79130935668945 C 23.57690048217773 18.90108680725098 24.55517387390137 16.44711303710938 24.55517387390137 13.777587890625 C 24.55517387390137 7.825042724609375 19.73013114929199 3 13.777587890625 3 C 7.825042724609375 3 3 7.825042724609375 3 13.777587890625 C 3 19.73013114929199 7.825042724609375 24.55517387390137 13.777587890625 24.55517387390137 C 16.44711303710938 24.55517387390137 18.90108680725098 23.57690048217773 20.79130935668945 21.95197105407715 L 21.23899269104004 22.41623878479004 L 21.23899269104004 23.72612953186035 L 29.52944564819336 31.99999809265137 L 31.99999809265137 29.52944564819336 L 23.72612953186035 21.23899269104004 Z M 13.777587890625 21.23899269104004 C 9.648942947387695 21.23899269104004 6.316181182861328 17.90623092651367 6.316181182861328 13.777587890625 C 6.316181182861328 9.648942947387695 9.648942947387695 6.316181182861328 13.777587890625 6.316181182861328 C 17.90623092651367 6.316181182861328 21.23899269104004 9.648942947387695 21.23899269104004 13.777587890625 C 21.23899269104004 17.90623092651367 17.90623092651367 21.23899269104004 13.777587890625 21.23899269104004 Z">
+                    </path>
+                </svg>
+            </form>
+		</div>
+	</div>
+
+    <div data-type="Group" data-name="그룹 295" class="_295_Class">
+        <div data-type="Text" data-name="일봉차트" class="_bmh_Class">
+            <span>일봉차트</span>
+        </div>
+        <div data-type="Text" data-name="[삼성전자]" class="_bmi_Class">
+            <span>[{{ name }}]</span>
+        </div>
+    </div>
+    <div id="plot" class="_4_bmf_Class">
+        <div id="chart-1">
+            {{ plot|safe }}
+        </div>
+    </div>
+
+    <div data-type="Group" data-name="그룹 499" class="_499_Class">
+        <div data-type="Group" data-name="그룹 296" class="_296_Class">
+            <div data-type="Text" data-name="일별시세" class="_bp_Class">
+                <span>일별시세</span>
+            </div>
+            <div data-type="Text" data-name="[삼성전자]" class="_bqa_Class">
+                <span>[{{ name }}]</span>
+            </div>
+        </div>
+
+        <div class="board_sub_Class_2">
+            <div data-type="Text" data-name="날짜" class="_bmn_Class table_title">
+                <span>날짜</span>
+            </div>
+            <div data-type="Text" data-name="종가" class="_bmp_Class table_title left_border">
+                <span>종가</span>
+            </div>
+            <div data-type="Text" data-name="전일비" class="_bmr_Class table_title left_border">
+                <span>전일비</span>
+            </div>
+            <div data-type="Text" data-name="시가" class="_bmt_Class table_title left_border">
+                <span>시가</span>
+            </div>
+            <div data-type="Text" data-name="고가" class="_bmv_Class table_title left_border">
+                <span>고가</span>
+            </div>
+            <div data-type="Text" data-name="저가" class="_bmx_Class table_title left_border">
+                <span>저가</span>
+            </div>
+            <div data-type="Text" data-name="거래량" class="_bmz_Class table_title left_border">
+                <span>거래량</span>
+            </div>
+        </div>
+
+        <div class="board_list_Class_2">
+            {% for stock in stocks %}
+                <div data-type="Group" data-name="그룹 297" class="board_list_Class_row">
+                    <div data-type="Text" class="ID20200812_bm_Class">
+                        <span>{{ stock.data_date|date:"Y-m-d" }}</span>
+                    </div>
+                    <div data-type="Text" class="ID65000_Class">
+                        <span>{{ stock.current_price|floatformat:0|intcomma }}</span>
+                    </div>
+                    <div data-type="Text" data-name="500" class="ID500_Class">
+                        {% if stock.updown_price >= 0 %}
+                            <svg data-type="Polygon" data-name="다각형 5" class="up_arrow" viewBox="0 0 11 10">
+                                <path class="up_arrow_fill" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+                                </path>
+                            </svg>
+                            <span class="up_color">{{ stock.updown_price|floatformat:0|intcomma }}</span>
+                        {% else %}
+                            <svg data-type="Polygon" data-name="다각형 5" class="down_arrow" viewBox="0 0 11 10">
+                                <path class="down_arrow_fill" d="M 5.499999523162842 0 L 11 10 L 0 10 Z">
+                                </path>
+                            </svg>
+                            <span class="down_color">{{ stock.updown_price|floatformat:0|intcomma }}</span>
+                        {% endif %}
+                    </div>
+                    <div data-type="Text" class="ID65000_bm_Class">
+                        <span>{{ stock.open_price|floatformat:0|intcomma }}</span>
+                    </div>
+                    <div data-type="Text" class="ID65000_bna_Class">
+                        <span>{{ stock.high_price|floatformat:0|intcomma }}</span>
+                    </div>
+                    <div data-type="Text" class="ID65000_bnb_Class">
+                        <span>{{ stock.low_price|floatformat:0|intcomma }}</span>
+                    </div>
+                    <div data-type="Text" class="ID16949183_Class">
+                        <span>{{ stock.volume|intcomma }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="_500_Class">
+        <div data-type="Group" data-name="그룹 296" class="_296_Class">
+            <div data-type="Text" data-name="일별시세" class="_bp_Class">
+                <span>기업실적분석</span>
+            </div>
+        </div>
+
+        <table class="table_div">
+            <tr class="text_center h50 table_th">
+                <td class="bottom_border_2px right_border_1px" rowspan="2">주요채무정보</td>
+                <td class="bottom_border_1px right_border_1px" colspan="3">최근연간실적</td>
+                <td class="bottom_border_1px" colspan="8">분기실적</td>
+            </tr>
+            <tr class="text_center h46">
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:3 }}.12</td>
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:2 }}.12</td>
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:1 }}.12</td>
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:1 }}.3</td>
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:1 }}.6</td>
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:1 }}.9</td>
+                <td class="bottom_border_2px right_border_1px">{{ year|sub:1 }}.12</td>
+                <td class="bottom_border_2px right_border_1px">{{ year }}.3</td>
+                <td class="bottom_border_2px right_border_1px">{{ year }}.6</td>
+                <td class="bottom_border_2px right_border_1px">{{ year }}.9</td>
+                <td class="bottom_border_2px">{{ year }}.12</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_05px right_border_1px">매출액(억원)</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.12|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.8|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.4|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.7|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.6|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.5|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.4|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.3|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.2|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.매출.1|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px">{{ financial.매출.0|intdiv:100000000|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_05px right_border_1px">영업이익(억원)</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.12|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.8|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.4|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.7|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.6|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.5|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.4|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.3|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.2|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.1|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_05px">{{ financial.영업이익.0|intdiv:100000000|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_1px right_border_1px">당기순이익(억원)</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.12|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.8|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.4|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.7|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.6|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.5|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.4|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.3|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.2|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.1|intdiv:100000000|intcomma }}</td>
+                <td class="bottom_border_1px">{{ financial.당기순이익.0|intdiv:100000000|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_05px right_border_1px">영업이익률(%)</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.12|div:financial.매출.12|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.8|div:financial.매출.8|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.4|div:financial.매출.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.7|div:financial.매출.7|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.6|div:financial.매출.6|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.5|div:financial.매출.5|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.4|div:financial.매출.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.3|div:financial.매출.3|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.2|div:financial.매출.2|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.영업이익.1|div:financial.매출.1|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px">{{ financial.영업이익.0|div:financial.매출.0|mul:100|floatformat:2|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_05px right_border_1px">순이익률(%)</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.12|div:financial.매출.12|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.8|div:financial.매출.8|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.4|div:financial.매출.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.7|div:financial.매출.7|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.6|div:financial.매출.6|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.5|div:financial.매출.5|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.4|div:financial.매출.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.3|div:financial.매출.3|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.2|div:financial.매출.2|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.당기순이익.1|div:financial.매출.1|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px">{{ financial.당기순이익.0|div:financial.매출.0|mul:100|floatformat:2|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_1px right_border_1px">ROE(%)</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.12|div:financial.자본총계.12|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.8|div:financial.자본총계.8|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.4|div:financial.자본총계.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.7|div:financial.자본총계.7|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.6|div:financial.자본총계.6|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.5|div:financial.자본총계.5|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.4|div:financial.자본총계.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.3|div:financial.자본총계.3|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.2|div:financial.자본총계.2|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.당기순이익.1|div:financial.자본총계.1|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px">{{ financial.당기순이익.0|div:financial.자본총계.0|mul:100|floatformat:2|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_05px right_border_1px">부채비율(%)</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.12|div:financial.자본총계.12|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.8|div:financial.자본총계.8|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.4|div:financial.자본총계.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.7|div:financial.자본총계.7|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.6|div:financial.자본총계.6|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.5|div:financial.자본총계.5|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.4|div:financial.자본총계.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.3|div:financial.자본총계.3|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.2|div:financial.자본총계.2|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px right_border_1px">{{ financial.부채총계.1|div:financial.자본총계.1|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_05px">{{ financial.부채총계.0|div:financial.자본총계.0|mul:100|floatformat:2|intcomma }}</td>
+            </tr>
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_05px right_border_1px">당좌비율(%)</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.12|div:financial.유동부채.12|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.8|div:financial.유동부채.8|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.4|div:financial.유동부채.4|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.7|div:financial.유동부채.7|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.6|div:financial.유동부채.6|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.5|div:financial.유동부채.5|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.4|div:financial.유동부채.4|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.3|div:financial.유동부채.3|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.2|div:financial.유동부채.2|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.당좌자산.1|div:financial.유동부채.1|mul:100|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px">{{ financial.당좌자산.0|div:financial.유동부채.0|mul:100|floatformat:2|intcomma }}</td>#}
+{#            </tr>#}
+            <tr class="text_center h38">
+                <td class="bottom_border_1px right_border_1px">유보율(%)</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.12|div:financial.자본금.12|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.8|div:financial.자본금.8|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.4|div:financial.자본금.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.7|div:financial.자본금.7|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.6|div:financial.자본금.6|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.5|div:financial.자본금.5|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.4|div:financial.자본금.4|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.3|div:financial.자본금.3|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.2|div:financial.자본금.2|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px right_border_1px">{{ financial.잉여금.1|div:financial.자본금.1|mul:100|floatformat:2|intcomma }}</td>
+                <td class="bottom_border_1px">{{ financial.잉여금.0|div:financial.자본금.0|mul:100|floatformat:2|intcomma }}</td>
+            </tr>
+            <tr class="text_center h38">
+                <td class="bottom_border_2px right_border_1px">EPS(원)</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.12|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.8|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.4|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.7|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.6|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.5|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.4|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.3|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.2|intcomma }}</td>
+                <td class="bottom_border_2px right_border_1px">{{ financial.EPS.1|intcomma }}</td>
+                <td class="bottom_border_2px">{{ financial.EPS.0|intcomma }}</td>
+            </tr>
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_05px right_border_1px">PER(배)</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.12|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.8|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.4|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.7|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.6|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.5|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.4|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.3|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.2|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.1|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px">{{ stocks.0.current_price|div:financial.EPS.0|intcomma }}</td>#}
+{#            </tr>#}
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_05px right_border_1px">BPS(원)</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.12|div:financial.당기순이익.12|mul:financial.자본총계.12|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.8|div:financial.당기순이익.8|mul:financial.자본총계.8|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.4|div:financial.당기순이익.4|mul:financial.자본총계.4|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.7|div:financial.당기순이익.7|mul:financial.자본총계.7|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.6|div:financial.당기순이익.6|mul:financial.자본총계.6|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.5|div:financial.당기순이익.5|mul:financial.자본총계.5|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.4|div:financial.당기순이익.4|mul:financial.자본총계.4|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.3|div:financial.당기순이익.3|mul:financial.자본총계.3|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.2|div:financial.당기순이익.2|mul:financial.자본총계.2|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px right_border_1px">{{ financial.EPS.1|div:financial.당기순이익.1|mul:financial.자본총계.1|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_05px">{{ financial.EPS.0|div:financial.당기순이익.0|mul:financial.자본총계.0|floatformat:2|intcomma }}</td>#}
+{#            </tr>#}
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_2px right_border_1px">PBR(배)</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.12|mul:financial.당기순이익.12|div:financial.자본총계.12|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.8|mul:financial.당기순이익.8|div:financial.자본총계.8|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.4|mul:financial.당기순이익.4|div:financial.자본총계.4|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.7|mul:financial.당기순이익.7|div:financial.자본총계.7|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.6|mul:financial.당기순이익.6|div:financial.자본총계.6|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.5|mul:financial.당기순이익.5|div:financial.자본총계.5|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.4|mul:financial.당기순이익.4|div:financial.자본총계.4|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.3|mul:financial.당기순이익.3|div:financial.자본총계.3|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.2|mul:financial.당기순이익.2|div:financial.자본총계.2|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px right_border_1px">{{ stocks.0.current_price|div:financial.EPS.1|mul:financial.당기순이익.1|div:financial.자본총계.1|floatformat:2|intcomma }}</td>#}
+{#                <td class="bottom_border_2px">{{ stocks.0.current_price|div:financial.EPS.0|mul:financial.당기순이익.0|div:financial.자본총계.0|floatformat:2|intcomma }}</td>#}
+{#            </tr>#}
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_05px right_border_1px">주당배당금(원)</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2018.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.6</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.9</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.3</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.6</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.9</td>#}
+{#                <td class="bottom_border_05px">2020.12</td>#}
+{#            </tr>#}
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_05px right_border_1px">시기배당률(%)</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2018.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.6</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.9</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2019.12</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.3</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.6</td>#}
+{#                <td class="bottom_border_05px right_border_1px">2020.9</td>#}
+{#                <td class="bottom_border_05px">2020.12</td>#}
+{#            </tr>#}
+{#            <tr class="text_center h38">#}
+{#                <td class="bottom_border_2px right_border_1px">배당성향(%)</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2018.12</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2019.12</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2020.12</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2019.6</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2019.9</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2019.12</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2020.3</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2020.6</td>#}
+{#                <td class="bottom_border_2px right_border_1px">2020.9</td>#}
+{#                <td class="bottom_border_2px">2020.12</td>#}
+{#            </tr>#}
+        </table>
+    </div>
+
+    <div style="position: absolute; display: flex; left: 0; top: 2400px; width: 2559px; flex-direction: column;">
+        {% include 'footer.html' %}
+    </div>
+</div>
+</body>
+</html>

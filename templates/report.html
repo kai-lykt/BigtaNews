@@ -1,0 +1,207 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>증권사리포트</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="{% static 'css/report.css' %}" />
+    <script src="{% static 'js/report.js' %}"></script>
+    <script src="https://kit.fontawesome.com/c21b1db13f.js"></script>
+</head>
+<body>
+<div id="report" class="report_Class">
+    <!--헤더-->
+    <div data-type="Symbol" data-name="Title" class="Title Title_Class">
+        <div data-type="Text" data-name="AI 주식분석 플랫폼" class="AI___Class">
+            <span>AI 주식분석 플랫폼</span>
+        </div>
+        <div data-type="Text" data-name="로그아웃" onclick="window.location.replace('/logout')" class="_sf_Class">
+            <span>로그아웃</span>
+        </div>
+        <div data-type="Text" data-name="고객센터" class="_sg_Class">
+            <span>고객센터</span>
+        </div>
+        <img data-type="Rectangle" data-name="logo2" class="logo2_Class" src="{% static 'img/logo2.png' %}"
+             srcset="{% static 'img/logo2.png' %} 1x, {% static 'img/logo2@2x.png' %} 2x">
+        <svg data-type="Rectangle" data-name="사각형 201" class="_201">
+            <rect class="_201_Class" rx="0" ry="0" x="0" y="0" width="1" height="16">
+            </rect>
+        </svg>
+    </div>
+
+    <!--메뉴-->
+    <div data-type="Symbol" data-name="Navigation_주식" class="Navigation___ Navigation__Class">
+        <svg data-type="Rectangle" data-name="사각형 24" class="_24">
+            <rect class="_24_Class" rx="0" ry="0" x="0" y="0" width="1920" height="73">
+            </rect>
+        </svg>
+        <svg data-type="Rectangle" data-name="사각형 23" class="_23">
+            <rect class="_23_Class" rx="0" ry="0" x="0" y="0" width="1920" height="2">
+            </rect>
+        </svg>
+        <div data-type="Text" data-name="공시데이터" onclick="window.location.href='/dart'" class="_Class">
+            <span>공시데이터</span>
+        </div>
+        <div data-type="Text" data-name="주식데이터" onclick="window.location.href='/stock'" class="_rv_Class">
+            <span>주식데이터</span>
+        </div>
+        <div data-type="Text" data-name="증권사리포트" onclick="window.report.href='/report'" class="_____Class">
+            <span>증권사리포트</span>
+        </div>
+        <svg data-type="Polygon" data-name="다각형 4" class="_4" viewBox="0 0 22 14">
+            <path class="_4_Class" d="M 10.99999904632568 0 L 22 14 L 0 14 Z">
+            </path>
+        </svg>
+        <div data-type="Group" data-name="그룹 143" onclick="window.location.href='/home'" class="_143_Class">
+            <div data-type="Text" data-name="HOME" class="HOME_Class">
+                <span>HOME</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 108" class="_108">
+                <rect class="_108_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+        <div data-type="Group" data-name="그룹 144" onclick="window.location.href='/article'" class="_144_Class">
+            <div data-type="Text" data-name="작성기사" class="_r_Class">
+                <span>작성기사</span>
+            </div>
+            <svg data-type="Rectangle" data-name="사각형 109" class="_109">
+                <rect class="_109_Class" rx="0" ry="0" x="0" y="0" width="100" height="27">
+                </rect>
+            </svg>
+        </div>
+    </div>
+    <!--//메뉴-->
+    <!--//헤더-->
+
+    <!--본문 제목-->
+    <div data-type="Text" data-name="증권사리포트" class="_sa_Class">
+        <span>증권사리포트</span>
+    </div>
+    <!--//본문 제목-->
+    <!--검색-->
+    <svg data-type="Rectangle" data-name="사각형 107" class="_107">
+        <rect class="_107_Class" rx="34.5" ry="34.5" x="0" y="0" width="749" height="69">
+        </rect>
+    </svg>
+    <form id="searchName" name="stock" action="/report/1" method="get">
+        <div data-type="Group" data-name="그룹 137" class="_137_Class">
+            <div data-type="Text" data-name="종 목" class="__Class">
+                <span>종 목</span>
+            </div>
+            <input data-type="Text" data-name="종목명, 지수명, 펀드명 입력" class="____Class"
+                   placeholder="종목명, 지수명, 펀드명 입력" value="{{ request.GET.stock }}" name="stock"
+            />
+        </div>
+        <svg data-type="Path" data-name="ic_highlight_off_24px"
+             class="ic_highlight_off_24px" viewBox="2 2 30 30"
+             onclick="document.getElementById('searchName').value = ''"
+        >
+            <path class="ic_highlight_off_24px_Class"
+                  d="M 20.88500022888184 11 L 17 14.88500022888184 L 13.11499977111816 11 L 11 13.11499977111816 L 14.88500022888184 17 L 11 20.88500022888184 L 13.11499977111816 23 L 17 19.11499977111816 L 20.88500022888184 23 L 23 20.88500022888184 L 19.11499977111816 17 L 23 13.11499977111816 L 20.88500022888184 11 Z M 17 2 C 8.704999923706055 2 2 8.704999923706055 2 17 C 2 25.29500198364258 8.704999923706055 32 17 32 C 25.29500198364258 32 32 25.29500198364258 32 17 C 32 8.704998970031738 25.29500198364258 2 17 2 Z M 17 29 C 10.38500022888184 29 5 23.61499977111816 5 17 C 5 10.38500022888184 10.38500022888184 5 17 5 C 23.61499977111816 5 29 10.38500022888184 29 17 C 29 23.61499977111816 23.61499977111816 29 17 29 Z">
+            </path>
+        </svg>
+        <svg data-type="Path" data-name="ic_search_24px"
+             class="ic_search_24px" viewBox="3 3 29 29"
+             onclick="document.getElementById('searchName').submit()"
+        >
+            <path class="ic_search_24px_Class"
+                  d="M 23.72612953186035 21.23899269104004 L 22.41623878479004 21.23899269104004 L 21.95197105407715 20.79130935668945 C 23.57690048217773 18.90108680725098 24.55517387390137 16.44711303710938 24.55517387390137 13.777587890625 C 24.55517387390137 7.825042724609375 19.73013114929199 3 13.777587890625 3 C 7.825042724609375 3 3 7.825042724609375 3 13.777587890625 C 3 19.73013114929199 7.825042724609375 24.55517387390137 13.777587890625 24.55517387390137 C 16.44711303710938 24.55517387390137 18.90108680725098 23.57690048217773 20.79130935668945 21.95197105407715 L 21.23899269104004 22.41623878479004 L 21.23899269104004 23.72612953186035 L 29.52944564819336 31.99999809265137 L 31.99999809265137 29.52944564819336 L 23.72612953186035 21.23899269104004 Z M 13.777587890625 21.23899269104004 C 9.648942947387695 21.23899269104004 6.316181182861328 17.90623092651367 6.316181182861328 13.777587890625 C 6.316181182861328 9.648942947387695 9.648942947387695 6.316181182861328 13.777587890625 6.316181182861328 C 17.90623092651367 6.316181182861328 21.23899269104004 9.648942947387695 21.23899269104004 13.777587890625 C 21.23899269104004 17.90623092651367 17.90623092651367 21.23899269104004 13.777587890625 21.23899269104004 Z">
+            </path>
+        </svg>
+    </form>
+    <!--//검색-->
+    <div class="clear"></div>
+    <!--본문-->
+    <section>
+        <div class="main">
+            <ul class="main_title">
+                <li class="main_cell01"><a class="border_de">종목명</a></li>
+                <li class="main_cell02"><a>제목</a></li>
+                <li class="main_cell03"><a>증권사</a></li>
+                <li class="main_cell04"><a>작성일</a></li>
+            </ul>
+            <div class="main_contents">
+                {% if reports|length == 0 %}
+                    <div class="cell_box">
+                        <span>수집된 데이터가 없습니다</span>
+                    </div>
+                {% endif %}
+                {% for report in reports %}
+                    <div class="cell_box">
+                        <div class="text_cell01">
+                            <span>{{ report.stock_name }}</span>
+                        </div>
+                        <div class="text_cell02">
+                            <span><a href="{{ report.link }}" target="_blank">{{ report.title }}</a></span>
+                        </div>
+                        <div class="text_cell03">
+                            <span>{{ report.fin_corp }}</span>
+                        </div>
+                        <div class="text_cell04">
+                            <span>{{ report.date|date:"Y-m-d" }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="main_number">
+                <div class="arrow_left">
+                    <ul>
+                        <li><a onclick="goTenPrevious({{ current_page }})"><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a onclick="previousPage({{ current_page }})"><i class="fas fa-angle-left"></i></a></li>
+                    </ul>
+                </div>
+
+                <ul class="center_number">
+                    <li class="first"><a href="/report/{{ ten_pages.0 }}?stock={{ request.GET.stock }}">{{ ten_pages.0 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.1 }}?stock={{ request.GET.stock }}">{{ ten_pages.1 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.2 }}?stock={{ request.GET.stock }}">{{ ten_pages.2 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.3 }}?stock={{ request.GET.stock }}">{{ ten_pages.3 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.4 }}?stock={{ request.GET.stock }}">{{ ten_pages.4 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.5 }}?stock={{ request.GET.stock }}">{{ ten_pages.5 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.6 }}?stock={{ request.GET.stock }}">{{ ten_pages.6 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.7 }}?stock={{ request.GET.stock }}">{{ ten_pages.7 }}</a></li>
+                    <li><a href="/report/{{ ten_pages.8 }}?stock={{ request.GET.stock }}">{{ ten_pages.8 }}</a></li>
+                    <li class="last"><a href="/report/{{ ten_pages.9 }}?stock={{ request.GET.stock }}">{{ ten_pages.9 }}</a></li>
+                </ul>
+
+                <div class="arrow_right">
+                    <ul>
+                        <li><a onclick="nextPage({{ current_page }}, {{ total_page }})"><i class="fas fa-angle-right"></i></a></li>
+                        <li><a onclick="goTenNext({{ current_page }}, {{ total_page }})"><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//본문-->
+    <div class="clear"></div>
+    <!--푸터-->
+    <div data-type="Symbol" data-name="footer" class="footer footer_Class">
+        <svg data-type="Rectangle" data-name="사각형 197" class="_197">
+            <rect class="_197_Class" rx="0" ry="0" x="0" y="0" width="1920" height="104">
+            </rect>
+        </svg>
+        <img data-type="Rectangle" data-name="logo" class="logo_Class" src="{% static 'img/logo.png' %}"
+             srcset="{% static 'img/logo.png' %} 1x, {% static 'img/logo@2x.png' %} 2x">
+        <div data-type="Group" data-name="그룹 523" class="_523_Class">
+            <div data-type="Text" data-name="등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED"
+                 class="___02392____20121218___________Class">
+                <span>
+                    등록번호 : 서울 아02392 | 등록일 : 2012년12월18일 | 제호 : 중소기업신문 | 발행·편집인 : 신진호
+                    <br/>주소 : 서울 강남구 언주로 556 성우빌딩 7층 | 발행일자 : 2012년12월18일 | 청소년보호책임자 : 방환미 | 대표전화 : 02)832-6115 | Fax : 02)3423-0228
+                    <br/>Copyright ⓒ 중소기업신문 . all right reserved. mail to webmaster@smedaily.co.kr  POWERED BY
+                </span>
+            </div>
+            <img data-type="Rectangle" data-name="kai" class="kai_Class" src="{% static 'img/kai.png' %}"
+                 srcset="{% static 'img/kai.png' %} 1x, {% static 'img/kai@2x.png' %} 2x">
+        </div>
+    </div>
+    <!--//푸터-->
+</div>
+</body>
+</html>
